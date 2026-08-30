@@ -1,0 +1,2539 @@
+% GT class project paper for JFM
+
+\documentclass{jfm}
+
+\usepackage{mathptmx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{verbatim}
+%\usepackage{hyperref}
+
+\voffset .4in
+\hoffset .3in
+
+\renewcommand{\baselinestretch}{1.4}          % enlarged line skip
+
+\newcommand{\ie}  {\textit{i.e., }}
+\newcommand{\eg}  {\textit{e.g., }}
+\newcommand{\ca}  [1]{\mathcal{#1}}
+\newcommand{\kb}  {\boldsymbol{k}}
+\newcommand{\bs}  [1]{\boldsymbol{#1}}
+\newcommand{\rms} {\mathrm{rms}}
+\newcommand{\del} {\nabla}
+\newcommand{\p}   {\partial}
+\newcommand{\pp}  [2]{\frac{\p #1}{\p #2}}
+\newcommand{\dd}  [2]{\frac{d #1}{d #2}}
+
+\title[Turbulent Diffusion in the Geostrophic Inverse Cascade]
+    {Turbulent Diffusion in the Geostrophic Inverse Cascade}
+
+\author[Smith, Boccaletti, Henning, Marinov, Tam, Held and Vallis]
+    {
+    K.\ns S.\ns S\ls M\ls I\ls T\ls H,\ns
+    G.\ns B\ls O\ls C\ls C\ls A\ls L\ls E\ls T\ls T\ls I,\ns \\
+    C.\ns C.\ns H\ls E\ls N\ls N\ls I\ls N\ls G,\ns
+    I.\ns M\ls A\ls R\ls I\ls N\ls O\ls V,\ns
+    C.\ns Y.\ns T\ls A\ls M,\ns \\
+    I.\ns M.\ns H\ls E\ls L\ls D,\ns
+    G.\ns K.\ns V\ls A\ls L\ls L\ls I\ls S
+    }
+
+\affiliation{GFDL/Princeton University, Princeton, New Jersey}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  Motivated in part by the problem of large-scale lateral
+  turbulent heat transport in the earth's atmosphere and oceans,
+  and in part by the problem of turbulent transport itself,
+  we seek to better understand the transport of a
+  passive tracer advected by various types of fully developed
+  two-dimensional turbulence. The types of turbulence considered
+  correspond to various relationships between the streamfunction
+  and the advected field. Each type of turbulence considered
+  possesses two quadratic invariants and each can develop an
+  inverse cascade. These cascades can be modified or halted, for
+  example, by friction, a background vorticity gradient or a mean
+  temperature gradient. We focus on three physically-realizable
+  cases: classical two-dimensional turbulence, surface
+  quasi-geo\-strophic turbulence, and shallow water
+  quasi-geo\-strophic turbulence at scales large compared to the
+  radius of deformation. In each model we assume that tracer
+  variance is maintained by a large-scale mean tracer gradient
+  while turbulent energy is produced at small scales via random
+  forcing, and dissipated by linear drag.  We predict the spectral
+  shapes, eddy scales and equilibrated energies resulting from the
+  inverse cascades, and use the expected velocity and length
+  scales to predict integrated tracer fluxes.
+
+  When linear drag halts the cascade, the resulting diffusivities
+  are decreasing functions of the drag coefficient, but with
+  different dependencies for each case.  When $\beta$ is
+  significant, we find a clear distinction between the tracer
+  mixing scale, which depends on $\beta$ but is nearly
+  independent of drag, and the energy containing (or jet) scale,
+  set by a combination of the drag coefficient and $\beta$.  Our
+  predictions are tested via high resolution spectral
+  simulations.  We find in all cases that the
+  passive scalar is diffused down-gradient with a diffusion
+  coefficient that is well predicted from estimates of mixing
+  length and velocity scale obtained from turbulence
+  phenomenology.
+\end{abstract}
+
+\section{Introduction}
+\label{intro:sec}
+
+This paper is concerned with the problem of transport of a
+passive tracer in a turbulent flow. In addition to its intrinsic
+interest, the problem is relevant to the issue of meridional heat
+transport in the earth's atmosphere and oceans. In mid-latitudes
+much of the atmospheric transport is effected by large-scale
+eddies that are well described by the quasi-geostrophic equations
+of motion \citep[e.g.,][]{Pedlosky87}. In the classical two-layer
+model of geostrophic turbulence
+\citep[e.g.,][]{Rhines77,Salmon80}, at scales larger than the
+deformation radius the baroclinic streamfunction is nearly
+passively advected by the barotropic streamfunction, resulting in
+a down-scale cascade of its variance. But energy in the
+barotropic mode itself cascades to large scales. Since temperature is
+proportional to the baroclinic streamfunction, its nearly-passive
+advection by the barotropic flow determines the heat transport,
+and this down-gradient flux of heat in turn determines the
+extraction of energy from the mean flow \citep{Larichev95}.  To
+understand the heat transport properties of this system we must
+at least, then, understand the transport properties of a passive
+tracer being advected by a turbulent flow in which energy is
+cascading to larger scales, and that is the subject of this paper.
+
+A familiar setting in which to explore this problem is that of
+conventional two-di\-men\-sion\-al turbulence [see e.g.,
+\citet{Kraichnan80}, \citet{Vallis93b} and \citet{danilov00} for
+reviews]. In such flows, vorticity $\zeta$ is advected by a flow
+defined by a streamfunction $\psi$ linked to the vorticity, in Fourier
+transform space, by $\zeta = -|\kb|^2 \psi$.  We will find it useful
+to consider more general relationships between streamfunction and
+advected field of the form $\xi = -|\kb|^{\alpha} \psi$. This is not
+only a formal device, for a number of physical systems can be realized
+by different choices of $\alpha$. For example, in surface
+quasi-geostrophic dynamics \citep[\eg][]{Held95a}, streamfunction
+$\psi$ and advected quantity $\xi$ are related by $\xi = -|\kb| \psi$,
+and the equations represent the advection of temperature along a
+surface bounding a constant potential vorticity interior, so providing
+(for example) a simple model for edge waves on the tropopause or
+temperature advection near the Earth's surface. Large-scale
+quasi-geostrophic flow (quasi-geostrophic dynamics at scales large
+compared to the radius of deformation), may be a particularly useful
+model for Jovian dynamics, presuming that small-scale convection
+constitutes a source of turbulent energy.  The latter case corresponds
+to, as we will see, yet a third relationship between advected scalar
+and associated streamfunction.
+
+The dynamics of such generalised two-di\-men\-sion\-al turbulence was
+explored by \citet{Pierrehumbert94} with an emphasis on the forward
+cascade properties of the flow. Our focus is on the inverse cascade
+and the transport of a passive tracer by such flows. Thus, we consider
+fluids that are stirred at small scales by a random forcing,
+generating an inverse cascade, and which advect a passive tracer whose
+variance is maintained by a large-scale gradient. Most of the
+transport of the tracer thus occurs at scales within the inverse
+cascade of the turbulent fluid, just as for heat transport in
+baroclinic turbulence. We derive general expressions for the spectral
+shape of the inverse cascade in the presence of friction, as well as
+estimates of the halting scale, equilibrated energy level and tracer
+diffusivity. We then test these expressions numerically for the three
+cases of geostrophic turbulence mentioned above --- conventional
+two-dimensional vorticity dynamics, surface quasi-geostrophic
+dynamics, and large-scale quasi-geostrophic dynamics --- each of which
+have a different relationship between streamfunction and advected
+scalar. In conventional two-dimensional turbulence we also explore the
+effects of differential rotation, and we will see that the stopping
+scale of the inverse cascade is not necessarily the same as the mixing
+length of a passive scalar; we offer, and test, expressions for these
+two scales.
+
+The theory presented in the paper is largely that of classical
+homogeneous turbulence, and accordingly we rely upon
+Kolmogorov-Kraichnan phenomenology, the presumption of well-defined
+eddy scales and magnitudes, and implicitly upon the convergence of
+flows to statistically steady states.  Kolmogorov-Kraichnan
+phenomenology has been investigated for two-dimensional flows by many
+authors, and is generally found to hold best for flows that are
+largely free of coherent structures and devoid of intermittency.
+Examples of this can be found in, \eg \citet{Maltrud91} and
+\citet{Sukoriansky99} for the inverse cascade and \citet{Oetzel97} and
+(at much higher resolution) \citet{Lindborg00} for the direct cascade.
+In the simulations we present, the flows are forced by small-scale
+random noise, which appears to minimize the production of coherent
+vortices in the inverse cascade of standard two-dimensional
+turbulence.  Moreover the inverse cascade is, in all cases, halted
+\emph{before} the up-scale cascading invariant reaches the domain
+scale, preventing vortex condensation \citep{SmithYakhot93}.
+Nevertheless, in some cases investigated, coherent structures do form,
+and we will point out where these deviations from phenomenology occur.
+
+Such phenomenology is sometimes questioned in light of simulations of
+two-dimensional turbulence forced at small scales reported by
+\citet{borue94}.  In those simulations it is found that while after a
+few eddy turn-around times the energy spectrum possesses a -5/3 slope,
+at much later times the spectrum evolves to a -3 slope, accompanied by
+coherent vortices in the flow.  However, Borue employed an inverse
+hyper-viscosity (or `hypo'-viscosity) to absorb energy at large
+scales, rather than the more traditional and geophysically relevant
+linear drag.  The former method of energy dissipation has recently
+been shown \citep{danilov01a} to cause the steepening of the energy
+spectrum in the inverse cascade observed by Borue, while linear drag
+merely tapers the -5/3 spectrum at large scales, so long as the drag
+is large enough to prevent significant energy from reaching the domain
+scale.
+
+The paper is organized as follows. In \S \mbox{} \ref{gen2d:sec} we introduce
+the basic formalism of generalised two-dimensional turbulence, and in
+\S \ref{spectra:sec} we discuss the fundamental spectral properties of
+such flows and calculate their corresponding inertial range spectra
+using Kolmogorov-Kraichnan phenomenology.  The dynamics of a passive
+tracer in an inverse cascade of generalised two-dimensional turbulence
+are discussed in \S \ref{tracer:sec}.  In \S \ref{halting:sec} we
+heuristically derive a shape for the spectrum of the inverse cascade
+in the presence of drag, which in turn yields an estimate of the
+halting scale of the cascade. In \S \ref{beta:sec} we add to the
+picture a mean vorticity gradient (the $\beta$-effect). This produces
+zonal jets, and we suggest expressions for both the jet scale and the
+eddy mixing scale. Finally, in \S \ref{numerics:sec}, we report on
+numerical tests of our scaling predictions, and conclude in \S
+\ref{disc:sec}.  An argument for cascade directions is given in
+appendix A and some details of the numerical model are relegated to
+appendix B.
+
+\section{Two-dimensional flow: a generalised formalism}
+\label{gen2d:sec}
+
+Consider the two-dimensional advection equation for a conserved scalar
+field $\xi$
+\begin{equation}
+\pp{\xi}{t} + J(\psi,\xi) = 0,
+\label{gen2d:eq}
+\end{equation}
+where $\psi$ is the advecting streamfunction and $J(A,B) = \p_x A\p_y
+B - \p_y A\p_x B$ is the Jacobian operator. The fluid velocity is
+given by $\boldsymbol{u} = \hat{k}\times\nabla\psi$.
+
+In ordinary two-dimensional turbulence $\xi = \del^2 \psi$.
+Restricting attention to a doubly-periodic domain, in Fourier
+transform space, this is equivalent to the relationship between
+Fourier components
+\begin{equation}
+\xi_{\kb} = -k^2\psi_{\kb},
+\label{coupling1:eq}
+\end{equation}
+where $k=|\kb|$ is the isotropic two-dimensional wavenumber. More
+generally we can consider the relationship between $\xi_{\kb}$ and
+$\psi_{\kb}$ discussed by \citet{Pierrehumbert94},
+\begin{equation}
+\xi_{\kb} = -k^{\alpha}\psi_{\kb},
+\label{coupling:eq}
+\end{equation}
+where $\xi$ shall be referred to as the generalised vorticity
+field. The independent variables $x,y$ have units of length $[L]$, and
+$t$ has units of time $[T]$.  Therefore, in order for \eqref{gen2d:eq}
+to be dimensionally balanced, $\psi \sim [L^2T^{-1}]$ and $\xi \sim
+[L^{2-\alpha}T^{-1}]$.  Three particular values of $\alpha$ lead to
+geophysically relevant equations: $\alpha=2$, $\alpha = 1$ and $\alpha
+= -2$.
+
+\bigskip
+\noindent\textit{$\alpha = 2$: Two-dimensional vorticity dynamics}
+
+\begin{narrower}
+
+\noindent If $\alpha=2$ we obtain the familiar two-dimensional Euler, or
+ba\-ro\-tro\-pic vor\-ticity equation, with $\xi = \zeta$ and $\zeta \sim
+[T^{-1}]$. In this paper we shall refer to these dynamics as
+two-dimensional vorticity (TDV) dynamics.
+
+\end{narrower}
+
+\bigskip
+\noindent\textit{$\alpha = 1$: Surface quasi-geostrophic dynamics}
+
+\begin{narrower}
+
+\noindent When $\alpha=1$ we obtain surface quasi-geostrophic (SQG)
+dynamics \citep[\eg][and references therein]{Held95a}. These equations
+describe the evolution of surface temperature perturbations bounding a
+constant potential vorticity interior, within the quasi-geostrophic
+equations.
+
+\end{narrower}
+
+\bigskip
+\noindent\textit{$\alpha = -2$: Large-scale quasi-geostrophic dynamics}
+
+\begin{narrower}
+
+\noindent The case $\alpha=-2$ corresponds to a rescaled shallow water
+quasi-geostrophic equation in the asymptotic limit of length scales
+large compared to the deformation scale [this system was
+investigated by \citet{Larichev91}]. We term this type of flow
+\textit{large-scale quasi-geostrophic (LQG) dynamics.} Consider the
+shallow water qua\-si\-geo\-stro\-phic equations
+\begin{equation}
+\pp{q}{t} + J(\psi,q) = 0, ~~~ q = (\del^2 - \lambda^2) \psi
+\label{qg:eq}
+\end{equation}
+where $\lambda$ is the deformation wavenumber.  In Fourier space the
+expression for the potential vorticity $q$ is
+\begin{equation}
+q_{\kb} = -(k^2 + \lambda^2) \psi_{\kb}
+\label{qk:eq}
+\end{equation}
+For wavenumbers such that $k\gg \lambda$, we recover TDV, but when
+$k\ll \lambda$, \eqref{qg:eq} becomes
+\begin{equation}
+-\lambda^2\pp{\psi}{t} + J(\psi,\del^2 \psi) = 0.
+\label{lqg1:eq}
+\end{equation}
+Because $\lambda$ only appears in combination with the time derivative,
+we can rescale time
+\begin{equation}
+\tau = t\lambda^{-2},
+\label{tau:eq}
+\end{equation}
+and make the substitution of variables
+\begin{equation}
+\xi =  \psi ~~~ \textrm{and}~~~ \Psi = \del^2 \psi
+\label{lqgvar:eq}
+\end{equation}
+so that \eqref{lqg1:eq} becomes
+\begin{equation}
+\pp{\xi}{\tau} + J(\Psi,\xi) = 0,~~~\Psi = \del^2 \xi.
+\label{lqg3:eq}
+\end{equation}
+In Fourier space the relation between $\xi$ and $\Psi$ is
+\begin{equation}
+\xi_{\kb} = k^{-2}\Psi_{\kb}
+\label{xik:eq}
+\end{equation}
+which has the same form as \eqref{coupling:eq} with $\alpha=-2$.
+
+\end{narrower}
+
+\bigskip
+
+Nonlinear advection is present in all of these geophysical cases, thus
+turbulence and turbulent cascades can develop.  The character of the
+turbulence --- \eg the spectral shapes, eddy scales, cascade
+directions, statistical amplitudes, coherent structures and rates of
+turbulent development --- will be distinct in each case.  Some aspects
+of these distinctions were discussed by \citet{Pierrehumbert94}, who
+argued, for example, that the enstrophy cascade should be dominated by
+local strain for $\alpha<2$, and that local scaling predictions should
+break down for $\alpha>2$.  Furthermore, they note, the inverse
+cascade --- our primary concern in this paper --- should remain local
+for all $\alpha<4$; the three cases discussed above fall into this
+category.
+
+The fact that a single generalised formalism describes three cases of
+geophysical interest by changing the value of a single parameter
+provides strong motivation in itself to investigate the properties of
+the general system. We may also regard the generalised turbulence
+formalism, however, as a convenient shorthand with which we can derive
+common aspects of the flows without repetition.
+
+In order to make quantitative statements about scales and
+energies (a necessary prerequisite to predicting the statistics
+of passive tracer advection) we first consider the Kolmogorov
+spectra for the generalised dynamics.  Some of what follows in
+the next section was derived by \citet{Pierrehumbert94}, but we
+include it for clarity, notation and as a reference basis for the
+rest of the paper.
+
+\section{Spectral properties of generalised two-dimensional flow}
+\label{spectra:sec}
+
+Because $\xi$ is conserved on parcels, the integral over a periodic
+domain (or an enclosed domain with no-normal-flow boundary conditions)
+of any function of $\xi$ is conserved. Thus, there are an infinite
+number of invariants. However, just as for TDV flow, two quadratic
+invariants determine the cascade directions. From \eqref{gen2d:eq}
+these are
+\begin{equation}
+E_G\equiv-\frac{1}{2}\overline{\psi\xi},~~~
+Z_G\equiv\frac{1}{2}\overline{\xi^2},
+\label{invar:eq}
+\end{equation}
+where the overline indicates a horizontal average.  We will refer to
+$E_G$ as the generalised energy, and to $Z_G$ as the generalised
+enstrophy. The invariants have units $E_G \sim [L^{4-\alpha}T^{-2}]$
+and $Z_G \sim [L^{4-2\alpha}T^{-2}]$.  [Note that for LQG, $T$ is the
+rescaled time from \eqref{tau:eq}]. The spectra of the two quadratic
+invariants are connected by a simple relationship involving scale
+only. To see this, we define the isotropic spectra $\ca{A}(k)$ of the
+positive definite quantity $A$ such that
+\begin{equation}
+A = \int_0^{\infty}\ca{A}(k) \, dk,
+\label{Adef:eq}
+\end{equation}
+where $k$ is the isotropic wavenumber, and $\ca{A}(k)$ is either
+$\ca{E}_G(k)$ or $\ca{Z}_G(k)$ (thus the dimensions of $\ca{E}_G(k)
+\sim [L][E_G]$ and $\ca{Z}_G(k) \sim [L][Z_G]$). The coupling
+relationship \eqref{coupling:eq}, together with Parseval's theorem,
+implies that
+\begin{equation}
+\ca{Z}_G(k) = k^{\alpha}\ca{E}_G(k).
+\label{EZ:eq}
+\end{equation}
+
+Well-known arguments \citep{Batchelor53} lead one to expect that,
+in TDV flow, energy will cascade to larger scale and enstrophy
+will cascade to smaller scale. These arguments are based on the
+presumption that the distribution of the spectra of each
+invariant spreads in wavenumber space.  In appendix A we extend
+such arguments to the case with arbitrary $\alpha$ and show that,
+for $\alpha>0$, generalised energy cascades to larger scale and
+generalised enstrophy cascades to smaller scales.  For
+$\alpha<0$, however, it turns out that generalised energy
+cascades to \textit{small} scales, and generalised enstrophy
+cascades to \textit{large} scale.
+
+If there is a spectrally localised source of variance of $E_G$ and
+$Z_G$, then in all the above cases we expect there will be a
+transfer of generalised energy and generalised enstrophy in
+opposite directions, away from the source region, just as in TDV
+dynamics. If frictional effects only act at some spectral
+distance from the source then we might expect inertial ranges to
+form between source and sink.  If this is the case one can derive
+the spectral slopes of these putative inertial ranges.
+
+Between source and sink the spectral flux $\epsilon_E$ or $\epsilon_Z$
+associated with the generalised energy or enstrophy will be constant,
+producing an inertial range.  We assume that over their respective
+inertial ranges, the local spectral density $\ca{E}_G(k)$ and
+$\ca{Z}_G(k)$ are functions only of the local spectral flux of $E_G$
+or $Z_G$ and of the scale itself --- the locality hypothesis of
+\citet{Kolmogorov41}. Thus
+\begin{equation}
+\epsilon_A = \frac{k\ca{A}(k)}{T_A(k)} = \textrm{constant},
+\label{epsA:eq}
+\end{equation}
+where $A$ is $E_G$ or $Z_G$ and $T_A(k)$ is a local timescale.  From
+dimensional considerations
+\begin{subequations}
+\begin{align}
+T_E(k) = [k^{5-\alpha}\ca{E}_G(k)]^{-1/2}, \label{TE:eq} \\
+T_Z(k) = [k^{5-2\alpha}\ca{Z}_G(k)]^{-1/2}. \label{TZ:eq}
+\end{align}
+\end{subequations}
+Using the expression for the flux \eqref{epsA:eq} we obtain
+\begin{subequations}
+\begin{align}
+\ca{E}_G(k) = \ca{C}_E\epsilon_E^{2/3}k^{(\alpha-7)/3},
+\label{Espec:eq} \\
+\ca{Z}_G(k) = \ca{C}_Z\epsilon_Z^{2/3}k^{(2\alpha-7)/3},
+\label{Zspec:eq}
+\end{align}
+\end{subequations}
+where $\ca{C}_E$ and $\ca{C}_Z$ are the Kolmogorov constants for the
+respective cascades of $E_G$ and $Z_G$.  Because the dynamics for each
+type of turbulence are different, $\ca{C}_E$ and $\ca{C}_Z$ may be
+expected to depend on $\alpha$.  Note also that one can find the
+spectrum $\ca{Z}_G(k)$ in the $E_G$-range or $\ca{E}_G(k)$ in the
+$Z_G$-range via \eqref{EZ:eq}.
+
+As a useful shorthand, we combine these results by writing the
+spectrum of a generalised invariant as
+\begin{equation}
+\ca{A}(k) = \ca{C}\epsilon^{2/3}k^{-\gamma},
+\label{Aspec:eq}
+\end{equation}
+where the exponent $\gamma$ is
+\begin{equation}
+\gamma = \left\{
+    \begin{array}{ll}
+       (7-\alpha)/{3},   &  A = E_G \\
+      (7-2\alpha)/{3},   &  A = Z_G.
+    \end{array}
+\right.
+\label{gam:eq}
+\end{equation}
+Note that as defined, $\gamma\geq 1$ for all cases considered in this
+paper.  For future reference, using \eqref{epsA:eq} and
+\eqref{Aspec:eq}, the generalised eddy timescale is then
+\begin{equation}
+T_A(k) = [k^{3\gamma-2}\ca{A}(k)]^{-1/2}
+= \ca{C}^{-1/2}\epsilon^{-1/3}k^{1-\gamma}.
+\label{TA:eq}
+\end{equation}
+
+Schema of the expected cascade directions and spectral slopes for each
+of the three cases considered in this paper can be found in figure
+\ref{schema:fig}.  Also noted are the dimensional estimates of the
+linear drag-induced stopping scale (discussed in \S
+\ref{halting:sec}), and the spectra of the velocity variance $\ca{E}$
+for each case.  The latter is necessary since rms velocities shall be
+needed to predict diffusivities in \S \ref{tracer:sec}.  In order to
+calculate the spectral slope of the velocity variance one must
+multiply $\ca{A}(k)$, the upscale cascading invariant, by the power of
+$k$ necessary to give a spectrum with dimensions $[L^3T^{-2}]$, a
+power which varies from case to case since $\ca{A}(k)$ has dimensions
+which depend on $\alpha$.  One must be careful in the LQG case, since
+in this case time has been re-dimensioned via \eqref{tau:eq}.
+Particulars of the velocity estimates will be addressed for each case
+separately as necessary in the context of the numerical calculations
+discussed in \S \ref{numerics:sec}.
+
+\section{Passive tracer dynamics}
+\label{tracer:sec}
+
+Suppose now that the streamfunction $\psi$ determined by the advection
+equation \eqref{gen2d:eq} and the coupling \eqref{coupling:eq} also
+advects a passive tracer $\phi$, for which the equation is
+\begin{equation}
+\pp{\phi}{t} + J(\psi,\phi) = \ca{D}_{\phi},
+\label{tracer:eq}
+\end{equation}
+where $\ca{D}_{\phi}$ represents dissipation, presumed to occur at
+small scales.  [In the LQG case, the streamfunction advecting the
+tracer is the QG streamfunction $\psi$, which determines the
+velocities, rather than the redefined streamfunction of
+\eqref{lqgvar:eq}.] The tracer variance
+\begin{equation}
+P \equiv \frac{1}{2}\overline{\phi^2}
+\label{P:eq}
+\end{equation}
+is a conserved quantity of the tracer field in the absence of
+dissipation.  In the inertial range of $A$ --- some conserved quantity
+of the flow field --- the spectral flux $\chi$ of tracer variance is
+\begin{equation}
+\chi = \frac{k\ca{P}(k)}{T_E(k)} = \textrm{constant}
+\label{epsP:eq}
+\end{equation}
+where $\ca{P}(k)$ is the spectrum of the tracer variance and
+$T_E(k)$ is the timescale associated with the kinetic energy in
+the inertial range of $A$.  In general there is only one
+spectrally local timescale available, namely \eqref{TA:eq}.  In
+this case the tracer variance spectrum is
+\begin{equation}
+\ca{P}(k) = \ca{K}\chi\epsilon^{-1/3}k^{-\gamma},
+\label{PE:eq}
+\end{equation}
+where $\ca{K}$ is the Kolmogorov constant for the tracer. In
+general, then, the tracer variance follows the same power law as
+the spectrum of the advecting flow invariant, in that invariant's
+inertial range.  For example, in the case $\alpha=2$ (TDV), tracer
+variance has the slope $-5/3$ in the energy inertial range, and
+slope $-1$ in the enstrophy inertial range.
+
+When LQG describes the dynamics, however, these predictions should
+only hold if the tracer is advected by the redefined streamfunction.
+This is not the relevant physical situation.  The variance of the
+tracer as given by \eqref{tracer:eq} requires that we specify the
+timescale $T_E(k)$ in terms of physical scales, which re-introduces
+the deformation scale into the calculation.  The up-scale cascading
+invariant is then associated with the available potential energy (APE)
+and the direct cascading invariant is the kinetic energy (KE).  The
+latter has a spectral slope of $k^{-5/3}$ in the inertial range of the
+APE, yielding an expected tracer variance spectral slope of $k^{-5/3}$
+as well.
+
+Suppose now that tracer variance is generated by the presence of a
+fixed large-scale meridional gradient and absorbed by small-scale
+dissipation. Specifically, we consider
+\begin{equation}
+\pp{\phi}{t} + J(\psi,\phi) + \overline{\theta} v = \ca{D}_{\phi}.
+\label{tracermg:eq}
+\end{equation}
+where $v=\p\psi/\p x$ is the meridional velocity of the advecting
+flow and $\overline{\theta} \equiv \p\bar{\phi}/\p y$ is the mean
+tracer gradient.  Since \eqref{tracermg:eq} is linear in $\phi$,
+we can rescale the equation such that $\overline{\theta}=1$.
+Multiplying \eqref{tracermg:eq} by $-\phi$ and averaging over
+space yields
+\begin{equation}
+\dd{P}{t} = \overline{\phi v} - \overline{\phi \ca{D}_{\phi}},
+\label{Pbal:eq}
+\end{equation}
+where $P$ is the tracer variance of \eqref{P:eq}.  The meridional flux
+of tracer is the explicit source of variance in the tracer field, and
+can be written
+\begin{equation}
+\overline{\phi v} = -D,
+\label{td:eq}
+\end{equation}
+where $D$ is the diffusivity, which has dimensions $[L^2T^{-1}] =
+[VL]$.  If the advecting meridional velocity field is sharply peaked
+at some scale $k_0$ and has a rms value $V_{\rms}$, then a standard
+down-gradient mixing hypothesis \citep[\eg][chapter 8]{Tennekes94}
+yields an expected diffusivity
+\begin{equation}
+D \simeq V_{\rms}k_0^{-1}.
+\label{diff:eq}
+\end{equation}
+One can make a crude estimate of the tracer flux spectrum by
+decomposing the left hand side of \eqref{td:eq} and estimating the two
+fields separately, yielding
+\begin{equation}
+\ca{D}(k) \sim \ca{E}^{1/2}(k)\ca{P}^{1/2}(k),
+\label{Dspec:eq}
+\end{equation}
+
+We shall derive specific diffusivity estimates for each of our
+cases and test their accuracy numerically.  In order to do
+so, however, we must first derive estimates for $k_0$ and
+$V_{\rms}$.
+
+\section{Cascade reduction by linear drag}
+\label{halting:sec}
+
+An inverse cascade will be diminished or halted when the
+upscale-cas\-ca\-ding in\-va\-ri\-ant either reaches the domain scale,
+or the scale at which some competing process such as friction
+dominates non-linear advection.  If some mechanism halts the cascade
+of whichever invariant is cascading upscale at wavenumber $k_0$, and
+if the eddies are forced at wavenumber $k_f$, then we must presume
+that
+\begin{equation}
+k_f>k_0.
+\label{kfkl:eq}
+\end{equation}
+If the spread between these scales is large, an inertial range may
+exist between them.
+
+As the eddies cascading through the system become larger, they also become
+slower.  In particular, we presume an eddy timescale given by
+\eqref{TA:eq}.  If the mechanism competing against nonlinear advection has
+a timescale ($T_{\mathrm{halt}}$) that is independent of scale, or
+increases less rapidly than $T_{\mathrm{eddy}}$ with increasing scale, then
+at some point in the cascade, $T_{\mathrm{eddy}} \sim T_{\mathrm{halt}}$.
+This expression can presumably be used to find the scale $k_0$ at which the
+cascade is halted, analogous to the derivation of the Kolmogorov
+micro-scale at which molecular viscosity overcomes the direct cascade.
+
+Consider the case of a linear vorticity drag with the equation of motion
+\begin{equation}
+\pp{\xi}{t} + J(\psi,\xi) = F - r\xi,
+\label{gen2dr:eq}
+\end{equation}
+where $F$ is the forcing. Physically, the term $r \xi$ represents a
+drag due to Ekman friction in TDV, or thermal damping in SQG or
+LQG. Note that $r \sim [T^{-1}]$: the drag coefficient has dimensions
+of an inverse time for all couplings $\alpha$.  For TDV with linear
+drag, \citet[p. 122]{Arbic00} proves that \eqref{kfkl:eq} must hold
+for all values of drag coefficient.
+
+If the time-averaged generalised energy (enstrophy) injection
+rate $g$ is known and $\alpha>0$ ($\alpha<0$), the equilibrated
+generalised energy (enstrophy) level can be calculated exactly.
+To see this, multiply \eqref{gen2dr:eq} by $-\psi$ ($-\xi$) and
+integrate over space to form the generalised energy (enstrophy)
+budget equation
+\begin{equation}
+\dot{A} = g - 2rA,
+\label{Atot:eq}
+\end{equation}
+where $g$ is the generation rate
+\begin{equation}
+g = \left\{
+    \begin{array}{ll}
+       -\overline{\psi F},   &  \alpha>0 \\
+       -\overline{\xi F},    &  \alpha<0.
+    \end{array}
+\right.
+\label{gdef:eq}
+\end{equation}
+In steady state
+\begin{equation}
+A = A_r = \frac{g}{2r},
+\label{Ar2:eq}
+\end{equation}
+thus we know in advance the total generalised energy (enstrophy) of
+the statistically steady flow for $\alpha>0$ ($\alpha<0$).  We have
+neglected the effects of small scale dissipation in the above
+calculation, but in the time-average, small scale dissipation simply
+decreases the net generation rate by a calculable amount.  This will
+be discussed further in the context of the numerical simulations.
+
+\subsection{Dimensional estimates of halting scale}
+\label{simpest:ssc}
+
+Using \eqref{TA:eq}, setting $T_A = r^{-1}$ and assuming
+$g=\epsilon$ gives an estimate for the halting scale
+\begin{equation}
+k_r \sim \left(r^3g^{-1}\right)^{{1 / [3(\gamma-1)]}}.
+\label{krdim:eq}
+\end{equation}
+For our three special cases this yields
+\begin{subequations}
+\begin{align}
+\textrm{TDV:} \qquad &k_r \sim \left(r^3g^{-1}\right)^{1/2} \\
+\textrm{SQG:} \qquad &k_r \sim \left(r^3g^{-1}\right)^{1/3} \\
+\textrm{LQG:} \qquad &k_r \sim \left(r^3g^{-1}\right)^{1/8}
+\end{align}
+\end{subequations}
+where $g$ is the injection rate of the appropriate upscale-cascading
+invariant.
+
+The expression \eqref{krdim:eq} is demanded by dimensional
+consistency, and so gives no indication of the value of any numerical
+prefactor.  One simple way to derive such a prefactor is to note that
+the integral of the energy spectrum \eqref{Aspec:eq} must be
+consistent with the total energy as given by \eqref{Ar2:eq}. That is,
+\begin{equation}
+\int_{k_r}^\infty \ca{C}\epsilon^{2/3}k^{-\gamma} \, dk = \frac{g}{2r},
+\label{krint:eq}
+\end{equation}
+where we have assumed that the energy content in the larger scales
+($k<k_r$) is negligible.  For $\gamma > 1 $ this gives
+\begin{equation}
+k_r \approx \left(\frac{2\ca{C}}{\gamma-1} \right)^{1/(\gamma-1)}
+\left(r^3g^{-1}\right)^{{1 / [3(\gamma-1)]}}.
+\label{krgen1:eq}
+\end{equation}
+which is identical to \eqref{krdim:eq}, except for the numerical
+coefficient involving the Kolmogorov constant. For TDV, this gives
+\begin{equation}
+k_r \approx \left({3\ca{C}} \right)^{3/2}
+\left(r^3g^{-1}\right)^{1/2}.
+\label{krtdv1:eq}
+\end{equation}
+\citet{danilov01a} independently proposed an identical scaling.  This
+coefficient is accurate only to the extent that the energy falls off
+very rapidly for wavenumbers smaller than $k_r$.
+
+\subsection{Spectral shapes}
+\label{univ:ssc}
+
+By making one additional assumption, we can derive an expression for
+the spectral shape that is putatively valid in the inertial range and
+in the range where friction begins to dominate.  The peak of this
+theoretical spectrum, derived in a manner similar to that of
+\citet{Leith68a} and \citet{Lilly72}, yields a better estimate for the
+stopping-scale prefactor than \eqref{krgen1:eq}. However, we only
+expect the theory to be relevant in parameter regimes such that the
+underlying inertial range is present and free of intermittency, and
+make no claim that the derived spectral shape is universal.
+
+The spectral budget equation for generalised energy (enstrophy) in
+mode $\kb$ for $\alpha>0$ ($\alpha<0$) is
+\begin{equation}
+\pp{A_{\kb}}{t} = \epsilon_{\kb} - 2rA_{\kb} + g\delta(k-k_f),
+\label{A:eq}
+\end{equation}
+where $A_{\kb} = |\psi_{\kb}|^2/2$ (or
+$\mathrm{Re}\left[\xi_{\kb}^{\star}\psi_{\kb}\right]/2$),
+$\epsilon_{\kb}$ is the transfer rate at $\kb$ arising from the real
+part of the product of $-\psi_{\kb}^{\star}$ and the spectral Jacobian
+term, and $g$ is the generalised energy (enstrophy) injection,
+localized at isotropic wavenumber $k_f$.  We assume a steady state, so
+that the time derivative vanishes, and isotropy so that $\kb$ can be
+replaced by $k$.  If the source term is at some high wavenumber $k_f
+\gg k_r$ then we may expect an inverse cascade initially unfettered by
+friction.  At smaller wavenumbers, the drag will remove energy from
+the flow, and, without further approximation, the spectral transfer is
+governed by the budget equation
+\begin{equation}
+\dd{\epsilon}{k} = 2r\ca{A}(k).
+\label{epsr:eq}
+\end{equation}
+That is, the energy flux is reduced by the frictional loss.
+
+We now assume that the spectrum \eqref{Aspec:eq} can be substituted
+for $\ca{A}(k)$, but let $\epsilon = \epsilon(k)$ therein. This is a
+perturbative solution for small drag-induced deviations from the
+inertial range flux.  Thus we expect the approximation to be valid in
+the spectral regions where drag is small and up to the scales where it
+begins to dominate, but not at the frictionally dominated, largest
+scales.  In this approximation \eqref{epsr:eq} becomes
+\begin{equation}
+\dd{\epsilon}{k} = 2r\ca{C}\epsilon^{2/3}k^{-\gamma}
+\label{epsr2:eq}
+\end{equation}
+which readily yields
+\begin{equation}
+\epsilon(k) = \left[\frac{2\ca{C}}{3(1-\gamma)}rk^{1-\gamma} +
+c\right]^3
+\label{epsr3:eq}
+\end{equation}
+where $c$ is the integration constant.  The transfer rate must be
+equal to the generation rate at the forcing scale, \ie
+\begin{equation}
+\epsilon(k_f) = g,
+\label{bc:eq}
+\end{equation}
+which we use to solve for the integration constant in
+\eqref{epsr3:eq}.  Using the solution for $c$, the flux is
+\begin{equation}
+\epsilon(k) =
+g~\left[1 - (k_c/k)^{\gamma-1} + (k_c/k_f)^{\gamma-1} \right]^3,
+\label{epsr4:eq}
+\end{equation}
+where
+\begin{equation}
+k_c =\left[\frac{2\ca{C}}{3(\gamma-1)}\right]^{1/(\gamma-1)}
+\left(r^3g^{-1}\right)^{1/[3(\gamma-1)]}.
+\label{kc:eq}
+\end{equation}
+Substituting this into \eqref{Aspec:eq} gives us an estimate for the
+spectrum of the invariant in the presence of linear drag
+\begin{equation}
+\ca{A}(k) = \ca{C}g^{2/3}k^{-\gamma}
+\left[1 - (k_c/k)^{(\gamma-1)} + (k_c/k_f)^{\gamma-1}\right]^2.
+\label{Arspec:eq}
+\end{equation}
+For TDV, the expression \eqref{Arspec:eq} in the limit $k_f
+\rightarrow \infty$ was derived by \citet{Lilly72}.  The reader
+may verify that the expression for $\ca{A}(k)$ satisfies
+\begin{equation}
+\int_{k_c}^{\infty}\ca{A}(k)\, dk = \frac{g}{2r}
+\label{Aint:eq}
+\end{equation}
+exactly.
+
+For $k_f\gg k_c$, the third term in brackets is small and can be
+neglected (but we shall retain it in our predictions for the simulated
+spectra).  For wavenumbers $k\gg k_c$, the second term in square
+brackets in \eqref{Arspec:eq} is also negligible and the spectrum
+reduces to \eqref{Aspec:eq}. For sufficiently small wavenumbers,
+$\epsilon(k)$ given by \eqref{epsr4:eq} is not positive. The critical
+wavenumber at which the spectral flux vanishes is $k=k_c$ (assuming
+$k_f\rightarrow\infty$), where $k_c$ is given by \eqref{kc:eq}. It is
+unphysical for $\ca{A}(k)$ to vanish identically at some finite
+$k$. The weakness of this derivation is just the use of the inertial
+range spectrum \eqref{Aspec:eq} in \eqref{epsr:eq}, an assumption we
+expect to be valid only if frictional effects are small perturbations
+on the inertial flow, as mentioned above.
+
+The predicted spectral shapes for the three cases we consider here are
+(assuming $k_f\rightarrow\infty$)
+\begin{subequations}
+\begin{alignat}{3}
+&\textrm{TDV:}
+\qquad \ca{E}(k) = \ca{C}g^{2/3}k^{-5/3}
+\left[1-(k_c/k)^{2/3}\right]^2,
+\qquad &k_c& = \ca{C}^{3/2}\left(r^3g^{-1}\right)^{1/2},
+ \label{Erspec2d:eq}\\
+&\textrm{SQG:}
+\qquad \ca{E}(k) = \ca{C}g^{2/3}k^{-2}
+\left[1-(k_c/k)\right]^2,
+\qquad &k_c& = \left(2\ca{C}/3\right)
+ \left(r^3g^{-1}\right)^{1/3},\label{Erspecsqg:eq}\\
+&\textrm{LQG:}
+\qquad \ca{Z}(k) = \ca{C}g^{2/3}k^{-11/3}
+\left[1-(k_c/k)^{8/3}\right]^2,
+\qquad &k_c& = \left(\ca{C}/4\right)^{3/8}
+ \left(r^3g^{-1}\right)^{1/8},\label{Erspeclqg:eq}
+\end{alignat}
+\end{subequations}
+where in each case the spectrum is valid for all $k>k_c$, and $\ca{C}$
+and $g$ are the Kolmogorov constant and injection rate, respectively,
+for the particular dynamics at hand.
+
+A quantitative estimate of the drag-induced halting scale can be made
+by calculating the location of the peak wavenumber $k_0 = k_r$ by
+setting
+\begin{equation}
+\left.\dd{\ca{A}(k)}{k}\right|_{k=k_r} = 0.
+\label{dAdk0:eq}
+\end{equation}
+This yields
+\begin{equation}
+k_r = \Gamma\left(r^3g^{-1}\right)^{1/[3(\gamma-1)]},~~~
+\Gamma = \left[\frac{2\ca{C}(3\gamma-2)}{3\gamma(\gamma-1)}
+\right]^{1/(\gamma-1)}.
+\label{krAtrue:eq}
+\end{equation}
+For our three cases, the drag-induced stopping scales expected
+are
+\begin{subequations}
+\begin{align}
+\textrm{TDV:}
+\qquad & k_r = \left(9\ca{C}/5\right)^{3/2}
+\left(r^3g^{-1}\right)^{1/2},\label{kr2d:eq}\\
+\textrm{SQG:}
+\qquad & k_r = \left(4\ca{C}/3\right)
+\left(r^3g^{-1}\right)^{1/3},\label{krsqg:eq}\\
+\textrm{LQG:}
+\qquad & k_r = \left(27\ca{C}/44\right)^{3/8}
+\left(r^3g^{-1}\right)^{1/8}.\label{krlqg:eq}
+\end{align}
+\end{subequations}
+
+As in \eqref{krtdv1:eq}, the prefactor $\Gamma$ in each case is not
+necessarily an order unity quantity. In the case of energy in TDV
+turbulence, for example, using the estimate $\ca{C} = 5.8$
+\citep{Maltrud91} yields $\Gamma = (9\ca{C}/5)^{3/2} = 33.7$. Using
+\eqref{krtdv1:eq} gives $72.6$, the larger number being consistent with the
+assumption that energy is strictly zero for wavenumbers smaller than $k_r$.
+Our numerical results (discussed in \S \ref{numerics:sec}) are consistent
+with these estimates; that is, the strictly dimensional estimate $k_r =
+(r^3/g)^{1/2}$ is more than an order of magnitude smaller than the actual
+wavenumber at which the cascade is halted.  The large value of $\Gamma$
+indicates that, in the presence of drag, TDV turbulence is more inefficient
+at moving energy to larger scales than one might expect from dimensional
+estimates alone.
+
+
+\section{Mean vorticity gradients:  the $\beta$-effect}
+\label{beta:sec}
+
+In two-dimensional vorticity dynamics, a meridional gradient of
+planetary vorticity may be represented by the $\beta$-effect. In
+SQG, a meridional gradient of temperature gives rise to a similar
+term in the equation of motion. Including such effects in
+\eqref{gen2dr:eq}, we write
+\begin{equation}
+\pp{\xi}{t} + J(\psi,\xi) +\beta\pp{\psi}{x} = F-r\xi,
+\label{gen2drb:eq}
+\end{equation}
+where we use the symbol $\beta$ for the constant mean gradient of
+$\xi$ with units $\beta \sim [L^{1-\alpha}T^{-1}]$.  Because $\beta$
+introduces anisotropy into the dynamics \citep{Rhines75,Vallis93a},
+the halting scale, if present, will be anisotropic as well. However,
+the dual presence of $\beta$ and $r$ introduces complexities to the
+dynamics which, even for TDV, have only recently come to be
+appreciated
+\citep{chekhlov96,manfroi99,smithwaleffe99,huang01,galperin01,danilov01b}. The
+mean vorticity gradient admits a possible tri-partite balance in the
+equation of motion between non-linear advection, advection of the mean
+gradient (and thereby possible wave propagation) and dissipation.
+
+We direct the discussion here to the two cases with $\alpha>0$: TDV
+and SQG.  The $\beta$ term as defined in \eqref{gen2drb:eq} physically
+represents the Coriolis gradient in TDV, and a mean temperature
+gradient in SQG, but has no obvious physical interpretation for
+LQG\footnote{Keeping the same definition of $\beta$ as in TDV, we
+obtain a term of the form $\beta\partial{\xi}/\partial{x}$ added to
+the left hand side of \eqref{lqg3:eq}. The dispersion relation is the
+same as that for equivalent barotropic Rossby waves at large scales,
+namely \(\omega_{R,LQG} = -k_x\beta/\lambda^2.\) The frequency goes
+linearly to zero rather than diverging at large scale, hence it is not
+clear that $\beta$ can halt the cascade in this case.}.
+
+\subsection{Waves, turbulence and drag}
+
+The first significant scale for these flows is determined by the
+balance between non-linear advection and advection of the mean
+gradient.  Ignoring drag for the moment, Rossby waves in the
+generalised two-dimensional formalism will have the dispersion
+relation
+\begin{equation}
+\omega_R = -\frac{k_x\beta}{k^{\alpha}}.
+\label{rossby:eq}
+\end{equation}
+Following \citet*{Vallis93a} we set this equal to the eddy strain rate
+(the inverse of \ref{TA:eq}) to find the boundary between
+$\beta$-dominated and isotropic flow,
+\begin{equation}
+k(\theta) = k_{\beta}~(\cos \theta)^{1/(\alpha+\gamma-2)}
+\label{wtbound:eq}
+\end{equation}
+where
+\begin{equation}
+k_{\beta} = (\ca{C}^{-1/2}\beta\epsilon^{-1/3})
+^{1/(\alpha+\gamma-2)}.
+\label{kbeta1:eq}
+\end{equation}
+Note that in the case of energy in TDV dynamics
+($\alpha=2$ and $\gamma=5/3$), expression \eqref{kbeta1:eq} becomes
+\begin{equation}
+k_{\beta} \simeq \left(\frac{\beta^3}{\ca{C}^{3/2}\epsilon}\right)^{1/5},
+\label{kbetavm:eq}
+\end{equation}
+a form similar to that of \citet*{Vallis93a}, apart from the
+nondimensional factors in the denominator (which we keep for later
+use).
+
+The relation \eqref{wtbound:eq} specifies a parametric relationship
+between the modulus of wavenumber $k$ and the wave direction $\theta =
+\arctan(k_y/k_x)$ having the shape of a dumbbell in the $(k_x,k_y)$
+plane and having a maximum at $\theta=0$ (along the $k_x$ axis).  Thus
+for $\beta$ such that $k_{\beta}\ll k_f$, we expect an isotropic
+inverse cascade up to $k_{\beta}$, and anisotropic flow at wavenumbers
+below $k_{\beta}$, rather than a simple halting of the inverse cascade
+at $k_{\beta}$.  Because weakly non-linear wave interaction typical of
+anisotropic flows is not as efficient as isotropic turbulence at
+cascading the invariant, we expect this boundary to be significant
+also in the spectral distribution of energy.  Along the $k_y$ axis,
+\eqref{wtbound:eq} gives $k(\theta=\pi/2)=0$.  There is evidence
+\citep{Vallis93b,chekhlov96,smithwaleffe99, huang01} that energy (in
+TDV flow on the torus or sphere) will continue to cascade to larger
+scale past $k_{\beta}$, but with most of the energy concentrated along
+the $k_y$ axis.
+
+When drag is present, and the drag coefficient $r$ is sufficiently
+large, a balance can be reached between dissipation and non-linear
+advection at scales smaller than those at which $\beta$ becomes
+important, and the cascade is then halted isotropically.  A critical
+value exists for $r$, separating the isotropic steady state flow from
+one in which anisotropy is allowed to develop.  This critical value of
+$r$ is found by setting $k_r = k_{\beta}$, using \eqref{krAtrue:eq}
+and \eqref{kbeta1:eq}, yielding
+\begin{equation}
+r_c = \Gamma^{1-\gamma}g^{(1-\alpha)/[3(2-\gamma-\alpha)]}
+(\ca{C}^{-1/2}\beta)^{(1-\gamma)/(2-\gamma-\alpha)}
+\label{rcrit:eq}
+\end{equation}
+In the TDV case with $\alpha=2$ and $\gamma=5/3$ this expression gives
+\begin{equation}
+r_{c,\alpha=2} = \frac{5}{9\ca{C}}(\beta^2g)^{1/5}.
+\label{rcrit2d:eq}
+\end{equation}
+In the rest of this discussion, we will assume that $r<r_c$, so that
+an anisotropic, large-scale spectrum should ensue.  It then remains to
+determine the largest scale to which this anisotropic spectrum
+extends, and expecting this scale to depend on both $\beta$ and $r$,
+we denote it $k_{\beta,r}$.
+
+\subsection{Estimates of the halting scale with $\beta$ and drag present}
+
+For clarity of presentation we focus on TDV, and then discuss how it
+may be adapted to generalised two-dimensional turbulence.  In the
+small drag limit ($r \ll r_c$) we seek an estimate for the halting
+scale $k_{\beta,r}$, that is for the scale at which the maximum energy
+is found.  Because in anisotropic turbulence most of the energy goes
+into zonal jets it is not surprising that this estimate will be
+particularly apt as an estimate for the separation scale of the jets
+themselves.  Our argument has two components: (i) the forcing and
+dissipation set the rms velocity; (ii) using this in conjunction with
+the $\beta$-effect provides an estimate of the halting scale.  We
+shall see that despite the jet scale being the most energetic scale,
+it is the inviscid scale \eqref{kbeta1:eq} that characterises the
+meridional transport of passive tracer.
+
+If one assumes that, at scales where $\beta$ is important but where
+drag is not yet significant ($k_{\beta,r}<k<k_{\beta}$), the spectral
+slope is a function only of $\beta$ and wavenumber, then dimensional
+analysis leads to the expression
+\begin{equation}
+\label{rossbyspecB:eq}
+\ca{E}_\beta(k) = \ca{C}_{\beta} \beta^2 k^{-5},
+\end{equation}
+as pointed out by \citet{Rhines75}.  Obviously, though, the spectrum
+cannot be isotropic, since it is derived specifically in the region
+where anisotropy is present.  Our simulations, as well as those of
+\citet{galperin01} and others cited above, demonstrate that at scales
+$k_{\beta,r}<k<k_{\beta}$, energy is concentrated along the $k_x=0$
+axis, but does roughly follow a $k^{-5}$ power law.
+\citet{chekhlov96} point out that energy continues to follow a
+$k^{-5/3}$ power law for all wavenumbers $k_{\beta,r}<k<k_{\beta}$
+with $k_x \neq 0$, but that implies that modes with $k_x \neq 0$
+contribute negligibly to the total spectrum at large scale.
+
+\mbox{} \citet{smithwaleffe99} discuss the subtleties of the transfer from the
+two-dimensional isotropic cascade to the one-dimensional ``cascade''
+along the zonal axis.  If the energy is concentrated on the $k_x=0$
+axis, precisely where the $\beta$ term in \eqref{gen2drb:eq} vanishes,
+then the dependence on $\beta$ of \eqref{rossbyspecB:eq} is
+unexpected.  A dependence on $\beta$ might arise if resonant nonlinear
+triad interactions among Rossby waves were responsible for the
+transfer to zonal flow, but these are unable to transfer energy from
+isotropic two-dimensional motions to modes with $k_x =
+0$. \citet{smithwaleffe99} argue that it is necessary to invoke
+quartic resonances or near resonances to explain these transfers and
+still maintain a $\beta$ dependence in the
+spectrum. \citet{chekhlov96} make similar points.  \citet{danilov01b}
+point out that in fact the zonal energy is not distributed as a
+uniform spectrum, but rather as a series of peaks whose amplitudes
+increase roughly like $k^{-5}$, and provide a preliminary explanation
+for the observed wavenumber dependence.  Given all of the above, we
+will take the appearance of such a $-5$ spectrum (or wavenumber
+dependence of the spectral peaks) as an empirical observation with a
+rather weak theoretical or phenomenological justification.
+
+Thus, we will suppose an isotropic $k^{-5/3}$ spectra at scales
+$k_{\beta}<k<k_f$, an anisotropic $k^{-5}$ spectral distribution, with most
+energy concentrated along the zonal axis, at scales
+$k_{\beta,r}<k<k_{\beta}$, and negligible energy at $k<k_{\beta,r}$. That
+is,
+\begin{equation}
+\ca{E}(k) \simeq
+\left\{\begin{array}{ll}
+    \ca{C}\epsilon^{2/3}k^{-5/3},  &\mbox{$k_{\beta}<k<k_f$}   \\
+    \ca{C}_{\beta} \beta^2 k^{-5}, &\mbox{$k_{\beta,r}<k<k_{\beta}$,
+                                          ~$k_x=0$}\\
+    0,                             &\mbox{$k<k_{\beta,r}$}.
+\end{array}
+\right.
+\label{betaspectot:eq}
+\end{equation}
+
+We use this phenomenological picture to determine $k_{\beta,r}$.  Note
+that even in the presence of $\beta$, \eqref{Atot:eq} remains valid,
+so that the total energy is $E = g/2r$. This constraint determines the
+lowest wavenumber which the inverse cascade may reach, just as in
+\eqref{krgen1:eq}.  Specifically, using \eqref{betaspectot:eq} we set
+\begin{equation}
+\int_{k_{\beta,r}}^{\infty} \ca{E}(k) \, dk \simeq \frac{g}{2r}.
+\label{intAros:eq}
+\end{equation}
+Because the spectra are so steep in the Rossby wave regime, the
+integral is dominated by contributions from its peak at the low
+wavenumber end, giving
+\begin{equation}
+k_{\beta,r} \simeq \left(\frac{\ca{C}_{\beta}\beta^2r}{2g}\right)^{1/4}.
+\label{kbr:eq}
+\end{equation}
+
+A simpler derivation results if we begin with the
+familiar expression for the stopping scale \citep{Rhines75}
+\begin{equation}
+k_{\beta,r} = \left(\beta U_{\rms}^{-1}\right)^{1/2}
+\label{rh75:eq}
+\end{equation}
+But from \eqref{Ar2:eq} $U_{\rms} = (g/r)^{1/2}$ (where we have also
+assumed that $U_{\rms}\gg V_{\rms}$), and substituting this into
+\eqref{rh75:eq} we obtain \eqref{kbr:eq}, albeit without the numerical
+constant. Note that \eqref{rh75:eq} is an estimate for a marginally
+barotropically unstable jet.
+
+\mbox{} \citet*{manfroi99} predict a jet-separation scale pro\-por\-tion\-al
+to $r^{-1/3}$, or equi\-va\-lent\-ly, $k_{\beta,r} \propto r^{1/3}$.
+Distinguishing between $r^{-1/3}$ and $r^{-1/4}$ (the latter from our
+\eqref{kbr:eq}) is difficult numerically due both to the small difference
+in exponent and to the slow equilibration of the flow in this parameter
+regime.
+
+We can formally derive an anisotropic wave spectrum in the general
+case assuming a balance between the wave frequency \eqref{rossby:eq}
+and the inverse of the eddy timescale of \eqref{TA:eq}. The wave
+spectrum in this case is
+\begin{equation}
+\ca{A}_{\beta}(k) = \ca{C}_{\beta} \beta^2 k^{4-2\alpha-3\gamma},
+\label{rossbyspecA:eq}
+\end{equation}
+which reduces to \eqref{rossbyspecB:eq} in the inverse cascade of
+TDV. In SQG we find a $k^{-4}$ spectrum in the Rossby
+wave regime, also significantly steeper than the isotropic spectrum of
+$k^{-2}$ relevant in that case.
+
+The result analogous to \eqref{kbr:eq} for the general case is
+\begin{equation}
+k_{\beta,r} \simeq \left[\frac{2\ca{C}_{\beta}\beta^2r}
+{(2\alpha+3\gamma-5)g}\right]^{1/(2\alpha+3\gamma-5)}
+\label{kbrA:eq}
+\end{equation}
+The simple argument using the analog of \eqref{rh75:eq} is not always
+possible in the generalised case, because the integral constraint
+corresponding to \eqref{Atot:eq} does not always give a value for the
+rms velocity. For example, in SQG, the generalised energy
+$E=\overline{\psi\xi}/2$ is not a velocity squared. Rather, it is the
+generalised enstrophy that has units of velocity squared, but its value
+is not constrained solely by the forcing and the drag.
+
+Which of the scales \eqref{kbetavm:eq} and \eqref{kbr:eq} (or
+\eqref{kbeta1:eq} and \eqref{kbrA:eq} in the general case) is relevant
+for the meridional transport of a passive tracer? The scale
+\eqref{kbr:eq} determines a jet scale, with vanishing meridional
+velocity. \citet{Bartello91} demonstrate that at the jet scale, zonal
+advection so dominates meridional advection that little meridional
+mixing occurs.  We thus expect the scale \eqref{kbetavm:eq}, the
+largest scale of \textit{isotropic} turbulence, to act as a mixing
+length, and explore this further in \S \ref{numerics:sec}.
+\citet{Held96} utilized the scaling \eqref{kbetavm:eq}, without the
+numerical prefactor, as a mixing length in their theory for turbulent
+quasi-geostrophic heat fluxes.
+
+\section{Numerical examinations of diffusivity scalings}
+\label{numerics:sec}
+
+We now describe sets of numerical simulations designed to test the
+diffusivity predictions for TDV, SQG and LQG with linear drag.  We
+also test TDV with linear drag and $\beta$.  Mixing lengths for each
+case have been derived in the previous two sections, but velocity
+scales have not --- both are required for estimates of diffusivity
+given by \eqref{diff:eq}.  It is difficult to generalise the
+calculation of velocity variance among the various cases, so we
+consider this detail, and the predictions for the diffusivities
+themselves, in the context of each case separately.
+
+All simulations were performed using a two-dimensional de-aliased
+spectral model with $512^2$ equivalent horizontal gridpoints
+($k_{\mathrm{max}}/k_{\mathrm{min}} = 255$). A leap-frog timestep is
+used to advance the solution, and a weak Robert filter suppresses the
+computational mode.  In each case, a passive tracer is advected along
+with the calculated flow.  The flow is forced with an isotropic
+forcing at high wavenumber, typically about $k_f/k_{\mathrm{min}} =
+160$.  The magnitude of the generation rate is fixed at $g=1$, less
+some due to small-scale dissipation (see appendix B for details of the
+forcing function).
+
+Small scale variance in both the generalised vorticity field (\ie
+enstrophy) and in the tracer field are dissipated with a highly
+scale-selective exponential cutoff filter (\ref{fec:eq} and
+\ref{a:eq}) with vanishing dissipation below a cutoff wavenumber
+$k_{\mathrm{cut}}$.  For all simulations presented here,
+$k_{\mathrm{cut}}/k_{\mathrm{min}}=165$ for the advecting flow and
+$k_{\mathrm{cut}}/k_{\mathrm{min}}=1$ for the tracer.  The exponent
+$s$ in \eqref{fec:eq} is $s=8$ for the advecting flow and $s=2$ for
+the tracer.  For the advecting flow, $k_{\mathrm{cut}}$ is just larger
+than the forcing scale and is the scale at which we begin to allow
+small-scale dissipation --- traditional hyperviscosity, by contrast,
+dissipates at all scales. The dissipation level does not become
+significant until near the maximum wavenumber in the computational
+domain.  Thus, while we focus here on maintaining as wide an inverse
+cascade range as possible, we have allowed a reasonable direct cascade
+for wavenumbers $k>k_f$.  The small-scale dissipation, despite its
+presence only at $k>k_f$, removes some of the upscale-cascading
+invariant.  We calculate this loss and use it to define a
+$g_{\mathrm{eff}} < g = 1$ ($g_{\mathrm{eff}} \simeq .5$ for all the
+simulations --- see appendix B).
+
+In each of the following sections, we state values as
+non-dimensionalized using a length given by the inverse forcing
+scale $L = k_f^{-1}$ and a time given by a combination of the
+generation rate $g$ and forcing scale.  The former has units
+\[
+g \sim \left[L^{3(\gamma-1)}T^{-3}\right],
+\]
+so that a nondimensional measure of the time is
+\begin{equation}
+T = \left[g k_f^{3(\gamma-1)}\right]^{-1/3}.
+\label{Tdim:eq}
+\end{equation}
+All values with a $\star$ superscript have been
+non-dimensionalized by these scales.
+
+For each dynamical case considered, a series of simulations was
+performed.   Each simulation described is run several eddy
+turnover times after a statistically steady state is achieved;
+averages are taken over the equilibrated phase of a given run.
+Each simulation was performed with a different drag coefficient,
+the values of which were chosen such that the halting scales were
+large compared to the forcing scale, but not too close to the
+domain scale.
+
+\subsection{Two-dimensional vorticity flow with linear drag}
+\label{tdv_exp:ssc}
+
+We begin with the straightforward case of two-dimensional
+vorticity dynamics dissipated by linear drag, namely equations
+\eqref{gen2dr:eq} and \eqref{coupling:eq} with $\alpha=2$.  In
+this case $E$ cascades upscale with spectral slope
+$\gamma=5/3$.  Five simulations were performed in which the drag
+was set to
+\[
+r^{\star} = r~\left(gk_f^2\right)^{-1/3}
+=(0.86, 1.5, 2.4, 3.7, 6.0)\times 10^{-2}.
+\]
+
+We predict a spectral shape given by \eqref{Erspec2d:eq} and a
+spectral peak given by \eqref{kr2d:eq}.  Since the total energy,
+according to \eqref{Ar2:eq}, is
+$E=g/2r=(U_{\rms}^2+V_{\rms}^2)/2\simeq V_{\rms}^2$ (assuming
+isotropy), the integrated (rms) meridional velocity $V_{\rms}$ is
+\begin{equation}
+V_{\rms} = \left(\frac{g}{2r}\right)^{1/2}.
+\label{V2d:eq}
+\end{equation}
+Using \eqref{diff:eq}, \eqref{kr2d:eq} and \eqref{V2d:eq}, we
+estimate the eddy diffusivity, or integrated tracer flux, to be
+\begin{equation}
+D \simeq
+\left[\left(\frac{5}{9\ca{C}}\right)^3\frac{1}{2}\right]^{1/2}gr^{-2}.
+\label{diff2dr:eq}
+\end{equation}
+We use $\ca{C}=6$ in numerical estimates.
+
+Figure \ref{tdv:fig} shows the spectra of the energy, tracer variance
+and tracer flux, as well as the stopping scales, rms velocities and
+diffusivities for each simulation, along with their respective
+predictions.  The halting scale $k_0$ is predicted by \eqref{kr2d:eq}
+with some accuracy.  [A similar result is inferred from the soap-film
+experiments of \citet{Rivera00}.]  However, the amplitude of the
+predicted spectrum \eqref{Erspec2d:eq} falls off much more rapidly
+than the experimental spectrum at small wavenumbers; the predicted
+spectrum evidently fails when drag is dominant.  Consistently, the
+largest overall discrepancy between theory and simulation occurs for
+the simulation with the highest drag, in which case the magnitude of
+the predicted spectrum falls well below that obtained numerically.
+Neither fact is surprising, since the theoretical spectrum is derived
+under the assumption of significant separation between the drag and
+forcing scales, and is formally valid only where deviations from
+constant $\epsilon$ are small, which is not true at small wavenumbers.
+Both the tracer variance and flux spectra have slopes close to $-5/3$,
+as predicted by \eqref{PE:eq} and \eqref{Dspec:eq}, respectively.
+
+The physical-space streamfunction and tracer fields for the run with
+the lowest drag are shown in the upper two panels of figure
+\ref{phys:fig}. Streamfunction, rather than vorticity, is plotted
+since the latter is dominated by noise from the random forcing field.
+The large-scale flow represented in the streamfunction is nearly
+structureless, but with undulations whose scale represents that of the
+spectral peak. The absence of coherent vortices in the flow is
+consistent with the good fit of the theory for the spectrum in figure
+\ref{tdv:fig}(a).  The tracer field, plotted with its mean gradient,
+is composed of meridionally-oriented plumes, with a characteristic
+scale similar to that of the streamfunction.  (The presence of fronts,
+and ``sheets'' in the passive tracer field has been investigated by
+\citet{constantin94}. %, and more recently by \citet{celani01}.
+% Personally, I'd also remove the constantin reference. 
+
+\subsection{Surface quasi-geostrophic flow}
+\label{sqg_exp:ssc}
+
+We now present simulations of SQG flow with linear drag, \ie equations
+\eqref{gen2dr:eq} and \eqref{coupling:eq} with $\alpha=1$.  Since
+$\alpha>0$, the upscale cascading invariant has a spectral slope
+$\gamma=2$.  Five simulations were performed, differing only in the
+magnitude of drag, whose value was set to
+\[
+r^{\star} = r\left(gk_f^3\right)^{-1/3}
+=(0.18,0.35,0.72,1.4,2.9)\times 10^{-2},
+\]
+respectively.
+
+The spectral shape and peak are predicted by \eqref{Erspecsqg:eq} and
+\eqref{krsqg:eq}, respectively.  Estimating the velocity in this case
+is less straightforward.  As defined in section \ref{spectra:sec}, for
+$\alpha=1$, the invariants of the flow have units $E\sim[L^3T^{-2}]$
+and $Z\sim[L^2T^{-2}]$, thus in this case $Z$ has the dimensions of
+energy (physically it is the temperature variance, or available
+potential energy).  In SQG then, the rms velocity of the flow is
+related to the generalised enstrophy as $Z=V_{\rms}^2$ (assuming
+isotropy).  Ignoring drag for the moment, in the inverse cascade range
+$Z$ has the spectrum
+\begin{equation}
+\ca{Z}(k) = \ca{C}_E\epsilon_E^{2/3}k^{-1}.
+\label{Zsqg:eq}
+\end{equation}
+The integral of this spectrum diverges logarithmically, and we must
+explicitly include the forcing scale
+\begin{equation}
+Z \simeq \int_{k_c}^{k_f}\ca{Z}(k)\, dk,
+\label{Zsqg2:eq}
+\end{equation}
+where $k_c$ is as given by \eqref{Erspecsqg:eq}.  We thus obtain our
+estimate of the rms meridional velocity scale
+\begin{equation}
+V_{\rms} = \left[\ca{C}_Eg^{2/3}\ln\left(k_f/k_c\right)\right]^{1/2},
+\label{Vsqg:eq}
+\end{equation}
+where we have taken $g=\epsilon_E$.
+
+Using \eqref{diff:eq}, \eqref{krsqg:eq} and \eqref{Vsqg:eq}, we
+estimate the eddy diffusivity, or integrated tracer flux, to be
+\begin{equation}
+D \simeq
+\left(g^{2/3}r^{-1}\right)
+\left[\frac{9}{16\ca{C}_E}\ln\left(k_f/k_c\right)\right]^{1/2}.
+\label{diffsqg:eq}
+\end{equation}
+
+The spectra of $\ca{E}(k)$, the tracer variance and tracer flux, as
+well as the stopping scales, rms velocities and diffusivities, and
+their respective theoretical predictions, are plotted in figure
+\ref{sqg:fig}.  The predictions for the spectral shapes in the upper
+left panel are noticeably less accurate than were the analogous curves
+for TDV in the previous section.  In particular, the spectra are more
+shallow than the expected $-2$ slope, even at scales which fall well
+inside the inverse cascade inertial range.  One might attribute this
+deviation from the expected slope to intermittency caused by the
+formation and persistence of coherent vortices in the flow.  Indeed,
+we see evidence for such structures, but in this case one would expect
+the spectral slope to be steeper than its inertia range theory
+prediction, when in fact it is somewhat more shallow.  We offer no
+explanation for this behavior presently.
+
+We estimate the Kolmogorov constant such that the closest possible fit
+was achieved for all five cases, resulting in the value $\ca{C} =
+7.9$.  Despite the poor fits, the simulated stopping scales are fairly
+well predicted by the peaks of the theoretical spectral shapes.  Both
+tracer variance and flux have the expected slopes $-2$.  Furthermore,
+despite the problematic dependence of the rms velocity on the forcing
+scale in \eqref{Vsqg:eq}, the predictions made thereby are relatively
+accurate.  The kinks in the theoretical curves for the velocities and
+diffusivities are due to the fact that the effective generation rate
+$g_{\mathrm{eff}}$ changed somewhat from one run to the next (see
+appendix B).  The diffusivity scales as anticipated, but is
+overestimated in magnitude by about a factor of 2.
+
+The physical-space streamfunction and tracer fields for the run with
+the lowest drag are shown in the middle two panels of figure
+\ref{phys:fig}.  The structures of the flow and tracer are similar to
+those for TDV, but with a higher degree of localisation in the
+streamfunction field, due to the presence of some small-scale coherent
+vortices in the flow.  We nevertheless see patterns in the tracer
+field similar to those found for TDV flow in the previous subsection.
+
+\subsection{Large-scale quasi-geostrophic flow}
+\label{lqg_exp:ssc}
+
+Here we consider the case \eqref{gen2dr:eq} with $\alpha=-2$, termed
+LQG.  We actually integrate the shallow water quasi-geostrophic
+equation
+\begin{equation}
+\pp{q}{t} + J(\psi,q) = F - rq, ~~~ q = (\del^2 - \lambda^2)\psi
+\label{qgswr:eq}
+\end{equation}
+with $\lambda/k_{\mathrm{min}}=70$, or $\lambda/k_f = 0.44$ so
+that at small wavenumbers the dynamics should be described by
+\eqref{gen2dr:eq} with $\alpha=-2$.  By integrating
+\eqref{qgswr:eq} one may see the transition from QG to LQG near
+scales just larger than the deformation scale (a similar approach
+was used by \citet{kukharkin95}).
+
+In the LQG regime ($k\ll\lambda$), the generalised energy and
+enstrophy are in fact the kinetic energy (KE) and available potential
+energy (APE), respectively.  One can see this by using the variable
+change \eqref{lqgvar:eq} in the general expressions for the
+invariants \eqref{invar:eq}, which yields
+\begin{equation}
+E_G = \frac{1}{2}\overline{\Psi\xi} =
+\frac{1}{2}\sum_{\kb}k^2|\psi_{\kb}|^2 = KE,
+\label{lqgE:eq}
+\end{equation}
+and
+\begin{equation}
+Z_G = \frac{1}{2}\overline{\xi^2} =
+\frac{1}{2}\sum_{\kb}|\psi_{\kb}|^2 = APE/\lambda^2.
+\label{lqgZ:eq}
+\end{equation}
+
+Since $\alpha < 0$, the generalised enstrophy, or APE, cascades
+upscale, while the generalised energy, or KE, cascades toward small
+scales.  Because we have chosen the deformation wavenumber
+$\lambda<k_f$, we expect a transition from the TDV-like inverse
+cascade at scales such that $k\gg\lambda$ to the LQG inverse cascade
+at scales $k\ll\lambda$.  Furthermore, there will be no direct cascade
+range for LQG in this arrangement, since the forcing scale is at
+smaller scale than the transition region.
+
+In the LQG regime, from \eqref{gam:eq}, $\alpha = -2$ implies that
+for $Z$ (the APE) the spectral slope is $\gamma=11/3$.  But since
+$\ca{Z}_{\mathrm{LQG}}(k) = |\psi^2|$, the spectral slope of the
+kinetic energy $\ca{E}_{\mathrm{LQG}}(k) = k^2|\psi^2|$ is
+$-5/3$, just as it is for $k^2|\psi^2|$ in the TDV regime.  Thus
+we expect \textit{no change in slope} of $k^2|\psi^2|$ as we
+transit from TDV to LQG, but possibly a kink in the spectrum
+due to a possible change in the Kolmogorov constant.
+
+In figure \ref{lqg_spec:fig} we have plotted the spectrum of
+$\ca{Z}(k)$ for the run with the smallest drag, along with the
+theoretical prediction described below.  Notice that at scales just
+larger than the deformation scale (indicated by the arrow), the
+spectrum slumps but maintains a similar slope, rising slightly near
+the spectral peak.  Because of the limited extent of the inertial
+range, an accurate determination of the appropriate Kolmogorov
+constant is not possible, and we use the value from TDV, $\ca{C}= 6$.
+
+We expect the spectrum of generalised enstrophy to follow
+\eqref{Erspeclqg:eq} and the peak of this spectrum to be given by
+\eqref{krlqg:eq}.  These expressions refer to the LQG formalism
+as derived in \S \ref{spectra:sec}, in which $g$ is the
+generation rate of the generalised enstrophy.  Dimensionally $g
+\sim [L^8\tau^{-3}]$, where $\tau$ is the rescaled time
+coordinate (see equation \ref{tau:eq}).  Thus in terms of
+unscaled time, $\tilde{g} = \lambda^6g$, hence
+\begin{equation}
+k_c = \left(\ca{C}/4\right)^{3/8}
+\left(r^3\lambda^6\tilde{g}^{-1}\right)^{1/8},
+\label{kclqg:eq}
+\end{equation}
+and
+\begin{equation}
+k_r = \left(27\ca{C}/44\right)^{3/8}
+\left(r^3\lambda^6\tilde{g}^{-1}\right)^{1/8},
+\label{kr2lqg:eq}
+\end{equation}
+where $\tilde{g}$ is the familiar energy generation rate (the rate we
+set to unity in the numerical model).  Since the spectral density has
+units $\ca{Z} \sim [L^9\tau^{-2}]$, we can also define a spectral
+density in unscaled time, $\tilde{\ca{Z}} = \lambda^4\ca{Z}$.  But
+$\tilde{g}^{2/3} = \lambda^{4}g^{2/3}$ as well, so that the factors of
+$\lambda$ in the unscaled spectra only appear inside the expression
+for $k_c$ and $k_r$.  Finally, though, $\ca{Z}$ is a spectrum of
+$|\psi|^2/2$, so the APE spectrum is expected to be
+\begin{equation}
+\ca{APE}(k) = \ca{C}\lambda^2\tilde{g}^{2/3}k^{-11/3}
+\left[1-\left(k_c/k\right)^{8/3}\right]^2,
+\label{APEspeclqg:eq}
+\end{equation}
+with $k_c$ given by \eqref{kclqg:eq}.
+
+From \eqref{lqgE:eq}, the spectrum of kinetic energy is the
+spectrum of $\ca{E}(k) = k^2\ca{Z}(k)$, so the total KE can be
+estimated
+\begin{equation}
+KE = \int_{k_r}^{\infty}k^2\ca{Z}(k)\, dk
+\label{KElqg:eq}
+\end{equation}
+The rms eddy meridional velocity $V_{\rms}^2 = KE$ (assuming isotropy)
+is thus predicted to be
+\begin{equation}
+V_{\rms}\simeq \left(\frac{33 C^3}{4}\frac{\tilde{g}^3}{r\lambda^2}\right)^{1/8}
+\label{Vlqg:eq}
+\end{equation}
+Following \eqref{diff:eq} the diffusivity of the tracer is then
+\begin{equation}
+D \simeq \left(\frac{22}{9}\frac{\tilde{g}}{r\lambda^{2}}\right)^{1/2}.
+\label{Dlqg:eq}
+\end{equation}
+
+Four simulations were performed, differing only in the value of the
+linear drag coefficient.  The nondimensional values used were
+\[
+r^{\star}
+= r~\left(gk_f^8\right)^{-1/3}
+= r\lambda^2\left(\tilde{g}k_f^8\right)^{-1/3}
+=(0.035, 0.23, 1.4, 8.9)\times 10^{-3}.
+\]
+The spectra of APE, tracer variance and tracer flux, and the
+stopping scales, rms velocities and diffusivities, along with
+their respective theoretical predictions, are plotted in figure
+\ref{lqg:fig}.  At the largest scales, under which the
+assumptions used to derive LQG are most accurate, our theory
+predicts the spectral shape quite well.  The tracer spectra are
+more complicated, but still roughly follow their expected slopes
+of $-5/3$ (see discussion of LQG tracer in \S \ref{tracer:sec}).
+In the case with the smallest drag, the tracer flux spectrum is
+actually \textit{negative} in the transition region $k \lesssim
+\lambda$, but we offer no explanation for this behaviour. The
+stopping scales and rms velocities are also predicted somewhat
+successfully by our theory.  Moreover, the divergence of
+simulation from theory is very slight, even when the stopping
+scale is on order the deformation scale. The theoretical
+prediction for the diffusivity scales like the simulations, but
+exceeds the simulated diffusivities by about a factor of 2. Also
+shown (the dashed line in the lower right panel of figure
+\ref{lqg:fig}) is the prediction for the diffusivity from TDV
+with linear drag, which behaves nothing like the simulated
+diffusivities.
+
+The physical-space streamfunction and tracer fields for the run with
+the lowest drag are shown in the bottom two panels of figure
+\ref{phys:fig}.  The streamfunction is quasi-crystalline in structure,
+and populated by deformation-scale vortices, as predicted by
+\citet{kukharkin95}.  This effect would presumably not be present had
+we simulated the strictly defined LQG equation rather than the shallow
+water quasi-geostrophic equations.  Despite the predominance of
+small-scale ordered structures in the streamfunction, and the
+intermittency one would presume to accompany their presence, the
+spectrum is well-predicted by the inertial range theory modified for
+linear drag.  Moreover, and perhaps more surprisingly, the tracer
+field is dominated by smooth plume-like structures whose
+characteristic scale is the \textit{energy-containing} scale
+associated with the APE, rather than the deformation scale which
+strikes the eye in the physical-space image of the streamfunction.
+
+There is a wealth of phenomena in these simulations which require
+further research to understand.  The key point of the present
+investigation, however, has been to determine the scale responsible
+for the mixing of a tracer.
+
+\subsection{Two-dimensional vorticity flow with linear drag and $\beta$}
+\label{tdvbr_exp:ssc}
+
+Lastly, we present the results of simulations of \eqref{gen2drb:eq}
+with $\alpha=2$.  We have no prediction for the spectral shapes in
+this case, since we cannot derive a flux equation similar to
+\eqref{epsr:eq} when $\beta$ is present, but we do predict the jet
+scale, mixing length and rms velocity at the mixing scale (derived
+below). Note that now we have two independent parameters to consider:
+$\beta$ and $r$.
+
+In order to see the effects of $\beta$, drag must be set such that
+$r\lesssim r_c$, where $r_c$ is defined by \eqref{rcrit2d:eq}.  In the
+simulations described here $\beta$ is fixed such that the isotropic
+scale \eqref{kbetavm:eq} lies within the computational domain at some
+relatively large wavenumber, but below the forcing wavenumber.  The
+critical drag $r_c$ is then fixed by $\beta$ and the generation rate
+(which is fixed for all simulations described in this paper).  Five
+values of drag are then chosen such that the largest value is just at
+$r_c$ while the rest are smaller.  In this way we hope to see a
+transition from the purely drag-induced diffusivity computed in \S
+\ref{tdv_exp:ssc} to the $\beta$ controlled diffusivity, which should
+be independent of drag. In particular, we choose
+\[
+\beta^{\star} \equiv \beta~\left(gk_f^5\right)^{-1/3} = 0.73,  %3450
+\]
+so that the inviscid $\beta$-scale \eqref{kbetavm:eq} is
+(assuming a Kolmogorov constant $\ca{C}=6$ and an effective
+generation of $g=g_{\textrm{eff}}\simeq .5$ --- see appendix)
+$k_{\beta}/k_{\mathrm{min}}=89.$, or
+\[
+k_{\beta}/k_f \simeq 0.56.   %89.
+\]
+The nondimensional critical drag, according to \eqref{rcrit2d:eq}
+(using the same values for $g$ and $\ca{C}$ as above), is
+\[
+r_c^{\star} \simeq 9.0\times 10^{-2}.              %2.1.
+\]
+The values of drag are then chosen to be
+\[
+r^{\star} = (0.04, 0.43, 2.1, 4.3, 8.5)\times 10^{-2}
+\]
+yielding predicted jet-scales from \eqref{kbr:eq}
+\[
+k_{\beta,r}/k_f \simeq 0.18, 0.33, 0.48, 0.58, 0.69.
+\]
+% 29., 52., 77., 92., 110.
+
+In figure \ref{kesxy:fig} we try to give a sense of these flows
+before showing their statistics.  The upper left panel shows a
+contoured snapshot of the physical-space streamfunction for the
+case with the lowest drag, and demonstrates that the flow is
+dominated by zonal jets, as expected.  The upper right panel
+contains the averaged two-dimensional energy spectrum for the
+same run.  The surface height is the logarithm of the spectrum and
+only the smallest wavenumbers are shown. Energy is concentrated
+along the zonal ($k_x=0$) axis, and is excluded from a dumb-bell
+region about $k_x=k_y=0$ (an argument for this shape can be found
+in \citet{Vallis93a}).  Energy clearly propagates more efficiently
+on the zonal axis, where it is uninhibited by the $\beta$-effect.
+
+Slices along the $k_x$ and $k_y$ axes of similar spectra for all five
+TDV runs with $\beta$ are shown in the lower left panel of figure
+\ref{kesxy:fig}. In order to compare the slopes of these spectra to
+our isotropic predictions, remember that integration over angle yields
+an integration factor $2\pi k$.  Hence we see that the slopes of the
+$k_x$ slice-spectra are about $k^{-8/3}$, which corresponds to an
+isotropic spectrum with slope $k^{-5/3}$, while the slopes of the
+$k_y$ slice-spectra are about $k^{-6}$, which corresponds to an
+isotropic spectrum with slope $k^{-5}$ (see equation
+\ref{rossbyspecB:eq}). Both of these slopes are as expected from
+arguments made and previous work noted in \S \ref{beta:sec}.
+Furthermore, we see that all of the $k_y$ spectra \textit{start to
+steepen} at the same scale (the scale at which the $-8/3$ and $-6$
+slopes cross), approximately $k/k_f = 0.56 \simeq k_{\beta}/k_f$, as
+predicted. (Since $\beta$ is held constant, this scale should be the
+same for all simulations.) Interestingly, energy cascades along the
+$k_x$ axis past $k\simeq k_{\beta}$, typically peaking at about the
+same wavenumber, but with smaller magnitude, than the corresponding
+$k_y$ spectra.  This phenomena was also observed by, for example,
+\citet{chekhlov96} and \citet{smithwaleffe99}, who point out that
+despite the anisotropy present at large scale, an underlying isotropic
+cascade still occurs.
+
+A sense of how the two-dimensional spectrum changes as drag is increased
+can be gleaned from the bottom right panel of figure \ref{kesxy:fig}, which
+shows the inner-most contours of energy values just shy of the maximum
+wavenumber along the $k_x$ axis (so just inside the dumb-bell) for the case
+with the weakest drag ($r^{\star} = 4\times 10^{-4}$) and the case with the
+second to largest drag ($r^{\star} = 4\times 10^{-2}$).  Despite the energy
+along the $k_y$ axis starting to steepen at a \textit{fixed} scale for all
+five simulations, the dumb-bell increases in size with increasing drag
+coefficient.
+
+Let us now consider the statistics of the flow.  The peaks of the energy
+spectra along the $k_y$ axis correspond to the jet-scales, which we
+expected to be described by \eqref{kbr:eq}.  If the isotropic $\beta$-scale
+$k_{\beta}$ is the relevant mixing length, then despite the spectrum of
+meridional velocity extending past $k_{\beta}$, we require the meridional
+velocity at the mixing scale in order to calculate the diffusivity.  We
+estimate the turbulent meridional velocity \textit{near the mixing scale}
+as
+\begin{equation}
+V_{\mathrm{mix}} \simeq \left[\int_{k_{\beta}}^{\infty}\ca{E}(k) \, dk
+\right]^{1/2}
+\simeq \left(\frac{3}{2}\right)^{1/2}
+\left(\frac{\ca{C}^3g^2}{\beta}\right)^{1/5}.
+\label{vb:eq}
+\end{equation}
+Then \eqref{kbetavm:eq} and \eqref{vb:eq} imply a diffusivity
+\begin{equation}
+D\simeq
+\left(\frac{3}{2}\right)^{1/2}
+\left(\frac{\ca{C}^{9/2}g^3}{\beta^4}\right)^{1/5},
+\label{Dbeta:eq}
+\end{equation}
+which is independent of $r$.
+
+If, on the other hand, the jet scale $k_{\beta,r}$ or
+\eqref{kbr:eq} is the appropriate mixing length, then we expect
+$D\sim r^{-1/4}$. Moreover, at values of drag $r\gg r_c$, the
+diffusivity should roll over to the slope predicted for TDV
+dynamics with linear drag and no $\beta$, namely $D \sim r^{-2}$.
+
+In figure \ref{ldrag_beta:fig} we plot the energy spectra, tracer
+variance and tracer flux as functions of total wavenumber, and the
+jet-scales (peaks along $k_y$ axis), rms meridional eddy velocities
+and integrated tracer fluxes, for the five simulations.  The total
+energy spectra show a break at a wavenumber slightly larger than
+$k_{\beta}$, where the spectra along the $k_y$ axis begin to steepen.
+The shape of these spectra can be best understood by referring back to
+the lower left panel of figure \ref{kesxy:fig} --- the contribution to
+the spectra in the region with slope $-5$ is almost solely due to
+zonal energy.  Strikingly, there is no significant tracer flux at
+scales larger than $k_{\beta}$ --- the spectra of the diffusivity (or
+tracer flux) vary just slightly as drag is varied, but are essentially
+peaked at $k_{\beta}$.  This supports our hypothesis that $k_{\beta}$
+is the relevant meridional mixing length.
+
+We also plot some predictions for the jet scales, rms velocities and
+diffusivities. The jet-scale is slightly over-predicted by
+$k_{\beta,r}$, but for the small drag runs, the slope is close to
+$r^{1/4}$, as predicted by \eqref{kbr:eq}.  At values of drag
+approaching $r_c$, the slope of jet-scale steepens. The meridional
+eddy velocity is somewhat flat at smaller values of $r$, but gently
+curves over the entire range.  The fact that the spectrum along the
+$k_y=0$ axis increases beyond $k_{\beta}$ in figure \ref{kesxy:fig}
+seems to be reflected in the fact that $\overline{v'^2}$ increases
+even at the smallest drags examined.
+
+Finally the diffusivity of the tracer, while being quite far off in
+magnitude, shows the expected trend: it is approximately constant for
+small $r$, then decreases for $r\sim r_c$.  A diffusivity proportional
+to $r^{-1/4}$, which would increase by a factor of 4 over the range of
+$r$ examined, is not seen, despite the fact that $\overline{v'^2}$
+continues to increase slowly with decreasing $r$. In fact, the
+diffusivity decreases slightly with decreasing $r$ for the smallest
+values examined.  This implies that in the small drag limit, the
+inviscid, isotropic $\beta$ scale $k_{\beta}$ of \eqref{kbetavm:eq},
+independent of drag, is a reasonable approximation to the mixing
+length for the diffusivity estimate.  However, these estimates are
+clearly not as accurate in this anisotropic problem, where more
+sophisticated closures (e.g., resonant interaction theory) may help in
+obtaining quantitatively better fits.
+
+
+\section{Conclusion}
+\label{disc:sec}
+
+This paper has been concerned with the inverse cascade in geostrophic
+turbulence, and with the transport of a passive scalar by that
+turbulent fluid. We considered conventional two-dimensional (vorticity)
+dynamics, surface quasi-geostrophic dynamics, and large-scale
+quasi-geostrophic dynamics with a finite deformation radius.
+
+We first showed that, for a general vorticity-streamfunction spectral
+field relationship of the form $\xi_k = - k^\alpha \psi$, we may
+indeed expect forward and inverse cascades of a generalised enstrophy
+and energy. In this context enstrophy refers to the variance of the
+advected field, and energy refers to the variance of the associated
+velocity. If $\alpha > 0$ ($\alpha < 0$) then generalised energy will
+cascade to larger (smaller) scale and generalised enstrophy to smaller
+(larger) scale.  [The precise form of this statement is given in
+equations \eqref{eq:direc} and \eqref{eq:direcz}.] One notable aspect
+of this result is that, if $\alpha < 0$ as for example in large-scale
+geostrophic turbulence, the variance of the advected field is
+transferred to larger scales, in contrast to the usual
+passive-scalar-like behaviour of a cascade to smaller scales.
+
+Given the cascade directions, we can apply classical phenomenology to
+obtain predictions of the spectral slope in each inertial range, the
+halting scale of the inverse cascade and, at a rather
+less-well-founded level, a prediction for a spectrum in the inverse
+cascade that includes a frictional decay at small wavenumbers. The
+inverse cascades will be modified and made anisotropic by the presence
+of a mean gradient of the advected quantity --- the natural
+generalization of the familiar beta-effect in TDV. However, because
+$\beta$ cannot alter the overall energy level in barotropic flow, the
+inverse cascade will only be halted by friction.  [This situation
+should be contrasted with the baroclinic case, in which eddy energies
+are a highly sensitive function of $\beta$ because of the feedback
+between the energy injection rate and the mixing length --- see, \eg
+\cite{Held96}.] The anisotropy of the inverse cascade leads to two
+distinct length scales: a wavenumber [e.g., \eqref{kbr:eq}]
+characterizing the scale of zonal flow, and a smaller scale [e.g.,
+\eqref{kbetavm:eq}] that characterizes the mixing length in the
+meridional direction.
+
+From these predictions we construct estimates of the diffusion
+coefficient of a passive tracer field stirred by the turbulent fluid
+and whose variance is maintained by a fixed meridional gradient.  The
+expected dependencies for the cases in which only linear drag is
+present are
+\begin{subequations}
+\begin{align}
+\textrm{TDV:}
+\qquad & D \sim r^{-2}\nonumber\\
+\textrm{SQG:}
+\qquad & D \sim r^{-1} \ln^{1/2}(k_f/k_c)\nonumber, ~~~
+k_c = \left(2\ca{C}/3\right)\left(r^3g^{-1}\right)^{1/3}\\
+\textrm{LQG:}
+\qquad & D \sim r^{-1/2},\nonumber
+\end{align}
+\end{subequations}
+and, in the small-drag limit when $\beta$ is present,
+\begin{subequations}
+\begin{align}
+\textrm{TDV:}
+\qquad & D \sim \beta^{-4/5}\nonumber\\
+\textrm{SQG:}
+\qquad & D \sim \beta^{-1}\ln^{1/2}(k_f/k_{\beta}), ~~~
+k_{\beta} = \beta \ca{C}^{-1/2}g^{-1/3}.\nonumber
+\end{align}
+\end{subequations}
+The last of these follows from using \eqref{kbeta1:eq} for SQG as the
+mixing length, but was not derived nor tested here; the LQG case is
+special and we do not predict its diffusive behaviour in the presence
+of $\beta$, notwithstanding its probable relevance to geophysical
+flows. (See \citet{kukharkin96} for some treatment of this case).
+
+In each case in which linear drag halts the cascade, the diffusivity
+decreases with increasing drag coefficient.  This is perhaps not
+immediately obvious, since, from the perspective of Brownian motion
+for example, damping can act to increase the irreversibility of the
+flow for a given eddy energy.  In turbulent inverse cascades, however,
+decreasing drag allows for increasing eddy scales, thus increasing the
+eddy mixing length, and thereby increasing the diffusivity.  On the
+other hand, when $\beta$ is significant relative to the drag (\ie when
+$r<r_c$ in \eqref{rcrit:eq} or \eqref{rcrit2d:eq}), a diffusivity
+which is increasing or constant with drag is reasonable.  In this
+less-turbulent, more wave-dominated parameter regime, zonal jets act
+as mixing barriers, and the underlying flow is less irreversible.  In
+this case, understanding and predicting the transport of tracer likely
+requires a different type of mathematical machinery than what we have
+employed here.
+
+We have tested many of these predictions numerically. Overall, the
+predictions for the halting scale of the inverse cascade, and the
+velocity amplitude at the halting scale, are quantitatively
+well-satisfied. We saw little evidence of non-universal behaviour over
+a wide range of frictional parameters, providing that the inertial
+range was well developed and that the halting scale was substantially
+smaller than the domain scale, with no pile up of energy at the
+halting scale. If any of these are not satisfied the predictions may
+fail. (Note also all of our simulations utilized a a single type of
+forcing, namely a random stirring localized in wavenumber).  The form
+of the predicted spectrum is less well satisfied by the numerical
+simulations --- the latter typically falling off much less rapidly
+than the former at small, frictionally dominated wavenumbers. However,
+because the flow in this low wavenumber regime has little energy, it
+does not contribute to the meridional flux of the tracer.
+
+Consistent with these results, the transport of a passive scalar
+advected by the turbulent flow is down-gradient diffusive, with a
+diffusion coefficient well estimated by turbulence phenomenology.  In
+particular, for an isotropic inverse cascade, the diffusion
+coefficient is proportional to the product of the mixing length and
+the rms velocity amplitude, which are both determined by the halting
+scale of the inverse cascade.  In the presence of a beta-effect, the
+inverse cascade can develop significant anisotropy; the mixing length
+appropriate to the meridional transport of a passive tracer scales
+more or less with the isotropic $\beta$-scale given by
+\eqref{kbetavm:eq}, whereas the energy containing scale is the
+jet-scale \eqref{kbr:eq}.
+
+Our predictions of the diffusion coefficients owe their approximate
+success to the presence of a good scale separation between the mean
+gradient and the energy containing scales, and a second scale
+separation between the energy containing scale and the forcing scale,
+enabling a well defined inverse cascade to occur and minimizing the
+effects of the forcing.  Both of these conditions are formally
+necessary for simple scaling behaviour, but in many cases such
+scalings may well remain valid well into more weakly non-linear
+regimes \citep[\eg][]{Held96}.  While neither scale separation is
+particularly well satisfied by meridional heat transport in the
+earth's atmosphere, scale separations between large-scale gradients
+and the internal radius of deformation are certainly significant in
+the earth's mid-oceans and on the giant gas planets, and the present
+diffusivity predictions may be particularly useful in those arenas.
+
+\begin{acknowledgments}
+  We acknowledge the contributions of A. Fournier to the tracer
+  diffusivity calculations, and thank B. Arbic, S. Danilov, D.
+  Gurarie, P. Kushner and G.  Lapeyre for very helpful comments.  S.
+  Danilov and D. Gurarie (preprint) have independently proposed and
+  explored the scaling \eqref{kbr:eq}.
+\end{acknowledgments}
+
+\appendix
+        \addtocounter{section}{1}
+        \setcounter{equation}{0}
+
+\section*{Appendix A}
+\subsection*{Phenomenology of cascade directions}
+\label{phenom:sec}
+
+We first define a rescaled wavenumber $k' \equiv k^{\alpha/2}$.
+In this space, the energy and enstrophy spectra are such that
+\begin{subequations}
+\begin{align}
+E_G & = \int \ca{E}_G'(k') \,dk' \\
+Z_G & =  \int \ca{Z}_G'(k') \,dk'
+\end{align}
+\end{subequations}
+where
+\begin{equation}
+\ca{Z}_G'(k') = k'^2\ca{E}_G'(k').
+\end{equation}
+The centroid of the energy distribution in this space is given by
+\begin{equation}
+\label{eq:centroid2}
+k_e' \equiv \frac{\int k' \ca{E}_G'(k')\, dk'}{\int \ca{E}_G'(k') \,dk'}.
+\end{equation}
+We now suppose that there is some initial distribution of energy
+distributed around this wavenumber, and that turbulence
+acts irreversibly to broaden this distribution.  That is,
+\begin{subequations}
+\label{eq:spread3}
+\begin{align}
+\label{eq:spread3a}
+I' & = \int \left( k' - k_e' \right)^2 \ca{E}_G'(k') \, dk' , \\
+\frac{d {I'}}{dt} & > 0 .
+\end{align}
+\end{subequations}
+Then, expanding \eqref{eq:spread3a} and  using \eqref{eq:centroid2},
+\begin{equation}
+  {I'} =  \int (k'^2 - k_e'^2) \ca{E}_G'(k') \, dk' .
+\end{equation}
+Since $dI'/dt >0$, and both $\int \ca{E}_G'(k') \, dk'$ and  $\int
+k'^2 \ca{E}_G'(k') \, dk'$ are constant, we must have that
+\begin{equation}
+\frac{d k_e'^2}{dt} < 0.
+\end{equation}
+This implies that
+\begin{equation}
+\frac{d k^\alpha_e}{dt} < 0,
+\label{eq:kdec}
+\end{equation}
+where $k^\alpha_e$ is a measure of the center of the
+energy distribution in conventional wavenumber space, given by
+\begin{equation}
+k_e \equiv \left[\frac{\int k^{\alpha/2} \ca{E}_G(k)\, dk}
+{\int \ca{E}_G(k) \,dk}\right]^{2/\alpha}.
+\label{eq:centroid}
+\end{equation}
+From \eqref{eq:kdec} we immediately have
+\begin{equation}
+\begin{aligned}
+\label{eq:direc}
+\frac{d k_e}{dt} & < 0, \qquad \alpha > 0 \\
+\frac{d k_e}{dt} & > 0, \qquad \alpha < 0.
+\end{aligned}
+\end{equation}
+It is because the mapping between the two wavenumber spaces is
+monotonic that a monotonic direction of energy or enstrophy transfer in
+the new wavenumber space corresponds to a monotonic transfer in the
+true wavenumber space, although the rates of transfer (and the
+direction of transfer if $\alpha < 0$) will differ.
+
+Finally, we note that in the above derivations we may substitute
+$\ca{Z}_G(k)$ for $\ca{E}_G(k)$, and $\alpha \rightarrow -\alpha$, in
+equations \eqref{eq:centroid} onward. We then readily obtain the
+direction of the generalised enstrophy transfer,
+\begin{equation}
+\begin{aligned}
+\label{eq:direcz}
+ \frac{d k_z}{dt} & > 0, \qquad \alpha > 0 \\
+ \frac{d k_z}{dt} & < 0, \qquad \alpha < 0,
+\end{aligned}
+\end{equation}
+where, analogous to \eqref{eq:centroid},
+\begin{equation}
+k_z \equiv \left[\frac{\int k^{\alpha/2} \ca{Z}_G(k)\, dk}
+{\int \ca{Z}_G(k) \,dk}\right]^{2/\alpha} .
+\end{equation}
+
+For TDV and SQG the generalised enstrophy, corresponding to the square
+of the advected quantity, cascades to smaller scales and the energy
+cascades to larger scales. However, for LQG dynamics the generalised
+enstrophy (that is, the variance of the advected quantity) cascades to
+\emph{larger} scales, and generalised energy to \emph{smaller}
+scales. This occurs in spite of the fact that the equation of motion
+is identical to that of a passive tracer, save for the additional
+constraint $\Psi = \del^2 \xi$. This serves to emphasize the point
+that inferring cascade directions in two-dimensional vorticity
+dynamics by analogy to passive tracer dynamics is valid only to the
+extent that vorticity acts as a passive tracer. This may well be the
+case for small-scale vorticity, but it is not a general rule.
+
+\appendix
+        \addtocounter{section}{2}
+
+\section*{Appendix B}
+\subsection*{The forcing function}
+
+The forcing is random Markovian in time and normalized at each
+timestep such that $g=1$.  Specifically, at each wavenumber $k$ and
+timestep $n$, we calculate an initial forcing function
+\begin{equation}
+\hat{F}_n = cF_{n-1} + (1-c^2)^{1/2}e^{i\theta},
+\label{rmf:eq}
+\end{equation}
+where $\theta$ is a random phase and $c$ is the correlation
+coefficient, set to $.99$ in all cases.  Since the generation rate is
+$g = -\overline{\psi F}$, in order to make $g=1$ the actual forcing
+$F_n$ is calculated as
+\begin{equation}
+F_n = -\left(\overline{\psi \hat{F_n}}\right)^{-1} \hat{F}_n.
+\label{rmf2:eq}
+\end{equation}
+The effective forcing, however, is less than 1 due to some loss from
+the small-scale filter, but this loss is restricted to scales smaller
+than the forcing scale.  We calculate this loss and find the effective
+generation rate via
+\begin{equation}
+g_{\mathrm{eff}} = 1 + \langle\overline{\psi \ca{D}_{\psi}}\rangle,
+\label{geff:eq}
+\end{equation}
+where $\ca{D}_{\psi}$ represents the filter dissipation and
+$\langle\rangle$ means a time average.  The latter term quickly
+reaches a steady value (usually about .45) in all the simulations and
+thus the effective rate $g_{\mathrm{eff}}$ is well defined.
+
+\subsection*{The enstrophy filter and timestep}
+
+The equation of motion is stepped forward via a leap-frog step but
+with the enstrophy filter applied implicitly,
+\begin{equation}
+\frac{\xi^{n+1}-\xi^{n-1}}{2\delta_t} = R^n + H(k)\xi^{n+1},
+\end{equation}
+where $R^n$ represents the right hand side terms at time step $n$ and
+$\delta_t$ is the magnitude of the timestep.  Thus
+\begin{equation}
+\xi^{n+1} =  (2\delta_t R^n + \xi^{n-1})F(k),
+\end{equation}
+where
+\begin{equation}
+F(k) = [1 + 2\delta_tH(k)]^{-1}
+\end{equation}
+is the filter.
+
+While we do not use the following filter, let us, as an example,
+consider a hyperviscosity filter of order $s$, \ie
+$(-1)^{s/2+1}\nu_s\del^s \xi$, then
+\[
+H(k) = -\nu_s k^s.
+\]
+Optimal estimates for the timestep and hyperviscosity are \citep[see,
+\eg][]{Maltrud91}
+\begin{equation}
+\delta_t
+\simeq \frac{2\pi}{Nk_{\mathrm{max}}^{2-\alpha}\xi_{\rms}}, ~~~~
+\nu_s
+\simeq (\xi_{\rms}k_{\mathrm{max}}^{2-\alpha})
+k_{\mathrm{max}}^{-s}.
+\end{equation}
+[The former estimate is used to calculate an adaptive timestep in
+the model.] Using these estimates in the hyperviscous filter then
+yields
+\begin{equation}
+F_{\mathrm{hv}}(k) =
+\left[1+\frac{4\pi}{N}\left(\frac{k}{k_{\mathrm{max}}}\right)^s\right]^{-1},
+\end{equation}
+which is independent of the flow.  $N=2k_{\mathrm{max}}$ is the
+equivalent horizontal resolution.  Note that $F(0)=1$ and
+$F(k_{\mathrm{max}}) = (1+4\pi/N)^{-1}$, so that no dissipation
+happens on the largest scale, and the maximum dissipation is a
+function only of the resolution.  Furthermore, and sensibly enough, as
+$N\rightarrow\infty$, $F(k_{\mathrm{max}})\rightarrow 1$.  Finally,
+the power $s$ only affects the curvature of the filter --- the higher
+the power, the less affected are the smaller wavenumbers (larger
+scales).
+
+Loosely following \citet[][and personal communication]{Lacasce96} we
+construct an exponential cutoff filter with the explicit property of
+having absolutely no dissipation at wavenumbers smaller than some
+preset cutoff wavenumber, $k_{\mathrm{cut}}$.  In particular, suppose
+we choose
+\begin{equation}
+F_{\mathrm{ec}}(k) = \left\{
+\begin{array}{ll}
+    \exp[-a (k-k_{\mathrm{cut}})^s],     & \mbox{$k>k_{\mathrm{cut}}$}   \\
+    1,                                   & \mbox{$k\le k_{\mathrm{cut}}$}.
+\end{array}
+\right.
+\label{fec:eq}
+\end{equation}
+
+Let us choose $a$ such that $F(k_{\mathrm{max}}) = (1+4\pi/N)^{-1}$, as
+for the optimal hyperviscous filter.  Hence
+\begin{equation}
+a= \frac{\ln(1+4\pi/N)}{(k_{\mathrm{max}}-k_{\mathrm{cut}})^s}.
+\label{a:eq}
+\end{equation}
+The combination of \eqref{fec:eq} and \eqref{a:eq} make our filter.
+
+Comparisons of the exponential cutoff filter to the hyperviscous
+filters are shown for a series of TDV and tracer calculations in
+figure \ref{filter_comp:fig}.  Slope of energy spectra with
+exponential cutoff filter at small scales is closer to expected $-3$
+than for any order of hyperviscous filter.  Also, both tracer variance
+and energy are higher at the largest scales with the cutoff filter.
+
+\bibliographystyle{jfm}
+%\bibliography{lit}
+
+
+\begin{thebibliography}{38}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Arbic(2000)]{Arbic00}
+{\sc Arbic, B.~K.} 2000 Generation of mid-ocean eddies: the local baroclinic
+  instability hypothesis. PhD thesis, Massachusetts Institute of Technology.
+
+\bibitem[Bartello \& Holloway(1991)]{Bartello91}
+{\sc Bartello, P. \& Holloway, G.} 1991 Passive scalar transport in
+  $\beta$-plane turbulence. {\em J. Fluid Mech.\/} {\bf 223}, 521--536.
+  
+\bibitem[Batchelor(1953)]{Batchelor53} {\sc Batchelor, G.~K.} 1953
+  {\em Theory of Homogeneous Turbulence\/}. Cambridge University
+  Press.
+
+\bibitem[Borue(1994)]{borue94}
+{\sc Borue, V.} 1994 Inverse energy cascade in stationary two-dimensional
+  homogeneous turbulence. {\em Phys. Rev. Let.\/} {\bf 72}, 1475--1478.
+  
+%  \bibitem[Celani {\em et~al.\/}(2001)Celani, Lanotte, Mazzino \&
+%  Vergassola]{celani01} {\sc Celani, A., Lanotte, A., Mazzino, A. \&
+%  Vergassola, M.} 2001 Fronts in passive scalar turbulence.
+%  Preprint.
+ 
+\bibitem[Chekhlov {\em et~al.\/}(1996)Chekhlov, Orszag, Sukoriansky,
+  Galperin \& Staroselsky]{chekhlov96} {\sc Chekhlov, A., Orszag,
+    S.~A., Sukoriansky, S., Galperin, B. \& Staroselsky, I.} 1996 The
+  effect of small-scale forcing on large-scale structures in
+  two-dimensional flows. {\em Physica D\/} {\bf 98}, 321--334.
+  
+\bibitem[Constantin {\em et~al.\/}(1994)Constantin, Majda \&
+  Tabak]{constantin94} {\sc Constantin, P., Majda, A.~J. \& Tabak, E.}
+  1994 Formation of strong fronts in the 2-d quasigeostrophic thermal
+  active scalar. {\em Nonlinearity\/} {\bf 7}, 1495--1533.
+
+\bibitem[Danilov \& Gryanik(2001)]{danilov01b} {\sc Danilov, S. \&
+    Gryanik, V.} 2001 Vorticity structure, jets, and spectra in
+  quasi-stationary beta-plane turbulence with a strong zonal
+  component.  Preprint.
+  
+\bibitem[Danilov \& Gurarie(2000)]{danilov00} {\sc Danilov, S.~D. \&
+    Gurarie, D.} 2000 Quasi-two-dimensional turbulence. {\em Uspekhi
+    Fizicheskikh Nauk.\/} {\bf 170}, 921--968.
+
+\bibitem[Danilov \& Gurarie(2001)]{danilov01a}
+{\sc Danilov, S. \& Gurarie, D.} 2001 Nonuniversal features of forced
+ two-dimensional turbulence in the energy range. {\em Phys. Rev. E\/} {\bf
+  63}, 020203:1--4.
+
+\bibitem[Galperin {\em et~al.\/}(2001)Galperin, Sukoriansky \&
+  Huang]{galperin01} {\sc Galperin, B., Sukoriansky, S. \& Huang,
+    H.~P.} 2001 Universal $n^{-5}$ spectrum of zonal flows on giant
+  planets. {\em Phys. Fluids\/} {\bf 13}, 1545--1548.
+  
+\bibitem[Held \& Larichev(1996)]{Held96} {\sc Held, I.~M. \& Larichev,
+    V.~D.} 1996 A scaling theory for horizontally homogeneous,
+  baroclinically unstable flow on a beta-plane. {\em J. Atmos.
+    Sci.\/} {\bf 53}, 946--952.
+  
+\bibitem[Held {\em et~al.\/}(1995)Held, Pierrehumbert, Garner \&
+  Swanson]{Held95a} {\sc Held, I.~M., Pierrehumbert, R.~T., Garner,
+    S.~T. \& Swanson, K.~L.} 1995 Surface quasi-geostrophic dynamics.
+  {\em J. Fluid. Mech.\/} {\bf 282}, 1--20.
+  
+\bibitem[Huang {\em et~al.\/}(2001)Huang, Galperin \&
+  Sukoriansky]{huang01} {\sc Huang, H.~P., Galperin, B. \&
+    Sukoriansky, S.} 2001 Anisotropic spectra in two-dimensional
+  turbulence on the surface of a rotationg sphere. {\em Phys.
+    Fluids\/} {\bf 13}, 225--240.
+
+\bibitem[Kolmogorov(1941)]{Kolmogorov41}
+{\sc Kolmogorov, A.~N.} 1941 The local structure of turbulence in
+  incompressible viscous fluid for very large reynolds numbers. {\em Dokl.
+  Acad. Sci. USSR\/} {\bf 30}, 299--303.
+
+\bibitem[Kraichnan \& Montgomery(1980)]{Kraichnan80}
+{\sc Kraichnan, R. \& Montgomery, D.} 1980 Two-dimensional turbulence. {\em
+  Rep. Prog. Physics\/} {\bf 43}, 547--619.
+
+\bibitem[Kukharkin \& Orszag(1996)]{kukharkin96}
+{\sc Kukharkin, N. \& Orszag, S.~A.} 1996 Generation and structure of rossby
+  vortices in rotating fluids. {\em Phys. Rev. E\/} {\bf 54}, 4524--4527.
+
+\bibitem[Kukharkin {\em et~al.\/}(1995)Kukharkin, Orszag \&
+  Yakhot]{kukharkin95}
+{\sc Kukharkin, N., Orszag, S.~A. \& Yakhot, V.} 1995 Quasicrystallization of
+  vortices in drift-wave turbulence. {\em Phys. Rev. Lett.\/} {\bf 75},
+  2486--2489.
+
+\bibitem[LaCasce(1996)]{Lacasce96}
+{\sc LaCasce, J.~H.} 1996 Baroclinic vortices over a sloping bottom. PhD
+  thesis, Massachusetts Institute of Technology.
+
+\bibitem[Larichev \& Held(1995)]{Larichev95}
+{\sc Larichev, V.~D. \& Held, I.~M.} 1995 Eddy amplitudes and fluxes in a
+  homogeneous model of fully developed baroclinic instability. {\em J. Phys.
+  Oceanogr.\/} {\bf 25}, 2285--2297.
+
+\bibitem[Larichev \& McWilliams(1991)]{Larichev91}
+{\sc Larichev, V.~D. \& McWilliams, J.~C.} 1991 Weakly decaying turbulencs in
+  an equivalent-barotropic fluid. {\em Phys. Fluids A\/} {\bf 3}, 938--950.
+
+\bibitem[Leith(1967)]{Leith68a}
+{\sc Leith, C.~E.} 1967 Diffusion approximations for two-dimensional
+  turbulence. {\em Phys. Fluids\/} {\bf 11}, 671--674.
+
+\bibitem[Lilly(1972)]{Lilly72}
+{\sc Lilly, D.~K.} 1972 Numerical simulation studies of two-dimensional
+  turbulence. {\em Geophys.\ Astrophys.\ Fluid Dyn.\/} {\bf 3}, 289--319.
+  
+\bibitem[Lindborg \& Alvelius(2000)]{Lindborg00} {\sc Lindborg, E. \&
+    Alvelius, K.} 2000 The kinetic energy spectrum of the
+  two-dimensional enstrophy turbulence cascade. {\em Phys. Fluids\/}
+  {\bf 12}, 945--947.
+  
+\bibitem[Maltrud \& Vallis(1991)]{Maltrud91} {\sc Maltrud, M.~E. \&
+    Vallis, G.~K.} 1991 Energy spectra and coherent structures in
+  forced two-dimensional and beta-plane turbulence. {\em J. Fluid
+    Mech.\/} {\bf 228}, 321--342.
+
+\bibitem[Manfroi \& Young(1999)]{manfroi99} {\sc Manfroi, A.~J. \&
+    Young, W.~R.} 1999 Slow evolution of zonal jets on the beta plane.
+  {\em J. Atmos. Sci.\/} {\bf 56}, 784--800.
+  
+\bibitem[Oetzel \& Vallis(1997)]{Oetzel97} {\sc Oetzel, K. \& Vallis,
+   G.~K} 1997 Strain, vortices, and the enstrophy inertial range in
+  two-dimensional turbulence. {\em Phys.  Fluids\/} {\bf 9},
+  2991-3004.
+
+
+\bibitem[Pedlosky(1987)]{Pedlosky87}
+{\sc Pedlosky, J.} 1987 {\em Geophysical Fluid Dynamics\/}, 2nd edn. New York:
+  Springer.
+
+\bibitem[Pierrehumbert {\em et~al.\/}(1994)Pierrehumbert, Held \&
+  Swanson]{Pierrehumbert94}
+{\sc Pierrehumbert, R.~T., Held, I.~M. \& Swanson, K.~L.} 1994 Spectra of local
+  and nonlocal two-dimensional turbulence. {\em Chaos, Solitons \& Fractals\/}
+  {\bf 4}, 1111--1116.
+
+\bibitem[Rhines(1975)]{Rhines75}
+{\sc Rhines, P.~B.} 1975 Waves and turbulence on a $\beta$-plane. {\em J.
+  Fluid. Mech.\/} {\bf 69}, 417--443.
+
+\bibitem[Rhines(1977)]{Rhines77}
+{\sc Rhines, P.~B.} 1977 The dynamics of unsteady currents. In {\em The Sea\/}
+  (ed. E.~A. Goldberg, I.~N. McCane, J.~J. O'Briend \& J.~H. Steele), , vol.~6,
+  pp. 189--318. J. Wiley and Sons.
+
+\bibitem[Rivera \& Wu(2000)]{Rivera00}
+{\sc Rivera, M. \& Wu, X.~L.} 2000 External dissipation in driven
+  two-dimensional turbulence. {\em Phys. Rev. Lett.\/} {\bf 5}, 976--979.
+
+\bibitem[Salmon(1980)]{Salmon80}
+{\sc Salmon, R.} 1980 Baroclinic instability and geostrophic turbulence. {\em
+  Geophys. Astrophys. Fluid Dyn.\/} {\bf 10}, 25--52.
+
+\bibitem[Smith \& Waleffe(1999)]{smithwaleffe99}
+{\sc Smith, L.~M. \& Waleffe, F.} 1999 Transfer of energy to two-dimensinoal
+  large scales in forced, rotating three-dimensional turbulence. {\em Phys.
+  Fluids\/} {\bf 11}, 1608--1622.
+
+\bibitem[Smith \& Yakhot(1993)]{SmithYakhot93}
+{\sc Smith, L.~M. \& Yakhot, V.} 1993 Bose condensation and small-scale
+  structure generation in a random force driven 2d turbulence. {\em Phys. Rev.
+  Let.\/} {\bf 71}, 352--355.
+
+\bibitem[Sukoriansky {\em et~al.\/}(1999)Sukoriansky, Galperin \&
+  Chekhlov]{Sukoriansky99}
+{\sc Sukoriansky, S., Galperin, B. \& Chekhlov, A.} 1999 Large scale drag
+  representation in simulations of two-dimensional turbulence. {\em Phys.
+  Fluids\/} {\bf 11}, 3043--3053.
+
+\bibitem[Tennekes \& Lumley(1994)]{Tennekes94}
+{\sc Tennekes, H. \& Lumley, J.~L.} 1994 {\em A First Course in Turbulence\/}.
+  Cambridge, Massachusetts: MIT Press.
+
+\bibitem[Vallis(1993)]{Vallis93b}
+{\sc Vallis, G.~K.} 1993 Problems and phenomenology in two-dimensional
+  turbulence. In {\em Nonlinear phenomena in atmospheric and oceanic
+  sciences\/} (ed. C.~F. Carnevale \& R.~Pierrehumbert), pp. 1--25. Springer.
+
+\bibitem[Vallis \& Maltrud(1993)]{Vallis93a}
+{\sc Vallis, G.~K. \& Maltrud, M.~E.} 1993 Generation of mean flows and jets on
+  a beta plane and over topography. {\em J. Phys. Oceanog.\/} {\bf 23},
+  1346--1362.
+
+\end{thebibliography}
+
+
+%**************************************************************************
+% Figures
+
+\newcommand{\thecaptionA}{Schematic diagram of the cascades in
+\textit{(a)} two-dimensional vorticity dynamics, \textit{(b)} surface
+quasi-geostrophic dynamics, and \textit{(c)} large-scale
+quasi-geostrophic dynamics. Each panel indicates the cascade
+directions, the spectrum of each cascading invariant in its own
+inertial range ($\ca{E}_G$ or $\ca{Z}_G$), the spectrum of the
+velocity variance ($\ca{E}$), and the dimensional estimate of the
+scale at which the inverse cascade is halted by linear drag, $k_r$.
+The upward arrows represent the injection of the invariants while the
+downward arrows represent their dissipation.}
+
+\newcommand{\thecaptionB}{Equilibrated statistics for five simulations
+of TDV dynamics which differ only in the value of the drag
+coefficient.  Values of drag used are $r^{\star} = (0.86, 1.5, 2.4,
+3.7, 6.0)\times 10^{-2}$ and the effective generation rates are
+$g_{\mathrm{eff}} = 0.57, 0.59, 0.61, 0.64, 0.69$.  All statistics are
+non-dimensionalized by the timescale \eqref{Tdim:eq} and the length
+scale $k_f^{-1}$.  Panels show \textit{(a)} energy spectra as a
+function of total wavenumber (solid) and theoretical predictions
+(dashed) for each simulation; \textit{(b)} tracer variance spectra as
+a function of total wavenumber for each simulation; \textit{(c)} peaks
+of energy spectra (stars) and theoretical prediction (solid) vs. drag;
+\textit{(d)} rms meridional eddy velocity (stars) and theoretical
+prediction (solid) vs. drag; \textit{(e)} tracer flux spectra (the
+spectra of $-v'\phi'$) as a function of total wavenumber for each
+simulation; \textit{(f)} integrated tracer flux $-\overline{v'\phi'}$
+(stars) and theoretical prediction for the diffusivity (solid)
+vs. drag.  Theoretical predictions are discussed in \S
+\ref{tdv_exp:ssc}.  In this case, the halting scale $k_0$ is compared
+to the drag scale $k_r$.}
+
+\newcommand{\thecaptionC}{Snapshots of streamfunction (left) and tracer
+(right) fields for TDV (top), SQG (middle) and LQG (bottom)
+simulations.  Each field is taken from the equilibrated phase of the
+simulation with the lowest drag in each ensemble.  For TDV, $r^{\star}
+= 8.6\times 10^{-3}$; for SQG, $r^{\star}= 1.8\times 10^{-3}$; for
+LQG, $r^{\star}= 3.5\times 10^{-5}$.}
+
+\newcommand{\thecaptionD}{As for figure \ref{tdv:fig} but for SQG with
+varied linear drag.  Values of drag used are $r^{\star} =
+(0.18,0.35,0.72,1.4,2.9)\times 10^{-2}$ and the effective generation
+rates are $g_{\mathrm{eff}} = 0.35, 0.37, 0.42, 0.54, 0.60$.  The
+theoretical predictions for the velocity and diffusivity are slightly
+curved due to the relatively large variations in $g_{\mathrm{eff}}$
+between simulations.  Theoretical predictions are discussed in \S
+\ref{sqg_exp:ssc}.}
+
+\newcommand{\thecaptionE}{Spectra of generalised enstrophy $|\psi|^2$
+for LQG with linear drag $r^{\star}= 2.3\times 10^{-4}$ (solid).  Also
+shown is theoretical prediction (dashed).  Arrow indicates location of
+deformation wavenumber ($\lambda/k_f = 0.44$).}
+
+\newcommand{\thecaptionF}{Same as figure \ref{tdv:fig} but for LQG with
+varied linear drag.  Values of the drag coefficient used are
+$r^{\star} =(0.035, 0.23, 1.4, 8.9)\times 10^{-3}$ and the effective
+generation rates are $g_{\mathrm{eff}} = 0.57, 0.59, 0.62, 0.75$.
+Theoretical predictions are discussed in \S \ref{lqg_exp:ssc}.
+Missing values in panel \textit{(e)} are negative but small.  Dashed
+line in panel \textit{(f)} shows the prediction one would attain for
+TDV dynamics with the same flow parameters (see \S
+\ref{tdv_exp:ssc}).}
+
+\newcommand{\thecaptionG}{Results from simulations of TDV flow with
+fixed $\beta^{\star} = 0.73$ and varied drag.  Values of drag used and
+effective generation rates are listed in caption of figure
+\ref{ldrag_beta:fig}.  Panels show: \textit{(a)} physical-space
+streamfunction contours for case with lowest drag (solid lines are
+positive and dashed lines are negative); \textit{(b)} energy spectrum
+as a function of $k_x$ and $k_y$ for the simulation with the lowest
+drag (surface height is logarithmically scaled energy, and spectrum is
+restricted to the $20$ wavenumbers in each direction closest to the
+origin); \textit{(c)} zonal ($k_x=0$; dashed) and meridional ($k_y=0$;
+solid) slices of energy spectra each simulation; \textit{(d)}
+inner-most contours at edge of ``dumb-bell'' region of spectra for
+simulations with $r^{\star} = 4.0\times 10^{-4}$ and $4.3\times
+10^{-2}$.}
+
+\newcommand{\thecaptionH}{Same as figure \ref{tdv:fig} but TDV flow
+with varied drag and fixed $\beta^{\star} = 0.73$.  Values of drag
+used are $r^{\star} = (0.040, 0.43, 2.1, 4.3, 8.5)\times 10^{-2}$, and
+the critical drag of \eqref{rcrit2d:eq} is $r_c^{\star} = 9.0\times
+10^{-2}$.  The effective generation rates are $g_{\mathrm{eff}} =
+0.35, 0.37, 0.42, 0.54, 0.60$.  Theoretical predictions are discussed
+in \S \ref{tdvbr_exp:ssc}.  Missing values in panel \textit{(e)} are
+negative but small.  Dashed lines in bottom panels \textit{(d)} and
+\textit{(f)} represent predictions for large-drag, $\beta=0$ limit.}
+
+\newcommand{\thecaptionI}{Comparison of energy spectra for TDV with
+various small-scale dissipation functions.  Exponential cutoff filter
+(solid) vs. $\del^8$ (dashed), $\del^{12}$ (dash-dot) and $\del^{16}$
+(dotted) hyperviscous filters.  Resolution for these runs is $256^2$,
+forcing is at $k_f/k_{\mathrm{min}} = 60$ and drag is $r^{\star} =
+0.03$.  Also shown are lines representing slopes expected from simple
+Kolmogorov scaling.  Exponential cutoff wavenumber in these
+simulations is $k_{\mathrm{cut}}/k_{\mathrm{min}} = 70$ and the order
+of the filter is $s = 8$ (see \ref{fec:eq} and \ref{a:eq}).}
+
+\clearpage
+
+\begin{figure}
+\begin{center}
+\vskip 1cm
+\includegraphics[width=2.5in]{Figures/schema_tdv.ps}
+\put(-190,160){\large \textit{(a)}}
+\includegraphics[width=2.5in]{Figures/schema_sqg.ps}
+\put(-190,160){\large \textit{(b)}}\\
+\includegraphics[width=2.5in]{Figures/schema_lqg.ps}
+\put(-190,160){\large \textit{(c)}}
+\caption{\thecaptionA}
+\label{schema:fig}
+\end{center}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\begin{center}
+\vskip 1cm
+\includegraphics[width=5.5in]{Figures/tdv_ldrag_nc.eps}
+\put(-397,523){\large \textit{(a)}}
+\put(-185,523){\large \textit{(b)}}
+\put(-397,335){\large \textit{(c)}}
+\put(-185,335){\large \textit{(d)}}
+\put(-397,151){\large \textit{(e)}}
+\put(-185,151){\large \textit{(f)}}
+\caption{See caption list at end of manuscript.}
+\label{tdv:fig}
+\end{center}
+\end{figure}
+
+\clearpage
+
+\bigskip
+\begin{figure}
+\begin{center}
+\vskip 1cm
+\includegraphics[width=2.25in]{Figures/psi_tdv_r1_jet_lr.eps}
+\put(-110,170){\textit{Streamfunction} $\psi$}
+\put(-190,80){\textit{TDV}}
+%\put(-180,150){\large \textit{(a)}}
+\hskip 1cm
+%\includegraphics[width=2.25in]{Figures/tr_tdv_wmean_r1_jet_lr.eps}
+\includegraphics[width=2.25in]{Figures/tr_tdv_r1_jet.eps}
+\put(-100,170){\textit{Tracer} $\phi$}
+%\put(-180,150){\large \textit{(b)}}\\
+\vskip 1cm
+\includegraphics[width=2.25in]{Figures/psi_sqg_r023_jet_lr.eps}
+\put(-190,80){\textit{SQG}}
+%\put(-180,150){\large \textit{(c)}}
+\hskip 1cm
+%\includegraphics[width=2.25in]{Figures/tr_sqg_r023_wmean_jet_lr.eps}
+\includegraphics[width=2.25in]{Figures/tr_sqg_r1_jet.eps}
+%\put(-180,150){\large \textit{(d)}}\\
+\vskip 1cm
+\includegraphics[width=2.25in]{Figures/psi_lqg_jet_lr.eps}
+\put(-190,80){\textit{LQG}}
+%\put(-180,150){\large \textit{(e)}}
+\hskip 1cm
+%\includegraphics[width=2.25in]{Figures/tr_lqg_wmean_jet_lr.eps}
+\includegraphics[width=2.25in]{Figures/tr_lqg_r1_jet.eps}
+%\put(-180,150){\large \textit{(f)}}\\
+\vskip 1cm
+\caption{\thecaptionC}
+\label{phys:fig}
+\end{center}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\begin{center}
+\vskip 1cm
+\includegraphics[width=5.5in]{Figures/sqg_ldrag_nc.eps}
+\put(-397,521){\large \textit{(a)}}
+\put(-185,521){\large \textit{(b)}}
+\put(-397,335){\large \textit{(c)}}
+\put(-185,335){\large \textit{(d)}}
+\put(-397,151){\large \textit{(e)}}
+\put(-185,151){\large \textit{(f)}}
+\caption{\thecaptionD}
+\label{sqg:fig}
+\end{center}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\begin{center}
+\vskip 1cm
+\includegraphics[width=5.5in]{Figures/lqg_spec_nc.eps}
+\caption{\thecaptionE}
+\label{lqg_spec:fig}
+\end{center}
+\end{figure}
+
+
+\clearpage
+
+\begin{figure}
+\begin{center}
+\vskip 1cm
+\includegraphics[width=5.5in]{Figures/lqg_ldrag_nc.eps}
+\put(-397,517){\large \textit{(a)}}
+\put(-185,517){\large \textit{(b)}}
+\put(-397,330){\large \textit{(c)}}
+\put(-185,330){\large \textit{(d)}}
+\put(-397,148){\large \textit{(e)}}
+\put(-185,148){\large \textit{(f)}}
+\caption{\thecaptionF}
+\label{lqg:fig}
+\end{center}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\begin{center}
+\vskip 1cm
+\includegraphics[width=5.5in]{Figures/beta_4panel_nc.eps}
+\put(-400,390){\large \textit{(a)}}
+\put(-185,390){\large \textit{(b)}}
+\put(-400,165){\large \textit{(c)}}
+\put(-185,165){\large \textit{(d)}}
+\vskip 1cm
+\caption{\thecaptionG}
+\label{kesxy:fig}
+\end{center}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\begin{center}
+\vskip 1cm
+\includegraphics[width=5.5in]{Figures/tdv_beta_ldrag_nc.eps}
+\put(-397,517){\large \textit{(a)}}
+\put(-185,517){\large \textit{(b)}}
+\put(-397,330){\large \textit{(c)}}
+\put(-185,330){\large \textit{(d)}}
+\put(-397,148){\large \textit{(e)}}
+\put(-185,148){\large \textit{(f)}}
+\caption{\thecaptionH}
+\label{ldrag_beta:fig}
+\end{center}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\begin{center}
+\vskip 1cm
+\includegraphics[width=5.5in]{Figures/filter_comparison_ke_nd.eps}
+\caption{\thecaptionI}
+\label{filter_comp:fig}
+\end{center}
+\end{figure}
+
+\clearpage
+
+\noindent{\textbf{\large Figure Captions}}
+
+\noindent \textbf{Figure \ref{schema:fig}}: \thecaptionA
+
+\bigskip
+\noindent \textbf{Figure \ref{tdv:fig}}: \thecaptionB
+
+\bigskip
+\noindent \textbf{Figure \ref{phys:fig}}: \thecaptionC
+
+\bigskip
+\noindent \textbf{Figure \ref{sqg:fig}}: \thecaptionD
+
+\bigskip
+\noindent \textbf{Figure \ref{lqg_spec:fig}}: \thecaptionE
+
+\bigskip
+\noindent \textbf{Figure \ref{lqg:fig}}: \thecaptionF
+
+\bigskip
+\noindent \textbf{Figure \ref{kesxy:fig}}: \thecaptionG
+
+\bigskip
+\noindent \textbf{Figure \ref{ldrag_beta:fig}}: \thecaptionH
+
+\bigskip
+\noindent \textbf{Figure \ref{filter_comp:fig}}: \thecaptionI
+
+\bigskip
+
+
+\end{document}

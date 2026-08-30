@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML VERSION="2.0">
+<HEAD>
+<!-- WEBMAGIC VERSION NUMBER="2.0.1" -->
+<!-- WEBMAGIC TRANSLATION NAME="ServerRoot" SRC="/var/www/htdocs/" DST="/" -->
+<!-- WEBMAGIC TRANSLATION NAME="ProjectRoot" SRC="./" DST="" -->
+<TITLE>Atmos. & Ocean Sci 576 Applied Math xxx   GEOSTROPHIC TURBULENCE: THE MACROTURBULENCE OF THE ATMOSPHERE AND OCEAN</TITLE>
+</HEAD>
+<BODY>
+
+ <BR>
+ </P>
+<CENTER><H2 ALIGN="CENTER">Atmos. &amp; Ocean Sci 576.  Applied Math 576
+</H2> 
+ <H2>(Fall 1999)</H2>
+</CENTER><CENTER><H2 ALIGN="CENTER"><BR>
+ GEOSTROPHIC TURBULENCE: <BR>
+ THE MACROTURBULENCE OF THE ATMOSPHERE AND OCEAN</H2>
+</CENTER><CENTER><P ALIGN="CENTER">Instructors: <A HREF="..">Geoff Vallis.</A> <STRONG> (
+ <A HREF="mailto:gkv@gfdl.gov">gkv@gfdl.gov</A>) </STRONG><A HREF="http://www.gfdl.gov/~ih">Isaac Held<STRONG></A> ( <A HREF="mailto:ih@gfdl.gov">ih@gfdl.gov</A>)</STRONG></P>
+</CENTER><P> </P>
+<P>The large-scale flows in the atmosphere and ocean are often characterized
+as `turbulent' but, because of the importance of rotation and stratification,
+these flows have many features that distinguish them from three-dimensional
+turbulence. This course presents the theory of such `geostrophic' turbulence,
+developing a sequence of idealized models ranging from the two-dimensional
+flow of a homogeneous incompressible fluid to rotating, stratified turbulence
+in the presence of environmental temperature and vorticity gradients. Connections
+will be made with observations and with the problem of numerical modeling
+of the atmosphere and oceans, and there will be opportunities to run numerical
+models of turbulence, such as the one producing this figure: </P>
+<P><DIV ALIGN="CENTER"><!-- MATH: $\epsfig{figure=turb.ps,height=3.2in,angle=0}$ --><IMG SRC="img1.gif" ALT="\epsfig{figure=turb.ps,height=3.2in,angle=0}" WIDTH="363" HEIGHT="368" BORDER="0" SGI_FULLPATH="/tmp_mnt/home/gkv/public_html/geoturb/img1.gif"></DIV> </P>
+<P><I>Prerequisites:</I> Some knowledge of fluid mechanics, equivalent to an undergraduate course.
+For AOS students, AOS 571 and 572 or equivalent. However, the course will
+be self-contained and can also be used by physics, astronomy, engineering,
+or mathematics students as an intensive introduction both to aspects of
+turbulence and to atmospheric and oceanic dynamics. </P>
+<P><I>When:</I> Tuesday and Thursday, from 9:00 to 10:30 am. 154 Guyot Hall. 
+First lecture on September 16. </P>
+<H4>Contents (approximate)</H4>
+<P>Vorticity, Circulation. Homogeneous turbulence in three dimensions. Kolmogorov
+theory, inertial ranges. </P>
+<P>Two-dimensional turbulence. Conservation properties. Inertial range theory.
+Batchelors similarity arguments. Tracer transport. </P>
+<P>Statistical mechanics of two dimensional turbulence. (Elementary theory
+based on energy-enstrophy arguments only.) </P>
+<P>Beta-plane turbulence and inhibition of inverse cascade. Formation of jets. </P>
+<P>Stratified, quasi-geostrophic turbulence. Classical picture. Analogies to
+2D turbulence. Charney theory of QG turbulence. Role of potential vorticity.
+Baroclinic Jets. </P>
+<P>Inhomogeneous geostrophic turbulence. Interaction of eddies and jets. </P>
+<P>Application to the atmosphere. Transfer (Green-Stone) theory. Mid-latitude
+baroclinic eddies. Storm-tracks. </P>
+<P>Application to the ocean. PV homogenization in gyres. Parameterization schemes. <BR>
+ <BR>
+ </P>
+<HR>
+<P><BR>
+ Back to main <A HREF="..">home page.</A> </P>
+<P></P>
+<P><BR>
+</P>
+<HR>
+<P><!--Table of Child-Links--><A NAME="CHILD_LINKS">&#160;</A> </P>
+<UL>
+<LI><A HREF="node1.html" NAME="tex2html3">About this document ... </A>
+</UL>
+<P><!--End of Table of Child-Links--></P>
+<HR>
+<P><!--Navigation Panel--><A HREF="node1.html" NAME="tex2html1"> </A><A HREF="node1.html"><IMG SRC="/usr/local/latex2html/icons.gif/next_motif.gif" ALT="next" WIDTH="37" HEIGHT="24" BORDER="0" SGI_FULLPATH="/usr/local/latex2html/icons.gif/next_motif.gif"></A> <IMG SRC="/usr/local/latex2html/icons.gif/up_motif_gr.gif" ALT="up" WIDTH="26" HEIGHT="24" BORDER="0" SGI_FULLPATH="/usr/local/latex2html/icons.gif/up_motif_gr.gif"> <IMG SRC="/usr/local/latex2html/icons.gif/previous_motif_gr.gif" ALT="previous" WIDTH="63" HEIGHT="24" BORDER="0" SGI_FULLPATH="/usr/local/latex2html/icons.gif/previous_motif_gr.gif"> <BR>
+ <B>Next:</B> <A HREF="node1.html" NAME="tex2html2">About this document ...</A> <!--End of Navigation Panel--> </P>
+<ADDRESS><I>Geoffrey Vallis</I> <BR>
+<I>1999-08-23</I> </ADDRESS>
+</BODY>
+</HTML>

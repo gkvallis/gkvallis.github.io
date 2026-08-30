@@ -1,0 +1,949 @@
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2021.4.8)  3 AUG 2021 16:54
+ restricted system commands enabled.
+**errata.tex
+(./errata.tex
+LaTeX2e <2020-10-01> patch level 4
+Lua module: luaotfload 2021-01-08 3.17 Lua based OpenType font support
+Lua module: lualibs 2020-12-30 2.73 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2020-12-30 2.73 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "/Users/gkv/Library/texlive/2021/tex
+mf-var/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2021-01-07.lua" from kpse-res
+olved path "/usr/local/texlive/2021/texmf-dist/tex/luatex/luaotfload/fontloader-
+2021-01-07.lua".
+Lua-only attribute luaotfload@noligature = 1
+Lua-only attribute luaotfload@syllabe = 2
+luaotfload | init : Context OpenType loader version 0x1.8e76c8b439581p+1
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 3
+luaotfload | conf : Root cache directory is "/Users/gkv/Library/texlive/2021/tex
+mf-var/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
+er'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /Users/gkv/Library/texlive/202
+1/texmf-var/luatex-cache/generic/names/luaotfload-names.luc)
+\c@part=\count175
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count183
+\Gm@cntv=\count184
+\c@Gm@tempcnt=\count185
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks16
+)
+(/Users/gkv/latex/sty/unimath.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count186
+\calc@Bcount=\count187
+\calc@Adimen=\dimen147
+\calc@Bdimen=\dimen148
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count188
+\calc@Cskip=\skip51
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/Users/gkv/latex/JFM_files/amsgen.sty
+File: amsgen.sty 1995/02/01 v1.2a
+\@emptytoks=\toks17
+\ex@=\dimen149
+)) (/Users/gkv/latex/JFM_files/amsbsy.sty
+Package: amsbsy 1995/01/20 v1.2
+\pmbraise@=\dimen150
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count189
+LaTeX Info: Redefining \frac on input line 236.
+\uproot@=\count190
+\leftroot@=\count191
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count192
+\DOTSCASE@=\count193
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen151
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count194
+\c@MaxMatrixCols=\count195
+\dotsspace@=\muskip16
+\c@parentequation=\count196
+\dspbrk@lvl=\count197
+\tag@help=\toks18
+\row@=\count198
+\column@=\count199
+\maxfields@=\count266
+\andhelp@=\toks19
+\eqnshift@=\dimen152
+\alignsep@=\dimen153
+\tagshift@=\dimen154
+\tagwidth@=\dimen155
+\totwidth@=\dimen156
+\lineht@=\dimen157
+\@envbody=\toks20
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count267
+\l_MT_multwidth_dim=\dimen158
+\origjot=\skip55
+\l_MT_shortvdotswithinadjustabove_dim=\dimen159
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen160
+\l_MT_above_intertext_sep=\dimen161
+\l_MT_below_intertext_sep=\dimen162
+\l_MT_above_shortintertext_sep=\dimen163
+\l_MT_below_shortintertext_sep=\dimen164
+\xmathstrut@box=\box49
+\xmathstrut@dim=\dimen165
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2021-03-18 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count268
+\l__pdf_internal_box=\box50
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-
+01.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.
+tex)))
+Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2020/02/21 2.7i Font selection for XeLaTeX and LuaLaTeX
+(/usr/local/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaT
+eX
+\l__fontspec_script_int=\count269
+\l__fontspec_language_int=\count270
+\l__fontspec_strnum_int=\count271
+\l__fontspec_tmp_int=\count272
+\l__fontspec_tmpa_int=\count273
+\l__fontspec_tmpb_int=\count274
+\l__fontspec_tmpc_int=\count275
+\l__fontspec_em_int=\count276
+\l__fontspec_emdef_int=\count277
+\l__fontspec_strong_int=\count278
+\l__fontspec_strongdef_int=\count279
+\l__fontspec_tmpa_dim=\dimen166
+\l__fontspec_tmpb_dim=\dimen167
+\l__fontspec_tmpc_dim=\dimen168
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/unicode-math/unicode-math-luatex.
+sty
+Package: unicode-math-luatex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaL
+aTeX
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+(/usr/local/texlive/2021/texmf-dist/tex/lualatex/lualatex-math/lualatex-math.st
+y
+Package: lualatex-math 2020/09/25 v1.9 Patches for mathematics typesetting with
+ LuaLaTeX
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count280
+)
+Lua module: lualatex-math 2013/08/03 1.3 Patches for mathematics typesetting wit
+h LuaLaTeX
+
+Package lualatex-math Warning: I've expected \MT_cramped_internal:Nn to have
+(lualatex-math)                the meaning
+(lualatex-math)                macro:#1#2->\sbox \z@ {$\m@th
+(lualatex-math)                #1\nulldelimiterspace =\z@ \radical \z@
+(lualatex-math)                {#2}$}\ifx #1\displaystyle \dimen@ =\fontdimen
+(lualatex-math)                8\textfont 3\advance \dimen@ .25\fontdimen
+(lualatex-math)                5\textfont 2\else \dimen@ =1.25\fontdimen 8\ifx
+(lualatex-math)                #1\textstyle \textfont \else \ifx
+(lualatex-math)                #1\scriptstyle \scriptfont \else
+(lualatex-math)                \scriptscriptfont \fi \fi 3\fi \advance \dimen@
+(lualatex-math)                -\ht \z@ \ht \z@ =-\dimen@ \box \z@ ,
+(lualatex-math)                but it has the meaning
+(lualatex-math)                macro:#1#2->\setbox \z@ \hbox {$\m@th #1\kern
+(lualatex-math)                -\nulldelimiterspace \radical \z@ {#2}$}\ifx
+(lualatex-math)                #1\displaystyle \dimen@ =\fontdimen 8\textfont
+(lualatex-math)                3\advance \dimen@ .25\fontdimen 5\textfont
+(lualatex-math)                2\else \dimen@ =1.25\fontdimen 8\ifx
+(lualatex-math)                #1\textstyle \textfont \else \ifx
+(lualatex-math)                #1\scriptstyle \scriptfont \else
+(lualatex-math)                \scriptscriptfont \fi \fi 3\fi \advance \dimen@
+(lualatex-math)                -\ht \z@ \ht \z@ =-\dimen@ \ifvmode \leavevmode
+(lualatex-math)                \fi {}\box \z@ .
+
+)
+\g__um_fam_int=\count281
+\g__um_fonts_used_int=\count282
+\l__um_primecount_int=\count283
+\g__um_primekern_muskip=\muskip17
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
+ex)))) (/Users/gkv/latex/sty/crimson-minion.sty
+luaotfload | aux : font no 28 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 30 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: Font family 'Crimson-Roman.otf(0)' created for font
+(fontspec)             'Crimson-Roman.otf' with options
+(fontspec)             [Scale=1.064,Ligatures=TeX,Ligatures=TeX,Scale=1.064,Ita
+licFont=Crimson-Italic.otf,BoldFont=Crimson-Semibold.otf,BoldItalicFont=Crimson
+-SemiboldItalic.otf].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-Roman.otf]:mode=node;script=latn;l
+anguage=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-Roman.otf]:mode=node;script=latn;l
+anguage=dflt;+tlig;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-Semibold.otf]:mode=node;script=lat
+n;language=dflt;+tlig;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-Italic.otf]:mode=node;script=latn;
+language=dflt;+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-Italic.otf]:mode=node;script=latn;
+language=dflt;+tlig;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-SemiboldItalic.otf]:mode=node;scri
+pt=latn;language=dflt;+tlig;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+luaotfload | aux : font no 34 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 36 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: Font family 'Crimson-Roman.otf(1)' created for font
+(fontspec)             'Crimson-Roman.otf' with options
+(fontspec)             [Scale=1.064,Ligatures=TeX,Renderer=Basic,Scale=1.064,It
+alicFont=Crimson-Italic.otf,BoldFont=Crimson-Semibold.otf,BoldItalicFont=Crimso
+n-SemiboldItalic.otf].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-Roman.otf]:mode=base;script=latn;l
+anguage=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-Roman.otf]:mode=base;script=latn;l
+anguage=dflt;+tlig;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-Semibold.otf]:mode=base;script=lat
+n;language=dflt;+tlig;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-Italic.otf]:mode=base;script=latn;
+language=dflt;+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-Italic.otf]:mode=base;script=latn;
+language=dflt;+tlig;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.064]"[Crimson-SemiboldItalic.otf]:mode=base;scri
+pt=latn;language=dflt;+tlig;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/Crimson-Roman.otf(1)/m/n on input li
+ne 23.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/Crimson-Roman.otf(1)/m/it on input 
+line 23.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/Crimson-Roman.otf(1)/b/n on input l
+ine 23.
+LaTeX Font Info:    Font shape `TU/Crimson-Roman.otf(0)/m/n' will be
+(Font)              scaled to size 12.76794pt on input line 23.
+
+Package fontspec Info: Font family 'CronosPro-Regular.otf(0)' created for font
+(fontspec)             'CronosPro-Regular.otf' with options
+(fontspec)             [Scale=1.064,Ligatures=TeX,Ligatures=TeX,Scale=1.1,Numbe
+rs=Lining,ItalicFont=CronosPro-Italic.otf,BoldFont=CronosPro-Semibold.otf,BoldI
+talicFont=CronosPro-SemiboldIt.otf].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Regular.otf]:mode=node;script=latn
+;language=dflt;+tlig;+lnum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Regular.otf]:mode=node;script=latn
+;language=dflt;+tlig;+lnum;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Semibold.otf]:mode=node;script=lat
+n;language=dflt;+tlig;+lnum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Semibold.otf]:mode=node;script=lat
+n;language=dflt;+tlig;+lnum;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Italic.otf]:mode=node;script=latn;
+language=dflt;+tlig;+lnum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Italic.otf]:mode=node;script=latn;
+language=dflt;+tlig;+lnum;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-SemiboldIt.otf]:mode=node;script=l
+atn;language=dflt;+tlig;+lnum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-SemiboldIt.otf]:mode=node;script=l
+atn;language=dflt;+tlig;+lnum;+smcp;"
+
+
+Package fontspec Info: Font family 'CronosPro-Regular.otf(1)' created for font
+(fontspec)             'CronosPro-Regular.otf' with options
+(fontspec)             [Scale=1.064,Ligatures=TeX,Renderer=Basic,Scale=1.1,Numb
+ers=Lining,ItalicFont=CronosPro-Italic.otf,BoldFont=CronosPro-Semibold.otf,Bold
+ItalicFont=CronosPro-SemiboldIt.otf].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Regular.otf]:mode=base;script=latn
+;language=dflt;+tlig;+lnum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Regular.otf]:mode=base;script=latn
+;language=dflt;+tlig;+lnum;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Semibold.otf]:mode=base;script=lat
+n;language=dflt;+tlig;+lnum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Semibold.otf]:mode=base;script=lat
+n;language=dflt;+tlig;+lnum;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Italic.otf]:mode=base;script=latn;
+language=dflt;+tlig;+lnum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-Italic.otf]:mode=base;script=latn;
+language=dflt;+tlig;+lnum;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-SemiboldIt.otf]:mode=base;script=l
+atn;language=dflt;+tlig;+lnum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[CronosPro-SemiboldIt.otf]:mode=base;script=l
+atn;language=dflt;+tlig;+lnum;+smcp;"
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/CronosPro-Regular.otf(1)/m/n on inp
+ut line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/CronosPro-Regular.otf(1)/b/n on in
+put line 29.
+luaotfload | aux : font no 51 (nil) defines no feature for script latn
+luaotfload | aux : font no 51 (nil) defines no feature for script dflt
+
+Package fontspec Info: Font family 'Cronos_MM_Swash.ttf(0)' created for font
+(fontspec)             'Cronos_MM_Swash.ttf' with options
+(fontspec)             [Scale=1.064,Ligatures=TeX,BoldFont={},ItalicFont={},Sma
+llCapsFont={},Scale=1.1].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.1]"[Cronos_MM_Swash.ttf]:mode=node;language=dflt
+;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'MinionMath-Regular(0)' created for font
+(fontspec)             'MinionMath-Regular' with options
+(fontspec)             [Scale=1.064,Ligatures=TeX,Renderer=Basic,BoldItalicFont
+={},ItalicFont={},SmallCapsFont={},Script=Math,FontAdjustment={\__um_luatex_cop
+y_fontdimens:
+(fontspec)             },Extension={.otf},Scale={1.064},Script={Math},SizeFeatu
+res={
+(fontspec)             {Size = -6, Font = MinionMath-Tiny, Style =
+(fontspec)             MathScriptScript}, {Size = 6-8.4, Font =
+(fontspec)             MinionMath-Capt, Style = MathScript}, {Size = 8.4-,
+(fontspec)             Font = MinionMath-Regular}, }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <-6>s*[1.064]"[MinionMath-Tiny.otf]:mode=base;script=mat
+h;language=dflt;+tlig;+ssty=1;"<6-8.4>s*[1.064]"[MinionMath-Capt.otf]:mode=base
+;script=math;language=dflt;+tlig;+ssty=0;"<8.4->s*[1.064]"[MinionMath-Regular.o
+tf]:mode=base;script=math;language=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: 
+
+LaTeX Font Info:    Font shape `TU/MinionMath-Regular(0)/m/n' will be
+(Font)              scaled to size 12.76794pt on input line 45.
+
+Package fontspec Info: Font family 'MinionMath-Regular(1)' created for font
+(fontspec)             'MinionMath-Regular' with options
+(fontspec)             [Scale=1.064,Ligatures=TeX,Renderer=Basic,BoldItalicFont
+={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.32-},{Siz
+e=7.44-10.32,Font=MinionMath-Regular,Style=MathScript},{Size=-7.44,Font=MinionM
+ath-Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdime
+ns:
+(fontspec)             },Extension={.otf},Scale={1.064},Script={Math},SizeFeatu
+res={
+(fontspec)             {Size = -6, Font = MinionMath-Tiny, Style =
+(fontspec)             MathScriptScript}, {Size = 6-8.4, Font =
+(fontspec)             MinionMath-Capt, Style = MathScript}, {Size = 8.4-,
+(fontspec)             Font = MinionMath-Regular}, }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <-6>s*[1.064]"[MinionMath-Tiny.otf]:mode=base;script=mat
+h;language=dflt;+tlig;+ssty=1;"<6-8.4>s*[1.064]"[MinionMath-Capt.otf]:mode=base
+;script=math;language=dflt;+tlig;+ssty=0;"<8.4->s*[1.064]"[MinionMath-Regular.o
+tf]:mode=base;script=math;language=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: 
+
+LaTeX Font Info:    Font shape `TU/MinionMath-Regular(1)/m/n' will be
+(Font)              scaled to size 12.76794pt on input line 45.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 45.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/MinionMath-Regular(1)/m/n on input l
+ine 45.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 45.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/MinionMath-Regular(1)/b/n on input 
+line 45.
+
+Package fontspec Info: MinionMath-Regular scale = 1.0641064.
+
+
+Package fontspec Info: MinionMath-Tiny scale = 1.0641064.
+
+
+Package fontspec Info: MinionMath-Capt scale = 1.0641064.
+
+
+Package fontspec Info: MinionMath-Regular scale = 1.0641064.
+
+
+Package fontspec Info: Font family 'MinionMath-Regular(2)' created for font
+(fontspec)             'MinionMath-Regular' with options
+(fontspec)             [Scale=1.064,Ligatures=TeX,Renderer=Basic,BoldItalicFont
+={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.32-},{Siz
+e=7.44-10.32,Font=MinionMath-Regular,Style=MathScript},{Size=-7.44,Font=MinionM
+ath-Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdime
+ns:
+(fontspec)             },Extension={.otf},Scale={1.064},Script={Math},SizeFeatu
+res={
+(fontspec)             {Size = -6, Font = MinionMath-Tiny, Style =
+(fontspec)             MathScriptScript}, {Size = 6-8.4, Font =
+(fontspec)             MinionMath-Capt, Style = MathScript}, {Size = 8.4-,
+(fontspec)             Font = MinionMath-Regular},
+(fontspec)             },ScaleAgain=1.0001,FontAdjustment={\fontdimen 8\font
+(fontspec)             =8.28639pt\relax \fontdimen 9\font =5.83495pt\relax
+(fontspec)             \fontdimen 10\font =4.87735pt\relax \fontdimen 11\font
+(fontspec)             =9.38443pt\relax \fontdimen 12\font =4.71136pt\relax
+(fontspec)             \fontdimen 13\font =4.95395pt\relax \fontdimen 14\font
+(fontspec)             =4.95395pt\relax \fontdimen 15\font =4.0985pt\relax
+(fontspec)             \fontdimen 16\font =3.01323pt\relax \fontdimen 17\font
+(fontspec)             =3.01323pt\relax \fontdimen 18\font =4.0985pt\relax
+(fontspec)             \fontdimen 19\font =1.2768pt\relax \fontdimen 22\font
+(fontspec)             =3.25581pt\relax \fontdimen 20\font =0pt\relax
+(fontspec)             \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <-6>s*[1.0641064]"[MinionMath-Tiny.otf]:mode=base;script
+=math;language=dflt;+tlig;+ssty=1;"<6-8.4>s*[1.0641064]"[MinionMath-Capt.otf]:m
+ode=base;script=math;language=dflt;+tlig;+ssty=0;"<8.4->s*[1.0641064]"[MinionMa
+th-Regular.otf]:mode=base;script=math;language=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
+(fontspec)             =8.28639pt\relax \fontdimen 9\font =5.83495pt\relax
+(fontspec)             \fontdimen 10\font =4.87735pt\relax \fontdimen 11\font
+(fontspec)             =9.38443pt\relax \fontdimen 12\font =4.71136pt\relax
+(fontspec)             \fontdimen 13\font =4.95395pt\relax \fontdimen 14\font
+(fontspec)             =4.95395pt\relax \fontdimen 15\font =4.0985pt\relax
+(fontspec)             \fontdimen 16\font =3.01323pt\relax \fontdimen 17\font
+(fontspec)             =3.01323pt\relax \fontdimen 18\font =4.0985pt\relax
+(fontspec)             \fontdimen 19\font =1.2768pt\relax \fontdimen 22\font
+(fontspec)             =3.25581pt\relax \fontdimen 20\font =0pt\relax
+(fontspec)             \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 45.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> TU/MinionMath-Regular(2)/m/n on input 
+line 45.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 45.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> TU/MinionMath-Regular(2)/b/n on input 
+line 45.
+
+Package fontspec Info: MinionMath-Regular scale = 1.0638936.
+
+
+Package fontspec Info: MinionMath-Tiny scale = 1.0638936.
+
+
+Package fontspec Info: MinionMath-Capt scale = 1.0638936.
+
+
+Package fontspec Info: MinionMath-Regular scale = 1.0638936.
+
+
+Package fontspec Info: Font family 'MinionMath-Regular(3)' created for font
+(fontspec)             'MinionMath-Regular' with options
+(fontspec)             [Scale=1.064,Ligatures=TeX,Renderer=Basic,BoldItalicFont
+={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.32-},{Siz
+e=7.44-10.32,Font=MinionMath-Regular,Style=MathScript},{Size=-7.44,Font=MinionM
+ath-Regular,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_fontdime
+ns:
+(fontspec)             },Extension={.otf},Scale={1.064},Script={Math},SizeFeatu
+res={
+(fontspec)             {Size = -6, Font = MinionMath-Tiny, Style =
+(fontspec)             MathScriptScript}, {Size = 6-8.4, Font =
+(fontspec)             MinionMath-Capt, Style = MathScript}, {Size = 8.4-,
+(fontspec)             Font = MinionMath-Regular},
+(fontspec)             },ScaleAgain=0.9999,FontAdjustment={\fontdimen 8\font
+(fontspec)             =0.6384pt\relax \fontdimen 9\font =1.37894pt\relax
+(fontspec)             \fontdimen 10\font =1.53215pt\relax \fontdimen 11\font
+(fontspec)             =3.76654pt\relax \fontdimen 12\font =8.06934pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <-6>s*[1.0638936]"[MinionMath-Tiny.otf]:mode=base;script
+=math;language=dflt;+tlig;+ssty=1;"<6-8.4>s*[1.0638936]"[MinionMath-Capt.otf]:m
+ode=base;script=math;language=dflt;+tlig;+ssty=0;"<8.4->s*[1.0638936]"[MinionMa
+th-Regular.otf]:mode=base;script=math;language=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
+(fontspec)             =0.6384pt\relax \fontdimen 9\font =1.37894pt\relax
+(fontspec)             \fontdimen 10\font =1.53215pt\relax \fontdimen 11\font
+(fontspec)             =3.76654pt\relax \fontdimen 12\font =8.06934pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 4
+5.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> TU/MinionMath-Regular(3)/m/n on input 
+line 45.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 45.
+
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> TU/MinionMath-Regular(3)/b/n on input 
+line 45.
+LaTeX Font Info:    Font shape `TU/MinionMath-Regular(1)/m/n' will be
+(Font)              scaled to size 9.19292pt on input line 45.
+LaTeX Font Info:    Font shape `TU/MinionMath-Regular(1)/m/n' will be
+(Font)              scaled to size 6.63933pt on input line 45.
+LaTeX Font Info:    Font shape `TU/MinionMath-Regular(2)/m/n' will be
+(Font)              scaled to size 12.76923pt on input line 45.
+LaTeX Font Info:    Font shape `TU/MinionMath-Regular(2)/m/n' will be
+(Font)              scaled to size 9.19383pt on input line 45.
+LaTeX Font Info:    Font shape `TU/MinionMath-Regular(2)/m/n' will be
+(Font)              scaled to size 6.64pt on input line 45.
+LaTeX Font Info:    Font shape `TU/MinionMath-Regular(3)/m/n' will be
+(Font)              scaled to size 12.76666pt on input line 45.
+LaTeX Font Info:    Font shape `TU/MinionMath-Regular(3)/m/n' will be
+(Font)              scaled to size 9.19199pt on input line 45.
+LaTeX Font Info:    Font shape `TU/MinionMath-Regular(3)/m/n' will be
+(Font)              scaled to size 6.63866pt on input line 45.
+
+Package fontspec Info: LucidaBrightMathOT scale = 0.8684940380509104.
+
+
+Package fontspec Info: LucidaBrightMathOT scale = 0.8684940380509104.
+
+
+Package fontspec Info: LucidaBrightMathOT scale = 0.8684940380509104.
+
+
+Package fontspec Info: LucidaBrightMathOT scale = 0.8684940380509104.
+
+
+Package fontspec Info: Font family 'LucidaBrightMathOT.otf(0)' created for
+(fontspec)             font 'LucidaBrightMathOT.otf' with options
+(fontspec)             [Scale=1.064,Ligatures=TeX,Renderer=Basic,BoldItalicFont
+={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.32-},{Siz
+e=7.44-10.32,Font=LucidaBrightMathOT.otf,Style=MathScript},{Size=-7.44,Font=Luc
+idaBrightMathOT.otf,Style=MathScriptScript}},FontAdjustment={\__um_luatex_copy_
+fontdimens:
+(fontspec)             },Scale={MatchLowercase},RawFeature={+ss04}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.32->s*[0.8684940380509104]"[LucidaBrightMathOT.otf]:
+mode=base;script=math;language=dflt;+tlig;+ss04;"<7.44-10.32>s*[0.8684940380509
+104]"[LucidaBrightMathOT.otf]:mode=base;script=math;language=dflt;+tlig;+ss04;+
+ssty=0;"<-7.44>s*[0.8684940380509104]"[LucidaBrightMathOT.otf]:mode=base;script
+=math;language=dflt;+tlig;+ss04;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: 
+
+LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT.otf(0)/m/n' will be
+(Font)              scaled to size 10.422pt on input line 50.
+\sym__um_fam1=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
+(Font)                  TU/LucidaBrightMathOT.otf(0)/m/n --> TU/LucidaBrightMat
+hOT.otf(0)/m/n on input line 50.
+LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
+(Font)                  TU/LucidaBrightMathOT.otf(0)/m/n --> TU/LucidaBrightMat
+hOT.otf(0)/b/n on input line 50.
+LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT.otf(0)/m/n' will be
+(Font)              scaled to size 7.50383pt on input line 50.
+LaTeX Font Info:    Font shape `TU/LucidaBrightMathOT.otf(0)/m/n' will be
+(Font)              scaled to size 5.41943pt on input line 50.
+)
+(/Users/gkv/latex/sty/myparalist.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen169
+\enit@toks=\toks22
+\enit@inbox=\box51
+\enit@count@id=\count284
+\enitdp@description=\count285
+)
+\enitdp@compactitem=\count286
+\enitdp@tightitem=\count287
+\enitdp@largeitem=\count288
+\enitdp@mediumitem=\count289
+\enitdp@compactdesc=\count290
+\enitdp@mediumdesc=\count291
+\enitdp@tightdesc=\count292
+\c@largeenumi=\count293
+\c@largeenumii=\count294
+\c@largeenumiii=\count295
+\enitdp@largeenum=\count296
+\c@vlargeenumi=\count297
+\c@vlargeenumii=\count298
+\c@vlargeenumiii=\count299
+\enitdp@vlargeenum=\count300
+\c@compactenumi=\count301
+\c@compactenumii=\count302
+\c@compactenumiii=\count303
+\enitdp@compactenum=\count304
+\c@mediumenumi=\count305
+\c@mediumenumii=\count306
+\c@mediumenumiii=\count307
+\enitdp@mediumenum=\count308
+\c@tightenumi=\count309
+\c@tightenumii=\count310
+\c@tightenumiii=\count311
+\enitdp@tightenum=\count312
+\c@inparaenumi=\count313
+\c@inparaenumii=\count314
+\c@inparaenumiii=\count315
+\enitdp@inparaenum=\count316
+\enitdp@inparaitem=\count317
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 225.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2020/10/05 v1.2a Graphics/color driver for luatex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (./preamble.tex (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/varioref.
+sty
+Package: varioref 2020/08/11 v1.6e package for extended references (FMi)
+\c@vrcnt=\count318
+)
+\c@regequation=\count319
+\c@mycounter=\count320
+)
+(./errata.aux)
+\openout1 = errata.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+*geometry* verbose mode - [ preamble ] result:
+* driver: luatex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=556.47656pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 105.
+)
+\Gin@req@height=\dimen170
+\Gin@req@width=\dimen171
+)
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 13.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 13.
+
+
+Package unicode-math Warning: Using \overbracket and \underbracket from
+(unicode-math)                `mathtools' package.
+(unicode-math)                 
+(unicode-math)                 Use \Uoverbracket and \Uunderbracket for
+(unicode-math)                original `unicode-math' definition.
+
+
+Package unicode-math Warning: I'm going to overwrite the following commands
+(unicode-math)                from the `mathtools' package: 
+(unicode-math)                 
+(unicode-math)                     \dblcolon, \coloneqq, \Coloneqq, \eqqcolon.
+(unicode-math)                
+(unicode-math)                 
+(unicode-math)                 Note that since I won't overwrite the other
+(unicode-math)                colon-like commands, using them will lead to
+(unicode-math)                inconsistencies.
+
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count321
+\scratchdimen=\dimen172
+\scratchbox=\box52
+\nofMPsegments=\count322
+\nofMParguments=\count323
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count324
+\MPscratchDim=\dimen173
+\MPnumerator=\count325
+\makeMPintoPDFobject=\count326
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Font shape `TU/Crimson-Roman.otf(0)/m/n' will be
+(Font)              scaled to size 15.32152pt on input line 16.
+LaTeX Font Info:    Font shape `TU/Crimson-Roman.otf(0)/b/n' will be
+(Font)              scaled to size 15.32152pt on input line 16.
+LaTeX Font Info:    Font shape `TU/CronosPro-Regular.otf(0)/b/n' will be
+(Font)              scaled to size 15.84007pt on input line 16.
+LaTeX Font Info:    Font shape `TU/Crimson-Roman.otf(0)/b/n' will be
+(Font)              scaled to size 12.76794pt on input line 26.
+LaTeX Font Info:    Font shape `TU/Crimson-Roman.otf(0)/m/n' will be
+(Font)              scaled to size 9.19292pt on input line 29.
+LaTeX Font Info:    Font shape `TU/Crimson-Roman.otf(0)/m/n' will be
+(Font)              scaled to size 6.63933pt on input line 29.
+
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./errata.aux))
+
+Here is how much of LuaTeX's memory you used:
+ 11761 strings out of 478531
+ 125034,794899 words of node,token memory allocated
+ 499 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 55 glue_spec,
+ 6 attribute_list, 1 write nodes
+   avail lists: 1:3,2:299,3:114,4:50,5:310,6:26,7:2788,8:37,9:178,10:5,11:138
+ 31385 multiletter control sequences out of 65536+600000
+ 80 fonts using 18672583 bytes
+ 97i,5n,133p,332b,2766s stack positions out of 5000i,500n,10000p,200000b,80000s
+</Users/gkv/Library/Fonts/MinionMath/MinionMath-Regular.otf></Users/gkv/Library/
+Fonts/Crimson/Crimson-Semibold.otf></Users/gkv/Library/Fonts/Crimson/Crimson-Rom
+an.otf></Users/gkv/Library/Fonts/Cronos/CronosPro-Semibold.otf>
+Output written on errata.pdf (1 page, 23003 bytes).
+
+PDF statistics: 36 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+

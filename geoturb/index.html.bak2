@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML VERSION="2.0">
+<HEAD>
+<!-- WEBMAGIC VERSION NUMBER="2.0.1" -->
+<!-- WEBMAGIC TRANSLATION NAME="ServerRoot" SRC="/var/www/htdocs/" DST="/" -->
+<!-- WEBMAGIC TRANSLATION NAME="ProjectRoot" SRC="./" DST="" -->
+<TITLE>Atmos. & Ocean Sci 576 Applied Math xxx   GEOSTROPHIC TURBULENCE: THE MACROTURBULENCE OF THE ATMOSPHERE AND OCEAN</TITLE>
+</HEAD>
+<BODY>
+<P><!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others --><META NAME="description" CONTENT="Atmos. &amp; Ocean Sci 576 Applied Math xxx &nbsp; GEOSTROPHIC TURBULENCE: THE MACROTURBULENCE OF THE ATMOSPHERE AND OCEAN"><META NAME="keywords" CONTENT="flyer"><META NAME="resource-type" CONTENT="document"><META NAME="distribution" CONTENT="global"><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1"><LINK REL="STYLESHEET" HREF="flyer.css"><LINK REL="next" HREF="node1.html"><!--Navigation Panel--><A HREF="node1.html" NAME="tex2html1"> </A><A HREF="node1.html"><IMG SRC="/usr/local/latex2html/icons.gif/next_motif.gif" ALT="next" WIDTH="37" HEIGHT="24" BORDER="0" SGI_FULLPATH="/usr/local/latex2html/icons.gif/next_motif.gif"></A> <IMG SRC="/usr/local/latex2html/icons.gif/up_motif_gr.gif" ALT="up" WIDTH="26" HEIGHT="24" BORDER="0" SGI_FULLPATH="/usr/local/latex2html/icons.gif/up_motif_gr.gif"> <IMG SRC="/usr/local/latex2html/icons.gif/previous_motif_gr.gif" ALT="previous" WIDTH="63" HEIGHT="24" BORDER="0" SGI_FULLPATH="/usr/local/latex2html/icons.gif/previous_motif_gr.gif"> <BR>
+ <BR>
+ <BR>
+</P>
+<P></P>
+<CENTER><H1 ALIGN="CENTER">Atmos. &amp; Ocean Sci 576 Applied Math xxx <BR>
+ <BR>
+ GEOSTROPHIC TURBULENCE: <BR>
+ THE MACROTURBULENCE OF THE ATMOSPHERE AND OCEAN</H1>
+</CENTER><CENTER><P ALIGN="CENTER"><STRONG>Geoff Vallis (gkv@princeton.edu) Isaac Held (ih@gfdl.gov)</STRONG></P>
+</CENTER><CENTER><P ALIGN="CENTER"></P>
+</CENTER><P></P>
+<P>The large-scale flows in the atmosphere and ocean are often characterized
+as `turbulent' but, because of the importance of rotation and stratification,
+these flows have many features that distinguish them from three-dimensional
+turbulence. This course presents the theory of such `geostrophic' turbulence,
+developing a sequence of idealized models ranging from the two-dimensional
+flow of a homogeneous incompressible fluid to rotating, stratified turbulence
+in the presence of environmental temperature and vorticity gradients. Connections
+will be made with observations and with the problem of numerical modeling
+of the atmosphere and oceans, and there will be opportunities to run numerical
+models of turbulence, such as the one producing this figure: </P>
+<P><DIV ALIGN="CENTER"><!-- MATH: $\epsfig{figure=turb.ps,height=3.2in,angle=0}$ --><IMG SRC="img1.gif" ALT="\epsfig{figure=turb.ps,height=3.2in,angle=0}" WIDTH="363" HEIGHT="368" BORDER="0" SGI_FULLPATH="/tmp_mnt/home/gkv/public_html/geoturb/img1.gif"></DIV> </P>
+<P><I>Prerequisites:</I> Some knowledge of fluid mechanics, equivalent to an undergraduate course.
+For AOS students, AOS 571 and 572 or equivalent. However, the course will
+be self-contained and can also be used by physics, astronomy, engineering,
+or mathematics students as an intensive introduction both to aspects of
+turbulence and to atmospheric and oceanic dynamics. </P>
+<P><I>When:</I> Tuesday and Thursday, from 9:00 to 10:30 am. Second floor seminar room,
+Sayre Hall, Forrestal Campus. First lecture on September 16. </P>
+<P>See also www.gfdl.gov/<IMG SRC="img2.gif" ALT="$\sim$" WIDTH="20" HEIGHT="17" BORDER="0" SGI_FULLPATH="/tmp_mnt/home/gkv/public_html/geoturb/img2.gif">gkv/geoturb. </P>
+<P><BR>
+</P>
+<HR>
+<P><!--Table of Child-Links--><A NAME="CHILD_LINKS">&#160;</A> </P>
+<UL>
+<LI><A HREF="node1.html" NAME="tex2html3">About this document ... </A>
+</UL>
+<P><!--End of Table of Child-Links--></P>
+<HR>
+<P><!--Navigation Panel--><A HREF="node1.html" NAME="tex2html1"> </A><A HREF="node1.html"><IMG SRC="/usr/local/latex2html/icons.gif/next_motif.gif" ALT="next" WIDTH="37" HEIGHT="24" BORDER="0" SGI_FULLPATH="/usr/local/latex2html/icons.gif/next_motif.gif"></A> <IMG SRC="/usr/local/latex2html/icons.gif/up_motif_gr.gif" ALT="up" WIDTH="26" HEIGHT="24" BORDER="0" SGI_FULLPATH="/usr/local/latex2html/icons.gif/up_motif_gr.gif"> <IMG SRC="/usr/local/latex2html/icons.gif/previous_motif_gr.gif" ALT="previous" WIDTH="63" HEIGHT="24" BORDER="0" SGI_FULLPATH="/usr/local/latex2html/icons.gif/previous_motif_gr.gif"> <BR>
+ <B>Next:</B> <A HREF="node1.html" NAME="tex2html2">About this document ...</A> <!--End of Navigation Panel--> </P>
+<ADDRESS><I>Geoffrey Vallis</I> <BR>
+<I>1999-08-23</I> </ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,64 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+
+%Set fonts:
+% Sans serif
+%%\renewcommand{\sfdefault}{hls}
+%\renewcommand{\sfdefault}{lmss}
+
+%Choose fonts:
+%\usepackage{mathpazo} \usepackage{amssymb}
+%\renewcommand{\rmdefault}{bch}  \usepackage{lucidmathonly} \linespread{1.02} 
+%\usepackage{chartlucid}
+%\renewcommand{\rmdefault}{bar}  \usepackage{timesmathonly} % \baskerville
+
+% Packages
+%\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage[dvips]{geometry}
+  \geometry{text={14cm,23cm},centering,letterpaper}
+\usepackage{paralist}
+\usepackage{varioref}
+\usepackage{microtype}
+\usepackage{bm}
+\usepackage{xspace}
+\usepackage{ifpdf}
+\usepackage{makeidx}
+\ifpdf
+%\usepackage{pdfsync}
+\fi
+
+%My preamble
+\input{preamble}
+\renewcommand{\sb}{}
+\newcommand{\eq}{eq.\ } \newcommand{\Eq}{Eq.\ }
+\renewcommand{\star}{\ensuremath{\blacklozenge} }
+
+\begin{document}
+\title{\sffamily Comments and Errata on Atmospheric and Oceanic Fluid Dynamics (2nd Printing)}
+\author{\sffamily Geoffrey K. Vallis}
+%\date{ }
+\maketitle
+%
+
+\noindent 
+
+
+The following errata and comments apply to the \emph{second printing} of the book, available from October 2007. (The second printing says `Reprinted 2007' on the copyright page.) If you have the first printing of the book, please see the corresponding errata sheet. Errors that occur in both printings are (or should be) listed in both errata sheets. If you find other errors, or if you think something is poorly explained, please contact the author at `gkv-at-princeton-dot-edu'. 
+
+\begin{enumerate}
+
+
+\item Page 130, \eq (3.33). Extraneous minus sign on rhs.
+
+\item \label{informal} Page 258. This explanation (the informal mechanism) is a little brief and may be hard to follow, and (6.48) is not transparent without more algebra. A clearer version may be provided eventually. 
+
+\item Page 237--238 on phase speed. Some sources define the phase velocity to be given by $\cb_p \equiv \omega \kbi / K^2$, where $\kbi$ is the wavevector. The components of the phase velocity are then given by $c^x_p = \omega k^x/K^2$, etc. Defined this way, the phase velocity is a true velocity. However, its components do \emph{not} represent the speed at which wavecrests travel along the coordinate axes. This definition is not common, but be aware of it. Also, at the bottom on page 240, the explanation of group velocity is rather terse, and note that ${\omega'} = \omega(k+k') - \omega(k)$.
+
+\end{enumerate}
+
+\end{document}
+
+% Finis

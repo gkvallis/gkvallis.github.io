@@ -1,0 +1,60 @@
+This is VTeX/Linux, v 7.53 (preloaded format=latex 2001.11.21)  7 JUN 2002 17:49
+**@latex bush
+(/home/gkv/public_html/uscar/bush.tex
+Verifying format fonts..............
+LaTeX2e <2001/06/01>
+(/usr/local/vtex/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/vtex/texmf/tex/latex/base/size12.clo
+File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/vtex/texmf/tex/latex/psnfss/times.sty
+Package: times 2001/06/04 PSNFSS-v8.2 (SPQR) 
+)
+(/home/gkv/public_html/uscar/bush.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 3.
+
+(/usr/local/vtex/texmf/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+) [1
+Initializing GeX...
+Loading vtex.pro profile.
+GeX initialization completed.
+
+] (/home/gkv/public_html/uscar/bush.aux) )
+Here is how much of TeX's memory you used: 
+382 strings out of 8241 
+3248 string characters out of 17706 
+44404 words of memory out of 524285
+ 5292 multiletter control sequences out of 10000
+ 5466 words of font info for 17 fonts, out of 196592 for 256
+ 309 hyphenation exceptions out of 907
+ 22i,4n,19p,130b,156s stack positions out of 512i,80n,1500p,2047b,2048s
+
+...Processing fonts...
+...Processing images
+Output written on bush.pdf (1 page, 3905 bytes).

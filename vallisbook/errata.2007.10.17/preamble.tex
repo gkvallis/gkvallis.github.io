@@ -1,0 +1,660 @@
+%SourceDoc aofd.tex
+% -------------------------------------------------------------
+% This file contains abbreviations, mainly mathematical
+% -------------------------------------------------------------
+%\sloppy
+\allowdisplaybreaks
+\newcounter{regequation}
+\newcounter{mycounter}
+\setcounter{secnumdepth}{2}
+
+\newcommand{\newcm}[2]{\newcommand*{#1}{\ensuremath{#2}}}
+\newcommand{\renewcm}[2]{\renewcommand*{#1}{\ensuremath{#2}}}
+\newcommand{\newc}{\newcommand*}
+
+
+\renewcommand{\boxed}[1]{\fbox{$\displaystyle#1$}\,}
+
+\providecommand{\what}{\widehat}
+\providecommand{\wtilde}{\widetilde}
+
+\newcommand{\tablesection}[1]{\subsection*{\centering\large #1} \medskip }
+
+% Need to redefine this because cupbook doesn't make the environment
+% narrower, so the quotes are too wide. 
+\renewenvironment{quote}
+ {\begin{list}{}
+ {%\setlength{\leftmargin}{1cm}
+ \setlength{\rightmargin}{\leftmargin}}
+ \item[]}%
+  {\end{list}}
+  
+
+\newenvironment*{myquote}[2]{  \begin{quote}
+ %{\small\textit{\textsf{#1}}} \\ \textsf{\footnotesize  #2}  } 
+ {\small\itsf#1} \\ \textsf{\footnotesize  #2}  } 
+{ \end{quote} }
+ 
+\newenvironment*{chapquote}[2]{  \begin{savequote} 
+  {\small\textit{\textsf{#1}}} \vskip 2pt  {\sf \footnotesize {#2}}  } 
+{ \end{savequote} }
+
+% \renewenvironment*{myquote}[2]{\begin{quote} \begin{flushright} 
+% \textit{\textsf{\small  #1 } } \\ \textsf{\footnotesize  #2}  }
+% { \end{flushright} \end{quote} }
+
+
+\newenvironment{shtable}[1][tbp]
+   {\begin{table}[#1]\begin{center}\begin{minipage}{\tablewidth}\begin{shaded}
+   \begin{minipage}{\tablewidth}
+   \setcounter{regequation}{\value{equation}}\setcounter{equation}{0}
+   \renewcommand{\theequation}{\arabic{equation}}
+   %\parskip=0pt 
+   \parindent=0.5cm 
+   \normalsize
+   }%
+  {\setcounter{equation}{\value{regequation}}
+    \end{minipage}\end{shaded}\end{minipage}\end{center}\end{table} }
+
+\newenvironment{wshtable}[1][tbp]
+{\begin{table}[#1]\begin{center}\begin{minipage}{1.0\textwidth}\begin{shaded}
+   \begin{minipage}{\textwidth}
+    \setcounter{regequation}{\value{equation}}\setcounter{equation}{0}
+   \renewcommand{\theequation}{\arabic{equation}}
+   %\parskip=0pt
+   \parindent=0.5cm 
+   \normalsize
+   }%
+  {\setcounter{equation}{\value{regequation}}
+   \end{minipage}\end{shaded}\end{minipage}\end{center}\end{table} }
+
+\newenvironment{frtable}[1][tbp]
+   {\begin{table}[#1]\begin{center}\begin{boxedminipage}{\tablewidth}
+   \setcounter{regequation}{\value{equation}}\setcounter{equation}{0}
+   \renewcommand{\theequation}{\arabic{equation}}
+    \parindent=0.5cm \normalsize}%
+ {\setcounter{equation}{\value{regequation}}
+   \end{boxedminipage}\end{center}\end{table} }
+   
+   \newenvironment{wfrtable}[1][tbp]
+      {\begin{table}[#1]\begin{center}\begin{boxedminipage}{\textwidth}
+      \setcounter{regequation}{\value{equation}}\setcounter{equation}{0}
+      \renewcommand{\theequation}{\arabic{equation}}
+       \parindent=0.5cm \normalsize}%
+    {\setcounter{equation}{\value{regequation}}
+      \end{boxedminipage}\end{center}\end{table} }
+
+
+\newenvironment{mediumitem}[1][\quad$\star$]%
+{\vskip 2pt \begin{compactitem}[#1]\setlength{\itemsep}{2pt}}%
+{\end{compactitem}\vskip 2pt}
+	     
+\newenvironment{mediumenum}[1][\it(i)]%
+{\vskip 2pt \begin{compactenum}[#1]\setlength{\itemsep}{2pt}}%
+{\end{compactenum}\vskip 2pt}
+
+
+\newenvironment{largeenum}[1][\it(i)]%
+{\begin{enumerate}[#1]}{\end{enumerate}}
+
+
+\newenvironment{largeitem}[1][\quad$\star$]%
+{\begin{enumerate}[#1]}{\end{itemize}}
+
+
+\newenvironment{notes}{ \begin{small} \begin{sffamily} 
+\renewcommand{\rightmark}{Notes and Problems}
+   \setlength{\rightmargin}{0.\leftmargin}}   % see also enoteformat in 
+                                              % mysects.sty
+   {\end{sffamily} \end{small}}
+
+
+% This is the environment for the problem sets 
+\newenvironment{problems}{\begin{sffamily} \begin{small} 
+\renewcommand{\rightmark}{Notes and Problems}
+ \setcounter{equation}{0}
+ \renewcommand{\theequation}{P\thechapter.\arabic{equation}}
+ \subsubsection*{Problems}
+ \begin{list}{\thechapter.\arabic{mycounter}} 
+   {\usecounter{mycounter}\setlength{\itemsep}{2pt}
+%   \setlength{\leftmargin}{1cm}\setlength{\rightmargin}{1cm}}}%
+   \setlength{\rightmargin}{0.\leftmargin}}}%                                                              
+  {\newpage \end{list} \end{small} \end{sffamily} \renewcommand{\rightmark}{Problems} }
+%   
+  
+  
+% This is for the problem sets of chapter 1.
+ \newenvironment{problemsch1}{\begin{sffamily} \begin{small}
+ \renewcommand{\rightmark}{Notes and Problems}
+ \setcounter{equation}{0}\renewcommand{\theequation}{P\thechapter.\arabic{equation}}
+ \begin{list}{\thechapter.\arabic{mycounter}}
+   {\usecounter{mycounter}\setlength{\itemsep}{2pt} 
+ % \setlength{\leftmargin}{1cm}\setlength{\rightmargin}{1cm}}}%
+   \setlength{\rightmargin}{0.\leftmargin}}}%
+   {\newpage \end{list} \end{small} \end{sffamily}}
+  
+
+% \newcommand{\theenotes}{\begingroup
+% 	\setlength{\parskip}{1ex}
+% 	\renewcommand{\enoteheading}{\subsubsection*{Notes} 
+% 		   \leavevmode\par\vskip-0.8\baselineskip }
+% 	\renewcommand{\enotesize}{\small}
+% 	\theendnotes \setcounter{endnote}{0} \endgroup}	
+
+\newcommand{\theenotes}{\begingroup
+        \setlength{\parskip}{1ex}
+        \renewcommand{\enoteheading}{}
+        \renewcommand{\enotesize}{\small}
+        \bigskip \par \pagebreak[3] 
+        \noindent {\normalsize \itsf Notes} \nopagebreak
+        \theendnotes \setcounter{endnote}{0}  \endgroup}
+
+
+%\def\enoteformat{\rightskip\z@ \leftskip 1cm \parindent=0em
+%     \leavevmode\llap{\hbox{{\@theenmark.} }}}
+
+
+
+
+\newenvironment{ndes}{ \begin{small} \begin{sffamily}
+\begin{list}{}{\usecounter{mycounter}
+\setlength{\itemindent}{-0.6cm} %
+\setlength{\topskip}{0pt}
+\setlength{\parsep}{0pt}
+%\setlength{\leftmargin}{1cm} %\setlength{\rightmargin}{1cm}}}%
+\setlength{\rightmargin}{0.\leftmargin}}}%
+{\end{list}\end{sffamily}\end{small}}
+
+
+\newenvironment{ndes3}{ 
+\begin{compactdesc} 
+    \setlength{\topskip}{-10pt}
+\setlength{\itemindent}{-0.6cm} }
+{\end{compactdesc}}
+
+\newenvironment{ndes2}{ \begin{small} \begin{sffamily}
+\begin{list}{}{\usecounter{mycounter}
+\setlength{\itemindent}{-0.6cm} %
+\setlength{\topskip}{0pt}
+\setlength{\itemsep}{0pt}
+\setlength{\parsep}{0pt} \setlength{\parskip}{-50pt} \setlength{\partopsep}{0pt} 
+%\setlength{\leftmargin}{1cm} %\setlength{\rightmargin}{1cm}}}%
+\setlength{\rightmargin}{0.\leftmargin}}}%
+{\end{list}\end{sffamily}\end{small}}
+
+
+\newenvironment{enumar}{\begin{list}{\arabic{mycounter}.}{\usecounter{mycounter}
+\setlength{\rightmargin}{\leftmargin}}}%
+ {\end{list}}
+
+\newenvironment{enumi}{\begin{list}{(\roman{enumi})}{\usecounter{enumi}
+\setlength{\rightmargin}{\leftmargin}}}%
+ {\end{list}}
+
+\newenvironment{enumI}{\begin{list}{\Roman{mycounter}}{\usecounter{mycounter}
+\setlength{\rightmargin}{\leftmargin}}}%
+ {\end{list}}
+
+ \newenvironment{enumalph}{\begin{list}{(\alph{enumi})}{\usecounter{enumi}
+ \setlength{\rightmargin}{0.\leftmargin}}}%
+ {\end{list}}
+
+\newenvironment*{equationab}{\begin{equation}\eqnab}{\end{equation}}
+\newcommand{\eqnab}%
+    {\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}a,b}}
+\newcommand{\eqnabc}%
+    {\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}a,b,c}} 
+    
+
+\newcommand{\aleqnab}%
+	{\renewcommand{\theequation}{\theparentquation\arabic{equation}a,b}}
+
+\newcommand{\textcas}{\texttt}
+\newenvironment{casual}{\ttfamily\itshape}{}
+
+
+\newcommand{\euro}{\textsf{\texteuro}}
+\newcommand{\ppt}{\textperthousand \xspace}
+\newcommand{\ie}{i.e.,\xspace}
+\newcommand{\eg}{e.g.,\xspace}
+\newcommand{\itsf}{\itshape\sffamily}
+\newcommand{\textitsf}[1]{\textit{\textsf{#1}}}
+
+\newcommand{\bindex}[1]{\index{#1|textbf} }
+\newcommand{\secindex}[1]{\index{#1|(textbf} }
+\newcommand{\esecindex}[1]{\index{#1|)textbf} }
+\newcommand{\mybegindex}[1]{\index{#1|(} }
+\newcommand{\myendindex}[1]{\index{#1|)} }
+
+%\providecommand{\PARENS}[1]{\left( #1 \right)}
+\newcommand{\bracket}[1]{\left( #1 \right)}
+\newcommand{\sbracket}[1]{\left[ #1 \right]}
+\newcommand{\cbracket}[1]{\left\{ #1 \right\} }
+\newcommand{\abracket}[1]{\left\langle #1 \right\rangle}
+\newcommand{\bracksup}[2]{\bracket{#1}^{\!\!#2}}
+\newcommand{\bracksub}[2]{\bracket{#1}_{\!\!#2}}
+\newcommand{\lbracksub}[2]{\left.{#1}\right|_{#2}}
+\newcommand{\linesub}[1]{\left.\right|_{#1}}
+\newcommand{\ave}[1]{\left< #1 \right> }
+%\renewcommand{\bracket}{\PARENS}
+
+\def\gobble #1{}   % effectively comments out what is in curly brackets
+\renewcommand{\Re}{\text{Re}\,}
+\newcommand{\Rey}{\mathit{Re}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\Dc}{\mathcal{D}}
+\newcommand{\etascale}{\mathcal H}
+
+\newc{\x}{$x$\xspace} \newc{\y}{$y$\xspace}  \newc{\z}{$z$\xspace}
+\newcommand{\sgn}{\text{sgn}\xspace}
+
+\newcommand{\APE}{\textit{APE}\xspace}
+\newcommand{\KE}{\textit{KE}\xspace}
+\newcommand{\PE}{\textit{PE}\xspace}
+\newcommand{\TPE}{\textit{TPE}\xspace}
+\newc{\afterpag}{\afterpage}
+\renewcommand{\O}{\ensuremath{\mathcal{O}}}
+\newcommand{\obar}[2][]{\overline{#2}^{#1}}
+\newcommand{\inprod}[2]{\left\langle{#1},{#2}\right\rangle}
+\newc{\probref}[1]{\thechapter.\ref{#1}}
+\providecommand{\LettrineFontHook}{}
+\renewcommand{\LettrineFontHook}{\sffamily}
+\newc{\letrn}[2]{\lettrine[lines=3,lhang=0]{{\color{gray}#1}}
+               {\MakeUppercase{\footnotesize\sffamily #2}}}
+	      % {#2}  } 
+\newc{\figref}[1]{Fig.~\ref{#1}}
+\newc{\Figref}[1]{Figure \ref{#1}}
+\newc{\secref}[1]{section \ref{#1}}
+\newcommand{\enote}[1]{$^{\ref{#1}}$}
+\newc{\dbint}{\iint}
+\newcommand{\curl}{\nabla\cross}
+\newc{\curlz}{\mathrm{curl}_z}
+\renewcommand{\div}[1][]{\nabla_{#1} \cdot}
+\newcommand{\divh}{\nabla_h \cdot}
+\newcommand{\divm}{\nabla_m \cdot}
+\newcommand{\dg}{\text{\textdegree}\xspace}
+\newcommand{\dgc}{\text{\textdegree\,C}\xspace}
+\newcommand{\dgs}{\text{\textdegree\,S}\xspace}
+\newcommand{\dgn}{\text{\textdegree\,N}\xspace}
+\newcommand{\dgw}{\text{\textdegree\,W}\xspace}
+\newcommand{\dge}{\text{\textdegree\,E}\xspace}
+%\newc{\dg}{\ensuremath{^\circ}\xspace}
+\newcommand{\boxeq}[1]{\begin{equation}
+      \fbox{$\displaystyle{#1}$} \end{equation}}
+\newcommand{\myboxed}[1]{\ovalbox{$\displaystyle{#1}$}}
+%\newcommand{\dsty}{\displaystyle}
+\renewcommand{\sup}[1]{^{(#1)}}
+\newcommand{\eqn}[1]{\( \displaystyle{#1} \)}
+\bmdefine{\omb}{\omega}
+\bmdefine{\Omb}{\varOmega}
+\newcommand{\ombhat}{\widehat{\omb}}
+\newcommand{\ombsw}{\omb^*}
+\newcommand{\tvb}{\wtilde{\vb}}
+\newcommand{\tub}{\wtilde{\ub}}
+\bmdefine{\taub}{\tau}
+\bmdefine{\deltab}{\delta}
+\newc{\ttaub}{\wtilde{\taub}}
+\newc{\ttau}{\wtilde\tau}
+\newcommand{\trho}{\wtilde \rho}
+\newcommand{\ttheta}{\wtilde \theta}
+\newcommand{\tsigma}{\wtilde \sigma}
+\newcommand{\e}{\, \mathrm{e}}
+\newcommand{\er}{\mathrm{e}}
+\newcommand{\Er}{\mathrm{E}}
+\newcommand{\ir}{\mathrm{i}}
+\newc{\s}{\,\text{s}\xspace} \newc{\m}{\,\text{m}\xspace}
+\newc{\cm}{\,\text{cm}\xspace}
+\newc{\km}{\,\text{km}\xspace}
+\newc{\kg}{\,\text{kg}\xspace} \newcm{\ps}{\, \text{s}^{-1}\xspace}
+\newc{\Kv}{\,\text{K}\xspace}
+\newc{\Sv}{\,\text{Sv}\xspace}
+\newc{\rms}{\text{rms}}
+\newc{\qg}{quasi-geostrophic\xspace}
+\newc{\pg}{planetary-geostrophic\xspace}
+\newc{\BV}{Brunt--V\"ais\"al\"a\xspace}
+\newc{\crn}{\nonumber  \\}
+\newc{\qqquad}{\qquad \qquad}
+\newc{\cdel}{\cdot \nabla}
+\newcommand{\cg}{c_{\mkern -1mu g}}
+\newcommand{\cbg}{\bm{c}_{g}}
+%\renewcommand{\div}[1][]{\nabla_{#1}\cdot}
+\newcommand{\eten}[1]{\ensuremath{\times 10^{#1}}\xspace}
+%\newc{\Ro}{\ensuremath{R_o}\xspace}
+\newc{\Ro}{\ensuremath{\mathit{Ro}}\xspace}
+\renewcommand{\Pr}{\ensuremath{\mathit{Pr}}\xspace}
+\newc{\Ek}{\ensuremath{\mathit{Ek}}\xspace}
+\newc{\Ra}{\ensuremath{\mathit{Ra}}\xspace}
+\newc{\Fr}{\ensuremath{\mathit{Fr}}\xspace}
+\newc{\Bu}{\ensuremath{\mathit{Bu}}\xspace}
+\newc{\Ri}{\ensuremath{\mathit{Ri}}\xspace}
+\newc{\Rot}{\ensuremath{\mathit{Ro_\mathrm{t}}}\xspace}
+\newcommand{\ro}{\ensuremath{\rho_0} }
+\newcommand{\ptwo}[2]{{\partial^2 #1 \over \partial #2^2}}
+\newcommand{\pptwo}[2]{{\partial^2 #1 / \partial #2^2}}
+\newc{\bpp}[2]{\bfrac{\partial #1}{\partial #2}}
+\newc{\bppp}[2]{({\partial #1}/{\partial #2})}
+\newc{\bfrac}[2]{\left( \frac{#1}{#2} \right) }
+\newc{\dbfrac}[2]{\left( \dfrac{#1}{#2} \right) }
+\newc{\bfracs}[3]{\left(\frac{#1}{#2}\right)_{\! \! #3}}
+\newc{\bfracsub}[3]{\left(\frac{#1}{#2}\right)_{\! \! #3}}
+\newc{\bfracsup}[3]{\left(\frac{#1}{#2}\right)^{\! \! #3}}
+\newc{\bpps}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{\! \! #3}}
+\newc{\bppsub}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{\! \! #3}}
+\newc{\bppsup}[3]{\left(\frac{\partial #1}{\partial #2}\right)^{\! \! #3}}
+\newc{\bdds}[3]{\left(\frac{\d #1}{\d #2}\right)_{\! \! #3}}
+
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\C}{\mathcal{C}}
+\newc{\Eta}{\mathcal{E}}
+\newc{\Zeta}{\mathcal{Z}}
+\newcommand{\Peta}{\mathcal{P}}
+\newc{\K}{\mathcal{K}}
+\newcommand{\bta}{\ensuremath{\beta}\xspace}
+\newcommand{\ustar}{\ensuremath{{u^*}} }
+\newc{\psisp}[1]{\psi^{(#1)}}
+\newcommand{\psidag}{\psi^\dagger}
+\newc{\psibar}{\overline \psi}
+\newc{\Psibar}{\overline \Psi}
+\newc{\phibar}{\overline \phi}
+\newc{\thetabar}{\overline \theta}
+\newc{\varthetabar}{\overline \vartheta}
+\newc{\varphibar}{\overline \varphi}
+\renewcommand{\hbar}{\overline h}
+\newcommand{\hbarr}{\overline h}
+%\providecommand{\dtbar}{{\raisebox{2pt}{\mathchar'26}\mkern-12mu \d}} 
+\providecommand{\dbar}{~{\raisebox{3pt}{--}\mkern-13mu \d \mkern 1mu}}
+\providecommand{\dsbar}{\,{\raisebox{2.5pt}{--}\mkern-12.5mu \d \mkern 1mu}} 
+\newc{\qbar}{\overline q}
+\newc{\ubar}{\overline u}
+\newc{\vbar}{\overline v}
+\newcommand{\mbar}{\overline m}
+\providecommand{\wbar}{}
+\renewcommand{\wbar}{\overline w}
+\newc{\ubbar}{\overline \ub}
+\newc{\vbbar}{\overline \vb}
+\newc{\bbar}{\overline b}
+\newc{\pbar}{\overline p}
+\newc{\zbar}{\overline z}
+\newc{\rhobar}{\overline \rho}
+\newc{\Fbar}{\overline F}
+\newc{\Jbar}{\overline J}
+\newc{\Sbar}{\overline S}
+\newc{\bybar}{\overline \by}
+\newcommand{\sigmabar}{\overline \sigma}
+\newc{\zetabar}{\overline \zeta}
+\newc{\etabar}{\overline \eta}
+\newc{\betahat}{\ensuremath{\what \beta}}
+\newc{\kbeta}{k_\beta}
+\newc{\that}{{\what t}}
+\newc{\khat}{\what k}
+\newcommand{\phat}{\what p}
+\newc{\zetahat}{\ensuremath{\what \zeta}}
+\newc{\deltahat}{\what \delta}
+\newc{\etahat}{\what \eta}
+\newc{\ubhat}{\what\ub}
+\newc{\vbhat}{\what\vb}
+\newc{\xhat}{{\what x}}
+\newc{\xbhat}{{\what \xb}}
+\newc{\yhat}{{\what y}}
+\newc{\zhat}{{\what z}}
+\newc{\uhat}{\what u}
+\newc{\vhat}{\what v}
+\newcommand{\hatw}{\what w}
+\newc{\bhat}{\what b}
+\newc{\fbhat}{\what{\bm{f}}}
+\newc{\phihat}{\what \phi}
+\newc{\byhat}{\what \by}
+\newc{\hhat}{\ensuremath{\what h}}
+\newc{\fhat}{\ensuremath{\what f}}
+\newc{\psihat}{\what \psi}
+\newc{\Psihat}{\what \Psi}
+\newc{\Nhat}{\what N}
+\newc{\Nbar}{\overline N}
+\newc{\omegahat}{\what \omega}
+\newc{\qhat}{\what q}
+\newcommand{\fohat}{\what \fo}
+\newcommand{\delhat}{\what \nabla}
+\newcommand{\divhat}{\what \nabla \cdot}
+\newcommand{\psitil}{\wtilde \psi}
+\newcommand{\phitil}{\wtilde \phi}
+\newcommand{\tautil}{\wtilde \tau}
+\newcommand{\zetatil}{\wtilde \zeta}
+\newcommand{\etatil}{\wtilde \eta}
+\newcommand{\htil}{\wtilde h}
+\newcommand{\wtil}{\wtilde w}
+\newcommand{\vtil}{\wtilde v}
+\newcommand{\util}{\wtilde u}
+\newcommand{\ptil}{\wtilde p}
+\newc{\tauhat}{\what \tau}
+\newcommand{\Ehat}{\what E}
+\newcommand{\Zhat}{\what Z}
+\newcommand{\Ebar}{\overline E}
+\newcommand{\Zbar}{\overline Z}
+\newc{\ug}{u_g}
+\newc{\vg}{\ensuremath{v_g}\xspace}
+\newc{\Lr}{\Ld}
+\newcommand{\Ld}{\ensuremath{L_{d}}\xspace}
+\newcommand{\kd}{\ensuremath{k_{d}}\xspace}
+\newc{\lr}{\ensuremath{l_r}}
+\newc{\lrr}{\ensuremath{\lambda_r}}
+\newc{\vrt}{\vartheta}
+\newc{\cross}{\bm{\times}}
+%\newc{\half}{\tfrac 12}
+\newc{\half}{\frac 12}
+\newc{\third}{\frac 13}
+\newc{\quarter}{\frac 14}
+\def\dF{\, \mathrm{d} \bm{F}}
+\def\dl{\, \mathrm{d}{l}}
+\def\dlb{\, \mathrm{d} \bm{l}}
+\def\drb{\mathrm{d} \bm{r}}
+\def\dV{\, \mathrm{d}V}
+\newc{\dt}{\, \mathrm{d}t}
+\newc{\dx}{\, \mathrm{d}x}
+\newc{\dy}{\, \mathrm{d}y}
+\newc{\dz}{\, \mathrm{d}z}
+\newc{\dk}{\, \mathrm{d}k}
+\newc{\dr}{\, \mathrm{d}r}
+\newc{\dkb}{\, \mathrm{d}\bm{k}}
+\newc{\dxb}{\, \mathrm{d}\xb}
+\newc{\dvrt}{\, \mathrm{d}\vrt}
+\newc{\dpr}{\, \mathrm{d}p}
+\newcommand{\dtheta}{\, \mathrm{d}\theta}
+\def\dS{\, \mathrm{d} S}
+\def\dSb{\, \mathrm{d} \bm{S}}
+\def\dA{\, \mathrm{d}{A}}
+\newc{\dAb}{\, \mathrm{d} \bm{A}}
+\newc{\Dth}{{\D_h \over \D t}}
+\newc{\Dto}{{\D_0 \over \D \that}}
+\newc{\Fb}{\bm{F} }
+\bmdefine\Fb{F}
+\newcommand{\Mb}{\bm{M} }
+\newcommand{\Sb}{\ensuremath{\bm{S}}\xspace}
+\newc\Ab{\ensuremath{\bm{A}}}
+\newc\Cb{\ensuremath{\bm{C}}}
+\newc\Jb{\ensuremath{\bm{J}}}
+\newc\Bb{\ensuremath{\bm{B}}}
+\newc\xb{{\bm{x}}}
+\bmdefine{\pb}{p}
+\bmdefine{\qb}{q}
+\bmdefine{\ab}{a}
+\bmdefine{\Xb}{X}
+\bmdefine{\Yb}{Y}
+\bmdefine{\rb}{r}
+\newcommand{\rbb}{\mathbf{r}}
+%\renewcommand*{\sb}{\bm{s}}
+\bmdefine{\sb}{s}
+\bmdefine{\Db}{D}
+\def\bb{{\ensuremath{\bm {b}}}}
+\def\gb{\bm{g} }
+\def\ib{{\bf i}}
+\def\jb{{\bf j} }
+\newcommand{\kb}{{\bf k}}
+\bmdefine{\kbi}{k}
+%\newcommand{\kb}{{\bf k}}
+\bmdefine{\Vb}{V}
+\bmdefine{\Wb}{W}
+\def\lb{{\bm l} }
+\newc{\fb}{{\ensuremath{\bm {f}}}}
+\newc{\fbo}{{\ensuremath{\bm {f}_0}}}
+\def\vb{{\ensuremath{\bm {v}}}\xspace}
+\def\ub{{\ensuremath{\bm {u}}}\xspace}
+\def\wb{{\ensuremath{\bm {w}}}\xspace}
+\def\mb{{\ensuremath{\bm {m}}}\xspace}
+\def\nb{{\ensuremath{\bm {n}}}\xspace}
+\bmdefine{\Ub}{U}
+\bmdefine{\cb}{c}
+\bmdefine{\psib}{\psi}
+\bmdefine{\phib}{\phi}
+\def\dll{\delta \lb}
+\def\dlrb{\delta \rb}
+
+\newcommand{\by}{\ensuremath{b}}
+
+\newc{\Tb}{{\bm T} }
+\newc{\lhs}{left-hands side\xspace}
+\newc{\fo}{\ensuremath{f_0}\xspace}
+\def\DD#1{{\D#1 \over \D t}}
+\newcommand{\DDhat}[1]{{\D#1 \over \D \that }}
+\newcommand{\DDDhat}[1]{{\D#1 / \D \that }}
+\newcommand{\DDbar}[1]{{\overline{\D}#1 \over \D t}}
+\def\DDh#1{{\D_h#1 \over \D t}}
+\def\DDo#1{{\D_0#1 \over \D \that}}
+\newc{\MD}[1]{{\partial {#1} \over \partial t} + (\vb \cdot \del) #1}
+\def\Dt{{\D \over \D t}} 
+\newcommand{\pp}[3][]{{\partial^{#1} #2 \over \partial #3^{#1}}}
+\newcommand{\ppp}[3][]{{\partial^{#1} #2 / \partial #3^{#1}}}
+\newcommand{\pppp}[3][]{{\partial^{#1}_{#3} #2 }} 
+\newcommand{\DDD}[1]{\D{#1} / \D t}
+\newcommand{\ddd}[3][]{{\d^{#1} #2 / \d #3^{#1}}}
+\newc{\ppa}[1]{{\partial \over \partial #1}}
+\newc{\pt}{{\partial \over \partial t}}
+\newc{\del}{\nabla }
+\newc{\grad}{\nabla}
+\newc{\delh}{\nabla_h}
+\newc{\cp}{c_{\mkern -1mu p}}
+\newc{\cv}{c_{\mkern -1mu v}}
+\def\kv{\kappa_v}
+\def\kh{\kappa_h}
+\newcommand{\kvy}{\kappa^\mathit{vy}}
+\newcommand{\kvz}{\kappa^\mathit{vz}}
+\newcommand{\kwy}{\kappa^\mathit{wy}}
+\newcommand{\kwz}{\kappa^\mathit{wz}}
+\newcommand{\srho}{s_{\rho}}
+\newcommand{\Kt}{\ensuremath{\tensor{K}}\xspace}
+\newcommand{\St}{\ensuremath{\tensor{S}}\xspace}
+\newcommand{\At}{\ensuremath{\tensor{A}}\xspace}
+\newcommand*{\veps}{\varepsilon}
+\newcommand*{\eps}{\epsilon}
+\def\delsq{\nabla^2}
+\newcommand{\delsqhat}{\what\del^2}
+\newcommand{\Jhat}{\what J}
+\def\delsqh{\nabla^2_h}
+\def\delt{\nabla^2}
+\def\delth{\nabla^2_h}
+\newcommand{\dd}[3][]{{\d^{#1} #2 \over \d #3^{#1}}}
+\newcommand{\dif}{\mathrm{d}}
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\f}{\mathrm{f}}
+\newcommand{\D}{\mathrm{D}}
+%\newcommand{\vres}[1][]{\obar{v^*_{#1}}}
+\newcommand{\vres}[1][]{\overline v_{\! #1}^{*}}
+\renewcommand{\vres}[1][]{\ensuremath{\overline v_{\! #1}^{*}}\xspace}
+\newcommand{\psires}{\psi^*}
+\newcommand{\vbres}[1][]{\overline \vb_{\! #1}^{*}}
+\newcommand{\ubres}[1][]{\overline \ub_{\! #1}^{*}}
+\newcommand{\wres}[1][]{\overline w_{\! #1}^{*}}
+%\newcommand{\Fbres}[1][]{\Fb_{#1}^{*}}
+\newcommand{\Fbres}{\Fb^{*}}
+\newcommand{\pref}{p_{R}}
+\newcommand{\rhoref}{\rho_{R}}
+
+%\newcommand{\eqref}[1]{\textup{\tagform@{\ref{#1}}}} % amsmath def
+\renewcommand{\eqref}[1]{(\ref{#1})} % gets fonts better
+
+\newcommand{\textmonth}{\ifcase\month \or January \or February\or
+March\or April\or May \or June \or July\or August\or September\or October
+\or November\or December\fi\xspace}
+
+% Following line always works but is a cheap hack using text fonts in math.
+\newcommand{\tensor}[1]{\textit{\textsf{\textbf{#1}}}}
+
+% Following lines are better but may cause TeX to run out of math alphabets.
+%\DeclareMathAlphabet{\mathsfsl}{\encodingdefault}{cmss}{bx}{sl} % uses cmr fonts
+\DeclareMathAlphabet{\mathsfsl}{\encodingdefault}{hlst}{b}{sl}   % uses lucida
+\renewcommand{\tensor}[1]{\mathsfsl{#1}}      % this is the delicate command
+                                               % Leave it in if possible
+
+
+\newcommand\longpage[1][1]{\enlargethispage{#1\baselineskip}}
+\newcommand\shortpage[1][1]{\enlargethispage{-#1\baselineskip}}
+
+\providecommand{\bibname}{}
+\renewcommand{\bibname}{References}
+
+\newc{\putabcd}{\put(-9.2,7){\small \textit{\textsf{(a)}}}
+\put(-4.5,7){\small \textit{\textsf{(b)}}}
+\put(-9.2,3.3){\small \textit{\textsf{(c)}}}
+\put(-4.5,3.3){\small \textit{\textsf{(d)}}}
+}
+
+\newc{\putab}{\put(-8.9,3.3){\small \textit{\textsf{(a)}}}
+\put(-4.3,3.3){\small \textit{\textsf{(b)}}}
+}
+\newcommand{\itemm}{\item\mbox{}}
+%\newcommand{\topfigrule}{\vspace*{-3pt}
+  %              \rule{\columnwidth}{0.4pt}\vspace{2.6pt} }
+% ---------------------------------------------------------------
+ 
+% Following lines ensure uniformity of mathcal between fontsets. 
+
+%\DeclareMathAlphabet{\mathcal}  {OMS}{hlcy}{m}{n}  % uses lucida
+%\SetMathAlphabet{\mathcal}{bold}{OMS}{hlcy}{b}{n}  % uses lucida for bold
+%\DeclareMathAlphabet{\mathbcal} {OMS}{hlcy}{b}{n}  % don't need this
+
+
+% \DeclareMathAlphabet{\mathcal}       {U}{mtms}{m}{n}
+% \SetMathAlphabet    {\mathcal} {bold}{U}{mtms}{b}{n}
+
+%Let's use cmr, for simplicity and style
+%\DeclareMathAlphabet{\mathcal}  {OMS}{cmsy}{m}{n}
+%\SetMathAlphabet{\mathcal}{bold}{OMS}{cmsy}{b}{n}
+%%\DeclareMathAlphabet{\mathbcal} {OMS}{cmsy}{b}{n} % don't need this
+                                                                                                  
+\newcommand{\Fbc}{\bm{\mathcal F}}
+\newcommand{\Fc}{\mathcal F}
+
+
+%\bmdefine{\Fbc}{\mathcal F}
+\bmdefine{\Ebc}{\mathcal E}
+%%\renewcommand{\Fbc}{\pmb{\mathcal{F}}} % comment out this line if possible
+                                        % however, it may lead to too many
+                                        % math alphabets (esp with mathtime)
+                         
+\newcommand{\resetcaptionmargin}{\setcaptionmargin{\captmarg}}
+\newcommand{\iteml}[1]{\item\label{#1}}
+\newcommand{\bfig}{\begin{figure}}
+\newcommand{\efig}{\end{figure}}
+\newcommand{\bcen}{\begin{center}}
+\newcommand{\ecen}{\end{center}}
+%\newcommand{\beql}[1]{\begin{equation}\label{#1}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+
+
+\newcommand{\bsub}{\begin{subequations}}
+\newcommand{\esub}{\end{subequations}}
+
+\renewcommand{\diamondsuit}{\blacklozenge}
+\renewcommand{\Omega}{\varOmega}
+\renewcommand{\Gamma}{\varGamma}
+\renewcommand{\Pi}{\varPi}
+
+\renewcommand{\reftextcurrent}{above}
+\newcommand{\eqvref}[1]{\eqref{#1}\ \vpageref{#1}}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "aofd"
+%%% End:

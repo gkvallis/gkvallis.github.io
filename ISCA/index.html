@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ISCA</title>
+<meta name="description" content="ISCA website">
+<meta name="keywords" content="ISCA, GCM, MiMA, Atmosphere,  Vallis">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+
+<div id="wrapper">
+
+  <div id="header">
+    <div class="top_banner">
+      <h1>ISCA</h1>
+      <h2>
+      <p>University of Exeter</p></h2>
+    </div>
+
+  </div>
+
+  <div id="page_content">
+
+    <div class="navigation">
+      <ul>
+          <li><A HREF="http://empslocal.ex.ac.uk/people/staff/gv219/">Vallis Home Page</a></li>
+          <li>    <A HREF="https://execlim.github.io/IscaWebsite/">Isca web site</a> </li> 
+ <!--     
+     <li><a href="http://empslocal.ex.ac.uk/people/staff/gv219/papers/index.html">Papers</a> </li>
+          <li><a href="http://empslocal.ex.ac.uk/people/staff/gv219/cvshort.pdf">CV (PDF)</a></li>
+          <li><a href=http://empslocal.ex.ac.uk/people/staff/gv219/jobs.html>Postdocs/Studentships</a></li>
+          <li><a href="http://empslocal.ex.ac.uk/people/staff/gv219/codes/index.html">Codes</a></li>
+          <li><a href=http://empslocal.ex.ac.uk/people/staff/gv219/teaching.html>Teaching</a></li>
+          <li><a href=http://empslocal.ex.ac.uk/people/staff/gv219/talks/index.html>Lectures/Seminars</a></li> -->
+      </ul>
+    </div>
+
+    <div class="left_side_bar">
+
+      <div class="col_1">
+        <h2>Contributors</h2>
+        <div class="box">
+        <h1>Core Developers <br>(but links are inactive)</h1>
+       <!--   <p>Enter Block content here...</p> -->
+       <ul>
+         <!--  <div class="img"><img src="../images/text.jpg" alt="" height="111"></div> -->
+          <br>
+            <li><a href=../index.html>Greg Colyer</a></li>
+            <li><a href=../index.html>Ruth Geen</a></li>
+            <li><a href=../index.html>Ed Gerber</a></li>
+            <li><a href=../index.html>Martin Jucker</a></li>
+            <li><a href=../index.html>Penelope Maher</a></li>
+            <li><a href=../index.html>Alex Paterson</a></li>
+            <li><a href=../index.html>Marianne Pietschnig</a></li>
+            <li><a href=../index.html>James Penn</a></li>
+            <li><a href=../index.html>Stephen Thomson</a></li>
+            <li><a href=../index.html>Geoffrey Vallis</a></li>
+          </ul>
+          <br>
+        </div>
+      </div>
+
+      <div class="col_1">
+        <h2>Papers</h2>
+        <div class="box">
+                <h1><a href="../iscapapers/index.html">Papers using the model
+                <br>(Not yet available)</a></h1>
+          <ul>
+              <div class="img"><img src="../images/text.jpg" alt="" height="151"
+               width="117"></div>
+            <li><a href="../papers/index.html">Vallis et al (GMD)</a></li>
+          </ul>
+<br> <br>
+         <h1><a href=../climoce/otherpapers.html>Papers from which the framework developed<br>
+         (Not yet added)</h1>
+         <ul>
+              <div class="img"><img src="../images/text.jpg" alt="" height="151"
+               width="107"></div>
+            <li><a href=../papers/index.html></a></li>
+          </ul>
+        </div>
+      </div>    
+    </div>
+
+    <div class="right_section">
+      <div class="common_content">
+        <h2>Isca</h2>
+ 
+
+
+
+
+Isca is a framework for the modelling of the global circulation of terrestrial planetary atmospheres.
+
+<br> <br> 
+This website has been replaced. Please <A HREF="https://execlim.github.io/IscaWebsite/">go here</a> for the new site, and/or read the paper: <br>
+Vallis, G. K. and co-authors, 2017. Isca: A Framework for the Global Modelling of the Atmospheres of Earth and Other Planets at Varying Levels of Complexity. Submitted to <i>Geoscientific Model Developments</i> <br>
+<A HREF="Vallis_etal17.pdf">PDF file. </a> <br> <br>
+The manuscript is in open review, and you may make comments on it <A HREF=https://www.geosci-model-dev-discuss.net/gmd-2017-243/>here.</A>
+<br><br>
+
+<hr>
+
+<br> 
+Isca is the Roman name for Exeter. It is also a framework for the idealized modelling of the global circulation of terrestrial planetary atmospheres, and so for creating certain kinds of climate model for Earth and other planets. Isca is not an acronym, but you may make one up if you like. Our goals are to construct a framework that actually connects idealized models to comprehensive models, and to ourselves build models within that hierarchy (and hope others will build more).
+<br><br>
+
+ The framework builds from the FMS infrastructure at GFDL, and includes their dry dynamical core and extensions such as the the Frierson moist model as particular cases. We have extended it in three main ways: 
+ The first is that we provide a framework for a user configurable model, not a single model, with various Python scripts to set options.
+ The user may pass from a very simple model to a quite complex model fairly easily. 
+Second, options are available that provide more realism for Earth's atmosphere, by the (optional) addition of configurable continents, a full radiation scheme etc. 
+ The third is the easy extension into other planetary regimes by configuring the planetary size, atmospheric mass, planetary rotation rate, solar forcing (varying obliquity and eccentricity, sidereal and solar day etc), and so forth, with either dry thermal relaxation or a moist model with radiation. Nothing is (as far as we know) hard-wired for Earth.
+<br> <br>
+
+
+<h2> Configurations and Options </h2>
+ Various forcing and radiation options are available from a dry Newtonian relaxation to a moist dynamics with full radiation. Examples include:
+<ul>
+          <br>
+            <li> A Held-Suarez test case</li>
+            <li> A dry case with thermal damping to a temperature field determined analytically from astronomical forcing parameters, optical thickness and mixed-layer depth, allowing seasonality and other planetary regimes.</li>
+            <li> A dry (thermal damping) case with a decent stratosphere, as in Jucker et al. (This is in some ways an extension of the Polvani--Kushner model.)
+            <li> An idealized grey IR radiation scheme (as in the Frierson model).</li>
+            <li> A gray scheme with moisture feedback (similar to Byrne-O'Gorman).</li>
+            <li> A two-band IR scheme with an IR window (similar to Geen et al), with or without moisture feedback.</li>  
+            <li> A realistic radiation scheme from RRTM (as in the MiMA model of Jucker and Gerber).  </li>
+            The radiation schemes all allow solar forcing to be determined fairly generally from astronomical parameters, with or without seasonal and diurnal cycles. 
+</ul>
+<br>
+<ul>
+ For Earth (and other planets, in principle) other options include:
+ <li> An aqua-planet with a slab mixed layer, or configurable (idealized or realistic) continents, configured with Python scripts.  </li>
+ <li> Continents may be defined by changing albedo, heat capacity and evaporation parameters, and/or by using a simple bucket hydrology model.</li>
+  <li> Idealized or realistic topography.</li> 
+  <li> Oceanic Q-fluxes may be added to reproduce specified mean sea-surface temperatures, with realistic or idealized continents, or in an aquaplanet. Or SST may be fixed. </li>
+  </ul>
+<br>
+ Planetary atmospheres may be configured by changing planetary mass, solar forcing, radiative and other parameters, and examples exist of a Jovian simulation with grey radiation, a dry-dynamical core Venusian simulation, and tidally-locked and spin-resonant dry exoplanets.  
+
+<br><br>
+Not all model combinations are sensible and, although there are some pre-configured cases, the framework is not meant for use as a black box. 
+
+<br><br>
+<h3>Practicalities </h3>
+ The model core is written in Fortran and may largely be configured with Python scripts, with internal coding changes required in some cases. Both vertical and horizontal resolution may be varied, but because of the spectral core some resolutions are to be preferrred (e.g. T42, T255 etc).
+<br><br>
+ Python scripts can be used to run the model and to archive the output. Various Python scripts are also available for diagnostics, graphics, and post-processing.  
+<br><br>
+The code is available on github at the link below. However, <i> this is a beta release.</i> Documentation is extremely limited, this website itself is incomplete, and we do not provide formal support. However, we do encourage serious users to try it out, add new options and different parameterizations to it, and to contact us for help.  If you are already familiar with the FMS infrastructure then using Isca will not be difficult. 
+
+
+
+<br><br>
+Isca is available on github at
+<br>
+ <a href=https://github.com/ExeClim/Isca target="_blank">https://github.com/ExeClim/Isca </a>.
+
+
+<br><br>
+<!-- <P><IMG SRC="mail.gif" WIDTH="49" HEIGHT="53" SGI_SETWIDTH SGI_SETHEIGHT SGI_FULLPATH="./mail.gif"> MAIL -->
+<script language=javascript>
+<!--
+var herring1 = "Email gkv here";
+var herring2 = "g.vallis";
+var herring3 = "exeter.ac.uk";
+document.write("<a href=" + "mail" + "to:" + herring2 + "&#64;" + herring3 + ">" + herring1 + "</a>")
+//-->
+</script>
+
+
+    </div>
+    </div>
+    <div class="clear"></div>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=2329354;
+var sc_invisible=0;
+var sc_partition=21;
+var sc_security="6215c22f";
+var sc_text=2;
+</script>
+
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c22.statcounter.com/counter.php?sc_project=2329354&amp;java=0&amp;security=6215c22f&amp;invisible=0" alt="free web hit counter" border="0"></a> </noscript>
+<!-- End of StatCounter Code -->
+
+
+  </div>
+
+</div>
+
+</body></html>

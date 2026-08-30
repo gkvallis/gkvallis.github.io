@@ -1,0 +1,4 @@
+AuthName        "Solutions"
+AuthType Basic
+require user solutions
+AuthUserFile /var/www/vallisbook.org/etc/apache/.htpasswd

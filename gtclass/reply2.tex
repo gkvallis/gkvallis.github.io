@@ -1,0 +1,157 @@
+\documentclass[11pt]{letter}
+\usepackage{mathptmx}
+\textheight  8.5in
+\textwidth   6.in
+\voffset     -.5in
+\hoffset     -.5in
+
+\newcommand{\ie}  {\textit{i.e., }}
+\newcommand{\eg}  {\textit{e.g., }}
+\newcommand{\etal}{\textit{et al., }}
+\newcommand{\ca}  [1]{\mathcal{#1}}
+\newcommand{\bs}  [1]{\mathbf{#1}}
+
+\signature{K. Shafer Smith \\ Geoffrey K. Vallis}
+\address{K. Shafer Smith\\  Geoffrey K. Vallis \\
+  GFDL/Princeton University\\
+  PO Box 308\\
+  Princeton, NJ 08542\\
+  Tel: (609) 452-6537\\
+  Email: kss@gfdl.noaa.gov
+}
+
+
+\begin{document}
+
+\begin{letter}{Dr. William R. Young \\
+ Editor, JFM \\
+ Physical Oceanography Research Division \\
+ Scripps Institution of Oceanography \\
+ University of California San Diego \\
+ La Jolla, California 92093-0213
+ }
+
+\opening{Dear Bill,}
+
+Enclosed please find two copies of a slightly revised version of the
+manuscript ``Turbulent Diffusion in the Geostrophic Inverse Cascade.''
+We respond to the comments of reviewer B below.
+
+\begin{quote}
+p. 4, end of top paragraph:  ``... - then the effects of friction become
+similar to [(a) - this is a typo, I suppose?] those of a barrier...'' - I
+am not sure what this statement means; it should either be better
+explained or dropped.
+\end{quote}
+
+This statement was dropped.
+
+\begin{quote}
+p. 13, the discussion of the ``halting scale.''  I still don't
+understand what this ``halting scale'' means.  If the authors imply
+termination of the inverse cascade, then this is a wrong statement;
+the rate of the inverse cascade is $\epsilon$ and termination of the
+inverse cascade would mean $\epsilon=0$ which the authors themselves
+find unphysical.  Equation (5.21) as a definition of the halting scale
+does not provide more clarity because epsilon remains $>0$ for wave
+numbers smaller than $k_r$ allowing the inverse cascade to penetrate
+beyond this ``halting scale.''
+\end{quote}
+
+The term ``halting scale'' is accepted by common usage in the
+literature as the scale at which the efficiency of the cascade begins
+to decline.  Reviewer B is free to challenge this usage in his or her
+own papers, but we do not find its usage in this context inappropriate.
+
+\begin{quote}
+p. 14, discussion of the combined effect of beta and friction.  The
+authors need to be aware that this effect has been discussed in the paper
+by Galperin, Sukoriansky and Huang, ``Universal $n^{-5}$ spectrum of zonal
+flows on giant planets,'' Phys. Fluids, 13, pp. 1545-1548 (2001), to which
+a proper citation needs to be made.
+\end{quote}
+
+This reference was added.
+
+\begin{quote}
+p. 17, top paragraph - discussion of the width of zonal jets as
+related to the steep zonal spectrum. This connection has been
+explained in the same paper by Galperin \etal (2001).
+\end{quote}
+
+The paragraph mentioned is primarily concerned with the mixing scale
+relevant to a passive tracer -- comments about the jet scale are made
+in passing.
+
+\begin{quote}
+p. 17, 3rd paragraph from the top, discussion of the paper by Smith
+and Waleffe (1999) in which energy transfer was investigated and
+quartic resonances were invoked.  This discussion, almost with the
+same text and the same references, can be found in a much earlier
+paper by Chekhlov \etal (1996).
+\end{quote}
+
+Another citation to Chekhlov was added.
+
+\begin{quote}
+p. 27, discussion of the energy spectra on beta-plane.  The authors
+describe the difference between the -5/3 and -8/3 spectra in isotropic
+turbulence and then show zonal -6 spectrum on beta-plane in Fig. 7. To the
+best knowledge of this reviewer, the zonal -5 spectrum has been found for
+the zonal modes only in Chekhlov \etal (1996), Smith and Wallefe (1999),
+and Huang \etal (2001); I am not aware of such spectrum to be found in
+the entire zonal sector.  This means that the -5 spectrum, if it exists,
+is delta-function like, and, thus, will retain the -5 slope even when
+calculated along the zonal axis only. The authors need to check this point
+very carefully.
+\end{quote}
+
+Perhaps it is a matter of definition of two-dimensional spectra,
+and Reviewer B may have misunderstood our argument. To be explicit,
+we meant the following.  The total energy $E$ is related to the
+two-dimensional energy spectrum $\hat{E}(k_x,k_y)$ as
+\[
+E = \int dk_x~dk_y ~\hat{E}(k_x,k_y) = \int dk~d\theta
+~k~\hat{E}(k,\theta).
+\]
+If we assume that the spectrum is given by
+\[
+\hat{E}(k,\theta) = A k^{-\alpha}\delta(\theta-\pi/2),
+\]
+similar to the form suggested by Reviewer B, then
+\[
+E = \int dk ~A k^{1-\alpha} \int d\theta ~\delta(\theta-\pi/2)
+= \int dk ~A k^{1-\alpha}.
+\]
+Defining $\ca{E}(k)$ (the isotropic spectrum we are usually concerned
+with) such that
+\[
+E = \int dk ~\ca{E}(k),
+\]
+we have that
+\[
+\ca{E}(k) = A k^{1-\alpha}.
+\]
+Hence if we predict that $\ca{E}(k) \propto k^{-5/3}$, then $\alpha =
+-8/3$.  Similarly, if $\ca{E}(k) \propto k^{-5}$, then $\alpha =
+-6$.
+
+Obviously the full spectrum at least contains both parts, and in fact
+is more complex altogether.  But the point is that the -8/3 and -6
+spectra are just the appropriate dimensional analysis predictions for
+slices of the two-dimensional spectra along the zonal and meridional
+axes. We have carefully looked again at our spectra, and there are
+no additional changes we wish to make in this regard. 
+
+Thank you for your time and effort in reviewing our work.  We hope
+that with these changes and comments you will now find the 
+manuscript acceptable for publication in the \textit{Journal of 
+Fluid Mechanics.}
+
+\closing{Sincerely,}
+
+
+\end{letter}
+\end{document}
+
+

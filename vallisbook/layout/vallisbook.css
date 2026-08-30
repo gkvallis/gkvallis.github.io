@@ -1,0 +1,148 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+	}
+#content h1 {
+	margin:0px 0px 20px 0px;
+	padding:0px;
+	font-size:14pt;
+	font-weight:bold;
+	color:#FFB400;
+       border-bottom: 1px solid #5D24BD;
+	}
+
+#content h2 {
+	margin:0px 0px 10px 0px;
+	padding:0px;
+	font-size:10pt;
+	font-weight:bold;
+	color:#FFB400;
+	}
+
+#content p {
+	margin:0px 0px 20px 0px;
+	padding:0px;
+	}
+
+#content a {
+	text-decoration:none;
+	}
+#content a:link {color:#5D24BD;}
+#content a:visited {color:#5D24BD;}
+#content a:hover {color:#FFB400; text-decoration:underline;} 
+
+#content table {
+	margin: 0px 0px 20px 0px;
+	}
+
+#myheader {
+	width: 780px;
+	height: 136px;
+	}
+
+#main_container {
+	overflow: hidden;
+	border: 0px solid #000000;
+	width: 778px;
+}
+
+#container {
+	overflow: hidden;
+	border: 0px solid #000000;
+	width: 100%;
+}
+
+/* Unused but it contains useful information about how to deal with browser differences */
+#header {
+	margin:50px 0px 10px 0px;
+	padding:17px 0px 0px 20px;
+	/* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+	height:33px; /* 14px + 17px + 2px = 33px */
+	border-style:solid;
+	border-color:black;
+	border-width:1px 0px; /* top and bottom borders: 1px; left and right borders: 0px */
+	line-height:11px;
+	background-color:#eee;
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own stupidity. 
+Thanks to Tantek Celik for the hack and to Eric Costello for publicizing it. 
+IE5/Win incorrectly parses the "\"}"" value, prematurely closing the style 
+declaration. The incorrect IE5/Win value is above, while the correct value is 
+below. See http://glish.com/css/hacks.asp for details. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height:14px; /* the correct height */
+	}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#Header {height:14px;}
+
+#content {
+	float: right;
+       width: 622px;
+	padding: 10px;
+	border-left: 1px solid #FFB400;
+	font-size: 10pt; 
+	}
+
+#menu {
+	float: left;
+	width: 125px;
+	position: relative;
+	left: 10px;
+	height: 267px;
+	padding-top: 48px;
+	background-color: white;
+	border-right: 1px solid #FFB400;
+	line-height: 27px;
+	font-size: 9pt;
+	font-weight: bold;
+/* Again, the ugly brilliant hack. 
+	voice-family: "\"}\"";
+	voice-family:inherit; */
+	height: 267px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#Menu {width:136px;}
+
+#menu a {text-decoration: none;}
+#menu a:link{color:#5D24BD;}
+#menu a:visited {color:#5D24BD;}
+#menu a:hover {color:#FFB400;}
+
+#review-menu {
+	position: absolute;
+	top: 170px;
+	left: 565px;
+	width: 201px;
+	font-size: 10pt;
+	text-align: right;
+}
+
+#review-menu-end {
+	position: absolute;
+	top: 170px;
+	left: 565px;
+	width: 201px;
+	font-size: 10pt;
+	text-align: left;
+}
+
+#footer {
+	padding: 1px;
+       width: 780px;
+	text-align: center;
+	font-size: 7pt;
+	color: white;
+	background-color: #5D24BD;
+	}
+
+#footer a {color: white; text-decoration: none;}
+#footer a:link{color: white;}
+#footer a:visited {color: white;}
+#footer a:hover {color:#FFB400;}
+

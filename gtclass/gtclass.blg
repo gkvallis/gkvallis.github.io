@@ -1,0 +1,84 @@
+This is BibTeX, Version 0.99c (Web2C 7.3.1)
+The top-level auxiliary file: gtclass.aux
+The style file: jfm.bst
+I found no \bibdata command---while reading file gtclass.aux
+Warning--I didn't find a database entry for "Pedlosky87"
+Warning--I didn't find a database entry for "Rhines77"
+Warning--I didn't find a database entry for "Salmon80"
+Warning--I didn't find a database entry for "Larichev95"
+Warning--I didn't find a database entry for "Kraichnan80"
+Warning--I didn't find a database entry for "Vallis93b"
+Warning--I didn't find a database entry for "danilov00"
+Warning--I didn't find a database entry for "Held95a"
+Warning--I didn't find a database entry for "Pierrehumbert94"
+Warning--I didn't find a database entry for "Sukoriansky99"
+Warning--I didn't find a database entry for "Lindborg00"
+Warning--I didn't find a database entry for "Maltrud91"
+Warning--I didn't find a database entry for "SmithYakhot93"
+Warning--I didn't find a database entry for "borue94"
+Warning--I didn't find a database entry for "danilov01a"
+Warning--I didn't find a database entry for "Larichev91"
+Warning--I didn't find a database entry for "Batchelor53"
+Warning--I didn't find a database entry for "Kolmogorov41"
+Warning--I didn't find a database entry for "Tennekes94"
+Warning--I didn't find a database entry for "Arbic00"
+Warning--I didn't find a database entry for "Leith68a"
+Warning--I didn't find a database entry for "Lilly72"
+Warning--I didn't find a database entry for "Rhines75"
+Warning--I didn't find a database entry for "Vallis93a"
+Warning--I didn't find a database entry for "chekhlov96"
+Warning--I didn't find a database entry for "manfroi99"
+Warning--I didn't find a database entry for "smithwaleffe99"
+Warning--I didn't find a database entry for "huang01"
+Warning--I didn't find a database entry for "galperin01"
+Warning--I didn't find a database entry for "danilov01b"
+Warning--I didn't find a database entry for "Bartello91"
+Warning--I didn't find a database entry for "Held96"
+Warning--I didn't find a database entry for "Rivera00"
+Warning--I didn't find a database entry for "constantin94"
+Warning--I didn't find a database entry for "celani01"
+Warning--I didn't find a database entry for "kukharkin95"
+Warning--I didn't find a database entry for "kukharkin96"
+Warning--I didn't find a database entry for "Lacasce96"
+You've used 0 entries,
+            2793 wiz_defined-function locations,
+            685 strings with 5206 characters,
+and the built_in function-call counts, 23 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 8
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 4
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 3
+(There was 1 error message)

@@ -1,0 +1,10 @@
+# LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+# Associate internals original text with physical files.
+
+
+$key = q/chart1/;
+$ref_files{$key} = "$dir".q|preprop1.html|; 
+$noresave{$key} = "$nosave";
+
+1;
+

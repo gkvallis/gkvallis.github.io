@@ -1,0 +1,351 @@
+******************
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6)
+ %&-line parsing enabled.
+entering extended mode
+(./errata1.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2007/texmf/tex/latex/config/hyperref.cfg)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+Implicit mode ON; LaTeX internals redefined
+(/usr/local/texlive/2007/texmf-dist/tex/latex/ltxmisc/url.sty))
+*hyperref using default driver hpdftex*
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/hpdftex.def)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2007/texmf-dist/tex/xelatex/xetexconfig/geometry.cfg))
+(/Users/gkv/latex/sty/paralist.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/varioref.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/xspace.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/makeidx.sty) (./preamble.tex
+)
+No file errata1.aux.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/oberdiek/refcount.sty))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/t1cmss.fd)
+! Undefined control sequence.
+<argument> \blacklozenge 
+                         
+l.57 \item \star
+                 \label{cancel} Pages 156 and 158. The cancellation of certa...
+
+? OK, entering \nonstopmode...
+! Undefined control sequence.
+<argument> \blacklozenge 
+                         
+l.60 \item \star
+                 \label{informal} Page 258. This explanation (the informal m...
+
+! Undefined control sequence.
+<argument> \blacklozenge 
+                         
+l.62 \item \star
+                 \label{eadyschem} Page 262, Fig.\ 6.9. The labels {\sf B} a...
+
+! Undefined control sequence.
+<argument> \blacklozenge 
+                         
+l.65 \item \star
+                 \label{simmhosk} Page 399, fig.\ 9.9 caption.  Potential en...
+
+! Undefined control sequence.
+<argument> \blacklozenge 
+                         
+l.67 \item \star
+                 \label{channel} Page 266. Above (6.78), the channel extends...
+
+! Undefined control sequence.
+<argument> \blacklozenge 
+                         
+l.69 \item \star
+                 Pages 426--436. In a few places, `across gradient' is writt...
+
+! Undefined control sequence.
+<argument> \blacklozenge 
+                         
+l.71 \item \star
+                 Page 434, \eq (10.135). The inequality needs further explan...
+
+! Undefined control sequence.
+<argument> \blacklozenge 
+                         
+l.73 \item \star
+                 Page 525, \eq (PV.1). The term $-\ppp{\obar{v_i q_i}}y$ sho...
+
+[1{/Users/gkv/Library/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+[4] [5] [6] (./errata1.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2007/te
+xmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2007/texm
+f-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2007/texmf
+-dist/fonts/type1/bluesky/cm/cmbsy10.pfb></usr/local/texlive/2007/texmf-dist/fo
+nts/type1/bluesky/cm/cmbx10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1
+/bluesky/cm/cmex10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/
+cm/cmmi10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi7.
+pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmib10.pfb></us
+r/local/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/cmmib7.pfb></usr/local/
+texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/20
+07/texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/texlive/2007/texmf-di
+st/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2007/texmf-dist/fonts/ty
+pe1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blues
+ky/cm/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super
+/sfrm1000.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/s
+frm1200.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfs
+s1000.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfss1
+200.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfss172
+8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfti0700.
+pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfti1000.pf
+b>
+Output written on errata1.pdf (6 pages, 176216 bytes).
+Transcript written on errata1.log.
+******************
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6)
+ %&-line parsing enabled.
+entering extended mode
+(./errata1.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2007/texmf/tex/latex/config/hyperref.cfg)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+Implicit mode ON; LaTeX internals redefined
+(/usr/local/texlive/2007/texmf-dist/tex/latex/ltxmisc/url.sty))
+*hyperref using default driver hpdftex*
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/hpdftex.def)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2007/texmf-dist/tex/xelatex/xetexconfig/geometry.cfg))
+(/Users/gkv/latex/sty/paralist.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/varioref.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/xspace.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/makeidx.sty) (./preamble.tex
+) (./errata1.aux) (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/oberdiek/refcount.sty))
+(./errata1.out) (./errata1.out)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/t1cmss.fd)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/Users/g
+kv/Library/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6]
+(./errata1.aux) ){/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/cm-super/c
+m-super-t1.enc}{/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/cm-super/cm-
+super-ts1.enc}</usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbsy1
+0.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></u
+sr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/
+texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2
+007/texmf-dist/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/texlive/2007/texmf-
+dist/fonts/type1/bluesky/cm/cmmib10.pfb></usr/local/texlive/2007/texmf-dist/fon
+ts/type1/bluesky/ams/cmmib7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1
+/bluesky/cm/cmr10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/c
+m/cmr5.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb>
+</usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/loc
+al/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive
+/2007/texmf-dist/fonts/type1/bluesky/ams/msam10.pfb></usr/local/texlive/2007/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2007/texm
+f-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2007/texmf-
+dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2007/texmf-di
+st/fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2007/texmf-dist
+/fonts/type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2007/texmf-dist/f
+onts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2007/texmf-dist/fon
+ts/type1/public/cm-super/sfti1000.pfb>
+Output written on errata1.pdf (6 pages, 178476 bytes).
+Transcript written on errata1.log.
+******************
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6)
+ %&-line parsing enabled.
+entering extended mode
+(./errata1.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/t1enc.def))
+(/Users/gkv/latex/sty/chartlucid.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2007/../texmf-local/tex/latex/lucimatx/lucimatx.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/keyval.sty)))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2007/texmf/tex/latex/config/hyperref.cfg)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+Implicit mode ON; LaTeX internals redefined
+(/usr/local/texlive/2007/texmf-dist/tex/latex/ltxmisc/url.sty))
+*hyperref using default driver hpdftex*
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/hpdftex.def)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2007/texmf-dist/tex/xelatex/xetexconfig/geometry.cfg))
+(/Users/gkv/latex/sty/paralist.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/varioref.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/xspace.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/makeidx.sty) (./preamble.tex
+) (./errata1.aux) (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/t1bch.fd)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/oberdiek/refcount.sty))
+(./errata1.out) (./errata1.out)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/mt-bch.cfg)
+(/usr/local/texlive/2007/../texmf-local/tex/latex/lucida/t1hls.fd) [1{/Users/gk
+v/Library/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ts1bch.fd) [2] [3]
+[4] [5] [6] (./errata1.aux) ){/usr/local/texlive/2007/texmf-dist/fonts/enc/dvip
+s/base/8r.enc}</usr/local/texlive/2007/texmf-dist/fonts/type1/bitstrea/charter/
+bchb8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bitstrea/charter/bch
+r8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bitstrea/charter/bchri8
+a.pfb></usr/local/texlive/2007/../texmf-local/fonts/type1/lbma.pfb></usr/local/
+texlive/2007/../texmf-local/fonts/type1/lbmdo.pfb></usr/local/texlive/2007/../t
+exmf-local/fonts/type1/lbme.pfb></usr/local/texlive/2007/../texmf-local/fonts/t
+ype1/lbmo.pfb></usr/local/texlive/2007/../texmf-local/fonts/type1/lbms.pfb></us
+r/local/texlive/2007/../texmf-local/fonts/type1/lbmsd.pfb></usr/local/texlive/2
+007/../texmf-local/fonts/type1/lsr.pfb>
+Output written on errata1.pdf (6 pages, 104153 bytes).
+Transcript written on errata1.log.
+******************
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6)
+ %&-line parsing enabled.
+entering extended mode
+(./errata1.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/t1enc.def))
+(/Users/gkv/latex/sty/chartlucid.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2007/../texmf-local/tex/latex/lucimatx/lucimatx.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/keyval.sty)))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2007/texmf/tex/latex/config/hyperref.cfg)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+Implicit mode ON; LaTeX internals redefined
+(/usr/local/texlive/2007/texmf-dist/tex/latex/ltxmisc/url.sty))
+*hyperref using default driver hpdftex*
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/hpdftex.def)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2007/texmf-dist/tex/xelatex/xetexconfig/geometry.cfg))
+(/Users/gkv/latex/sty/paralist.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/varioref.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/tools/xspace.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/makeidx.sty) (./preamble.tex
+) (./errata1.aux) (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/t1bch.fd)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2007/texmf-dist/tex/latex/oberdiek/refcount.sty))
+(./errata1.out) (./errata1.out)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/microtype/mt-bch.cfg)
+(/usr/local/texlive/2007/../texmf-local/tex/latex/lucida/t1hls.fd) [1{/Users/gk
+v/Library/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(/usr/local/texlive/2007/texmf-dist/tex/latex/psnfss/ts1bch.fd) [2] [3]
+[4] [5] [6] (./errata1.aux) ){/usr/local/texlive/2007/texmf-dist/fonts/enc/dvip
+s/base/8r.enc}</usr/local/texlive/2007/texmf-dist/fonts/type1/bitstrea/charter/
+bchb8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bitstrea/charter/bch
+r8a.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bitstrea/charter/bchri8
+a.pfb></usr/local/texlive/2007/../texmf-local/fonts/type1/lbma.pfb></usr/local/
+texlive/2007/../texmf-local/fonts/type1/lbmdo.pfb></usr/local/texlive/2007/../t
+exmf-local/fonts/type1/lbme.pfb></usr/local/texlive/2007/../texmf-local/fonts/t
+ype1/lbmo.pfb></usr/local/texlive/2007/../texmf-local/fonts/type1/lbms.pfb></us
+r/local/texlive/2007/../texmf-local/fonts/type1/lbmsd.pfb></usr/local/texlive/2
+007/../texmf-local/fonts/type1/lsr.pfb>
+Output written on errata1.pdf (6 pages, 104153 bytes).
+Transcript written on errata1.log.

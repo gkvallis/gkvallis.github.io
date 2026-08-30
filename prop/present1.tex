@@ -1,0 +1,283 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX definitions for Slides *******************************
+% ----------------------------------------------------------------
+\documentclass[titlepage]{slides}
+\usepackage{graphicx}
+\usepackage{color}
+%\usepackage{times}
+%\usepackage{srcltx} % SRC Specials
+% Fuzz --- -------------------------------------------------------
+\hfuzz5pt % Don't bother to report over-full boxes < 5pt
+% MATH -----------------------------------------------------------
+\pagestyle{empty}
+
+\newcommand{\knu}{\kappa_\nu}
+\newcommand{\crn}{\nonumber \\ }
+
+\newcommand{\boxeq}[1]{\begin{eqnarray*}
+      \fbox{$\displaystyle{#1}$} \end{eqnarray*}}
+\newcommand{\boxed}[1]{\fbox{$\displaystyle{#1}$}}
+\def\fo{f_0}
+\newcommand{\dg}{\ensuremath{^{\circ}}}
+\newcommand{\m}{\, \textrm{m}}
+\newcommand{\km}{\, \textrm{km}}
+\newcommand{\s}{\, \textrm{s}}
+\newcommand{\cm}{\, \textrm{cm}}
+\newcommand{\pp}[2]{{\partial #1 \over \partial #2}}
+\newcommand{\pt}{{\partial \over \partial t}}
+\newcommand{\delsq}{\nabla^2}
+\newcommand{\bsli}{\begin{slide}}
+\newcommand{\esli}{\end{slide}}
+\newcommand{\bsma}{\begin{small}}
+\newcommand{\esma}{\end{small}}
+\newcommand{\bsms}{\bsma \bsli}
+\newcommand{\esms}{\esli \esma}
+\newcommand{\bssl}{\bsma \bsli}
+\newcommand{\essl}{\esli \esma}
+\newcommand{\benu}{\begin{enumerate}}
+\newcommand{\eenu}{\end{enumerate}}
+\newcommand{\bite}{\begin{itemize}}
+\newcommand{\eite}{\end{itemize}}
+\newcommand{\bdes}{\begin{description}}
+\newcommand{\edes}{\end{description}}
+\newcommand{\bfig}{\begin{figure}}
+\newcommand{\efig}{\end{figure}}
+\newcommand{\bcen}{\begin{center}}
+\newcommand{\ecen}{\end{center}}
+\def\beq{\[}
+\def\eeq{\]}
+\def\beqn{\begin{eqnarray*}}
+\def\eeqn{\end{eqnarray*}}
+
+\newcommand{\textred}[1]{\textcolor{red}{#1} }
+\newcommand{\textblue}[1]{\textcolor{blue}{#1} }
+\definecolor{navy}{rgb}{0,0,0.8}
+\newcommand{\textnavy}[1]{\textcolor{navy}{#1} }
+\newcommand{\header}[1]{\centerline {\textcolor{navy}{\bfseries #1} }\bigskip}
+\newcommand{\subheader}[1]{{\textcolor{blue}{\bfseries #1} }\smallskip}
+%%% --------------------------------------------------------------
+\begin{document}
+\title{\textblue{ Climate Predictability and  Variability in the Presence of
+Anthropogenic Climate Change: \\
+  A Proposal for a Princeton Climate Center
+}}
+\author{Geoffrey K. Vallis ~~~  Jorge Sarmiento  \\
+ Isaac Held ~~~~~~~   George Philander \\   GFDL \& Princeton University }
+\date{August 2000}
+\maketitle
+
+
+\bsli
+
+\header{The Issues}
+
+\benu
+\item The Scientific Issue: Climate Variability and Predictability.
+
+\item The Structural Issue: A Joint Institute between GFDL and P.U.
+
+\eenu
+
+\esli
+
+\bssl
+ \header {Goals and Activities}
+ \bite
+\item Experimental predictions (projections) of climate and climate
+  change from the seasonal to the multidecadal timescales using: \benu
+  \item State-of-the-art coupled ocean-atmosphere-sea-ice models.
+  \item  The current state of the climate system as initial conditions.
+  \item Projections of all relevant future forcing terms (GHGs, aerosols
+  etc).
+  \item Interactive terrestrial and marine carbon cycle.
+    \eenu
+ \item Quantification of climate predictability and variability.
+ \item Continual development of methods for climate prediction.
+ \eite
+
+\bigskip
+
+ \subheader{Specific Products}
+\bite
+ \item Periodic Reports and Assessments.
+ \item Continually updated web site containing reports
+     and the data from the numerical models.
+ \item Archival publications in the scientific literature.
+ \eite
+
+\essl
+
+ \bssl
+ \header{Limitations to Climate Predictability}
+  \benu
+ \item Imperfect models;
+ \item Imperfect initial and boundary conditions.
+   \eenu
+ Errors from these are amplified and filtered by the natural (chaotic)
+ variability in the climate system.
+
+\bigskip
+
+ Over any given timescale:
+\benu
+
+\item What processes limit predictability?
+
+ \item What level of predictability is achievable?
+
+ \item How can we achieve the maximum possible predictability?
+
+\eenu
+
+\essl
+
+
+
+\bssl
+
+\header{Research Agenda}
+
+\benu
+
+\item \textblue{\it Understanding and quantifying climate variability.} \\
+   e.g.,  Do long-term  natural oscillations (e.g., NAO, AAO) imply
+    predictability? \\
+    Decadal variability of ENSO. \\
+    Understanding the historical record.  Paleo-variability.
+
+\item \textblue{{\it Initialization.} } \\
+ Assimilation of the state of the ocean, sea-ice
+and (ultimately) land-surface. \\
+ Use of Argo float program; \textit{in situ} observations; altimeter.
+ \\
+ Sea-ice from satellite measurements.
+
+\item \textblue{{\it Radiative forcing and the Carbon Cycle.} } \\
+   Projection of levels of external forcing agents, \\
+   including GHGs, sulfates and other aerosols, \\ statistical estimates of
+   volcanic eruptions.
+
+    Interactive carbon cycle.\\
+    Interaction of the terrestrial biosphere.
+
+\item \textblue {\it Detection, attribution and prediction.} \\
+      State-of-the-art models +
+      statistical methodology. \\
+      Differentiate between anthropogenic climate change and natural
+      variability. \\
+       ~\\
+      ~ \hskip 1cm What aspects of the climate system is predictable? \\
+       What aspects of the initial field is the future evolution sensitive to?
+
+\eenu
+
+\essl
+
+
+\bssl
+\subheader{Preliminary Experiments (partially completed)}
+\bite
+     \item Coupled Atmosphere-Ocean GCM.
+      \item Three different oceanic initial conditions.
+      \item For each oceanic initial condition, three different
+      atmospheric initial conditions.
+      \item Nine experiments in all.
+      \eite
+
+
+\subheader{Future}
+\bite
+\item Continually perform multiple ensembles of experiments, with
+increasingly sophisticated models and increasingly accurate initial
+conditions.
+
+\item Research into the causes and nature of climate variability and
+predictability, including both physical and biogeochemical processes.
+\eite
+\essl
+
+\bssl
+\header{Structure: A Joint Institute between GFDL and PU}
+
+\textit{Phase 1:} Approximately 20 additional scientists and support
+staff will enable the problems to be addressed.
+
+New teams of scientists in the following areas:
+\benu
+\item Outreach, web-design, and interface with impacts and policy community.
+\item Data Assimilation (especially ocean).
+\item Statistical methodologies in prediction.
+\eenu
+
+Enhancement of existing strengths in:
+\benu
+\item Climate variability (e.g. `dec-cen' dynamics) and its quantification.
+\item General model development (many aspects).
+\item Radiative forcing and development of scenarios.
+\item Carbon cycling, both terrestrial and marine.
+\eenu
+
+\essl
+
+\bssl
+\header{Some Potential Collaborations and Interactions}
+
+\benu
+\item \textit{PMEL, AOML:} Ocean measurements, incl.\ Argo.
+\item
+\textit{NODC:} Analysed data sets. Historical record.
+\item
+\textit{IRI:} Impacts. Seasonal-to-interannual (S-I) to decadal.
+\item
+\textit{NCEP:} S-I forecasts. Development of prediction methodology.
+\item \textit{Princeton Environmental Institute, \\
+Woodrow Wilson School (P.U.):}  Policy.
+\eenu
+
+\essl
+
+\bssl
+
+\subheader{Why?}
+\bite
+\item Few (if any) major efforts in the USA to these ends.
+      NCAR/DoE?
+      
+\item There are efforts in Europe: \\
+ e.g., Hadley Centre (U.K.). Max Planck
+(Germany).
+
+\item NOAA's climate services. 
+
+\eite
+
+\subheader{Why GFDL and Princeton University?}
+
+\bite 
+
+\item Combined intellectual and computational resources of GFDL
+   and Princeton University.
+\bite 
+\item Expertise in atmospheric and oceanic modelling, and links
+to  other NOAA labs and resources.
+
+\item New model developments at GFDL.  
+
+\item Strength in biogeochemical cycling, paleoclimate.
+
+\item Ability to attract and train talent.
+ 
+\eite
+
+\item Commitment of existing personnel and resources.
+
+\item Grand theme with breadth, excitement and focus.
+
+\eite 
+
+\essl
+
+\end{document}
+
+
+

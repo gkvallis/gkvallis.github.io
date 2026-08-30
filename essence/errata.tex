@@ -1,0 +1,103 @@
+%!TeX program = lualatex
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{unimath}
+\usepackage{crimson-minion}
+\usepackage{myparalist}
+\usepackage{xcolor}
+\usepackage{xspace}
+\input{preamble.tex}
+\newcommand{\longto}{\longrightarrow}
+\newcommand{\gt}{\text{g}}
+
+\begin{document}
+
+\begin{center}
+\large \bfseries \sffamily
+Errata for \\ `Essentials of Atmospheric and Oceanic Dynamics' \\ by G K. Vallis
+\end{center}
+\vspace{1cm}
+
+
+\noindent Below are various errata and a few clarifications for the book `Essentials of Atmospheric and Oceanic Dynamics'. If you find more please email me at g.vallis@exeter.ac.uk.   I am grateful to many readers for their comments, especially Tim Dowling for his careful reading.  
+
+\begin{description}
+
+\item [p. 15,  (1.50):]   
+Strictly speaking $c_v$ and $c_p$ may vary with temperature, even in an ideal gas. Here they are treated as constant. That is generally appropriate for Earth, but might not be for other planetary atmospheres. 
+
+\item [p. 35, below (2.51):] $\gt/\kg^{-1}  \to  \gt/\kg$  and $\m \s^{-2} \kg^{-1} \to  \m\s^2 \kg^{-1} $.
+
+\item [p. 40:] “geostrophic relations” are not defined at that point. Don't worry, they come in Chapter 3. 
+
+\item [p. 41: (2.79):]  $-p/RT -> -RT/p$
+
+\item [p. 62:] Exercise 3.2 is the same as Exercise 2.10 on page 46. 
+
+\item [p. 64:]  Caption to Fig 4.1: “The quantity $\eta_B$"  $\to$  “The quantity $\eta_T$”. 
+
+\item [p. 79:] For clarity, on the first line, $\sqrt{gH} = 1$  is in the nondimensional units described in the caption for Fig. 4.8 
+
+\item [p. 110:]  (6.20) $q'(x,y,t) \to q'(x,y,z,t)$,  as is then consistent with $\psi'(x,y,z,t)$ in the same line.
+
+\item [p. 136:]   (7.45c) $u'\to b'$, but the subsequent equations are not affected. 
+
+
+\end{description}
+
+ 
+ \end{document}
+ 
+ 
+%p. 15: (1.50)   
+%c_v and c_p are like map factors, they go outside (to the left of) the differential. So, I = c_v T is wrong, but dI = c_v dT is correct.
+%This error gets carried into the d(c_v T) in (1.52b), it should be c_v dT .  (I remember getting tied up in my underwear with map factors when starting out tackling Jupiter and Saturn’s oblate spherical surfaces; and Andy Ingersoll rescued me by pointing out the radii of curvature go to the left of the differential, not inside it; same issue here.)
+ 
+%p. 35: below (2.51): g/kg-1 -> (g/km)-1  and m s-2 kg-1 -> m s2 kg-1 (these are okay in Table 1.2)
+ 
+%p.40: (2.72)  this is not the chain rule;  (2.71ab) is the chain rule
+%This also affects exercise 2.9. 
+% 
+%p. 41: (2.79) -p/RT -> -RT/p
+ 
+%p. 49: “give rise hydrostatic” -> “give rise to hydrostatic”
+ 
+%p. 62: 3.2: This is identical to exercise 2.10;  just delete one of them
+ 
+%p. 64: Caption to Fig 4.1: “The quantity \eta_B” -> “The quantity \eta_T”
+ 
+% p. 79: “\sqrt(gH) = 1” in first line is oddly missing units
+ 
+% p. 110: (6.20) q’(x,y,t) -> q’(x,y,z,t)  (to be consistent with \psi’(x,y,z,t) in the same line)
+ 
+%  p. 136: (7.45c) u’ -> b’
+----
+My margin notes regarding passages that were not immediately clear:
+ 
+p. 7: (D.5)-(D.6): Changing the meaning of \Delta V from one viewpoint to another?
+ 
+p. 12: (1.36): Better to show it; too much hocus pocus
+ 
+p. 14: (1.44): \eta for specific entropy---unusual notation
+ 
+p.17: top: Avoiding using a variable for enthalpy?  If you wake up Kerry Emanuel at 3am, he’ll still say ‘enthalpy’ instead of ‘heat’ (he has internalized it better
+than anyone else I know).
+ 
+p. 26: (2.10): Convoluted?  Just do (d/dt + \Omega\times) (d/dt + \Omega\times)
+ 
+p. 26: (2.14) the rightmost \bf r_perp can be just \bf r .
+ 
+p.27: middle:  ‘effective gravity’ ---just introduce the geopotential
+ 
+p. 40: “geostrophic relations” is not defined yet?
+ 
+p. 53: Fig. 3.1: A modon?  While National Geographic cameras whirred, Jack Whitehead and I balanced on one of his person-sized rotating tanks and he tried to pour his one-thousandth modon, and as usual, it quickly morphed into a monopole. He was using blue ink and it looked just like Neptune’s Great Dark Spot, and was awesome since the documentary was about Jupiter and Neptune. But the look on his face was telling: there it goes again.  And two doors down from Joe Pedlosky his whole career.  My point is there are no modons on Jupiter or Saturn. It is a misleading solution that should not be given precedence like this.  We will probably have to agree to disagree on this point.
+ 
+p. 104: The wave kinematics is fine, but it seems to come a bit late, since we are already looking at SW waves.
+ 
+p.105: Fig 6.1: too many uses of \theta (potential temperature, latitude, now phase) 
+ 
+p. 121: 6.1: Need (\psi -\psi_deep), a la Ingersoll and Cuong. This gets rid of the Galilean invariance problem.  It is arguably artificial to set \psi_deep to zero and keep it zero for all reference frames, since it would require concrete that could withstand a bulging geopotential.  Not impossible, but not more realistic than just including \psi_deep and staying stress free like fluids.
+ 
+p. 136: (7.48): Seems odd to have the extra d2/dx2 on all terms, like a quadratic gauge invariance
+

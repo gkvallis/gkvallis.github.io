@@ -1,0 +1,287 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+
+%Set fonts:
+% Sans serif
+\renewcommand{\sfdefault}{hls}
+%\renewcommand{\sfdefault}{lmss}
+
+%Choose fonts:
+\usepackage{mathpazo} \usepackage{amssymb}
+%\renewcommand{\rmdefault}{bch}  \usepackage{lucidmathonly} \linespread{1.02}
+%\renewcommand{\rmdefault}{bar}  \usepackage{timesmathonly} % \baskerville
+
+% Packages
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage[dvips]{geometry}
+  \geometry{text={14cm,23cm},centering,letterpaper}
+\usepackage{paralist}
+\usepackage{varioref}
+\usepackage{microtype}
+\usepackage{bm}
+\usepackage{xspace}
+\usepackage{ifpdf}
+\usepackage{makeidx}
+\ifpdf
+\usepackage{pdfsync}
+\fi
+
+%My preamble
+\input{preamble}
+\newcommand{\eq}{eq.\ } \newcommand{\Eq}{Eq.\ }
+\renewcommand{\star}{\ensuremath{\blacklozenge} }
+
+\begin{document}
+\title{\sffamily Comments and Errata on Atmospheric and Oceanic Fluid Dynamics}
+\author{\sffamily Geoffrey K. Vallis}
+%\date{ }
+\maketitle
+%
+
+\noindent Below I list some typos and give a few very brief explanatory comments on the book. Most of the errors should not, I think, cause too much frustration to either the careful reader (who will figure them out independently) or the casual reader (who won't notice them), but those marked with a black diamond may cause a little head-scratching or may need the reader to work a little. These are collected at the head of the list, and are followed by the typos in page order. Unless stated, none of the corrections affect the subsequent arguments or derivations in the book. If you find other errors, or if you think something is poorly explained, please contact the author at `gkv-at-princeton-dot-edu'.
+
+
+
+\begin{enumerate}
+
+\item \star \label{cancel} Pages 156 and 158. The cancellation of certain boundary terms is poorly explained, and will be clarified (via the web) eventually. However, the results are correct.
+% Email me if you wish for a clarification sooner rather than later.
+
+\item \star \label{informal} Page 258. This explanation (the informal mechanism) is a little brief and may be hard to follow, and (6.48) is not transparent without more algebra. A clearer version will be provided (via the web) eventually.
+
+\item \star \label{eadyschem} Page 262, Fig.\ 6.9. The labels {\sf B} and {\sf C} are interchanged.
+% Note 'rho' instead of $\rho$.
+
+\item \star \label{simmhosk} Page 399, fig.\ 9.9 caption.  Potential energy and kinetic energy are transposed. Should read: ``\ldots Initially baroclinic processes dominate, with conversions from zonal to eddy APE and then eddy APE to eddy kinetic energy, followed by the barotropic conversion of eddy kinetic to zonal kinetic energy\ldots"
+
+\item \star \label{channel} Page 266. Above (6.78), the channel extends from $0$ to $L$, not $\pm L/2$. Relatedly, on page 268, above (6.91), the most unstable wave is that with the gravest meridional scale, and so the smallest possible meridional wavenumber $l$. This is not exactly $l=0$ except in doubly periodic geometry, but for a wide channel $l$ is very small.
+
+
+\item \star Pages 426--436. In a few places, `across gradient' is written where `across iso-surfaces' (or `along gradient') is meant. Page 426, below (10.82), should read: `The flux has a component across iso-surfaces (or parallel to the the gradient) of $\phi$, called the diagradient flux, and a component along isosurfaces (or perpendicular to the gradient), called the skew flux.' Similarly, on p.\ 428, l3, `along gradient' should be `along isosurfaces' (or `perpendicular to the gradient') and on p. 436, item (i) should read 'across iso-surfaces of buoyancy' instead of across its gradient. Duh.
+
+\item \star Page 434, \eq (10.135). The inequality needs further explanation, especially as $\ppp by $ may be positive or negative.  The reader may ignore it, and just read on.
+
+\item \star Page 535, \eq (PV.1). The term $-\ppp{\obar{v_i q_i}}y$ should be just $\obar{v'_i q'_i}$, as in (12.67). This typo should be obvious to those who have read the text, but it is still confusing. Relatedly, the terms on the rhs of (PV.4) should have a minus sign.
+
+\end{enumerate}
+
+\hrule
+
+\begin{enumerate}
+
+\item Page 5, \eq (1.10).  Given the  convention used in the book, the subscripts on $b$ should be superscripts (i.e., $b^x$ not $b_x$), because they denote components of a vector and not derivatives.
+
+\item Page 29, equation on last line. $\d p$ should be $\d \alpha$ in middle term on rhs.
+
+\item Page 31, line below (1.139). Should be: $\theta = \theta(\eta, S, \pref) = \theta (T, S, p)$; i.e., $p$ not $\pref$ in last term.
+
+\item Page 35, Fig.\ 1.4 caption, line 3. Replace 13.36\dgc by 10.14\dgc.
+
+\item Page 86, line 3. The factor of $\sin \theta$ should be removed, but (2.187) is nevertheless correct.
+
+\item Page 119, problem 2.14. The pressure term, $-\ro^{-1} \grad p$, is inadvertently omitted from the right-hand side of the first equation.
+
+\item Page 139, section 3.6.2. The derivation given is for the flat-bottomed case, which is not stated explicitly. As an exercise, the reader should perform a similar calculation with topography, and show that $E = (h u^2/2 + g h^2/2 + g \eta_b h)$ and $\Fb = \ub( E + g h^2/2)$.
+
+\item Page 142. The deformation radius, $L_d$, is not defined. It is $L_d \equiv \sqrt{gH}/f$. (In the continuosly stratified case, it is $NH/f$.)
+
+\item Page 150, (3.149) and (3.150). Factor of $\er^{\ir (kx + ly)}$ is missing in all the integrands.
+
+\item Page 156, \eq (3.178). The two right-hand sides should each have a minus sign before the integral signs. \\
+\Eq (3.179). Factor of $1/2$ missing, and the minus sign should be deleted. The factor of 1/2 should be propagated through to (3.183).
+
+\item Page 160. Formatting error in problem 3.3. It should read $\div[][\vb(E + gh^2/2)]$ and not $\div[\vb(E + gh^2/2)]$.
+
+\item Page 185, \eq (4.109). Should read $\alpha^{-2} \gg 1$ and not $\alpha^2 \ll 1$. Also, line before (4.113), $\Omb = f \kb$ should be $2\Omb = f \kb$.
+
+\item Page 196, \eq (5.1). Should read $(u, v) \sim U$, not $(u,v) \sim L$.
+
+\item Page 208, \eq (5.61). Missing subscript 0 on second $\ubhat$, and second $t$ should be $\that$. Also, missing $\fhat_0$ in (5.62), although its value is unity.
+
+\item Page 213, eqs.\ (5.85a) and (5.88a). Should be a minus sign before last terms on rhs in each equation, and $H_2$ should be $H_1$ in last term in (5.88a). (The terms are subsequently dropped).
+
+\item Page 227, \eq (5.159). $H$ should be $H^2$.
+
+\item Page 228, \eq (5.168). As written, $\psihat \equiv (\psi_1 -\psi_2)/\sqrt 2$. Also, in (5.170), $\int \dxb \equiv \int \dA$.
+
+\item Page 237--238 on phase speed. Some sources define the phase velocity to be given by $\cb_p \equiv \omega \kbi / K^2$, where $\kbi$ is the wavevector. The components of the phase velocity are then given by $c^x_p = \omega k^x/K^2$, etc. Defined this way, the phase velocity is a true velocity. However, its components do \emph{not} represent the speed at which wavecrests travel along the coordinate axes. This definition is not common, but be aware of it.
+
+\item Page 239, \eq (5.225). Last term should have minus sign before it.
+
+%\item Page 252, \eq (6.22). Remove minus sign on rhs.
+
+\item Page 256, caption to Fig.\ 6.5. $\sigma = -i k c_i$ not $\sigma = kc_i$.
+
+%\item Page 258, \eq (6.47). Both equations are missing a factor $\exp(-2ka) = \exp(-1)$.
+
+\item Page 259 \eq (6.53) and (6.54). The terms $v \zeta$ should be multiplied by 2. \\ Eq.\ (6.55), the two plus signs should both be minus signs, as in (7.17).
+
+
+\item Page 263, \eq (6.61). $z_A$ instead of $z_B$ in fourth term in second expression.
+
+\item Page 265, after (6.74). Should be `the integral must vanish', or alternatively (and implying) `the integrand must vanish at some point'.
+
+% \item Page 264. Double `for' at beginning of section 6.4.3.
+% \item Page 265, \eq (6.73). Missing tilde on first term.
+% \item Page 266, l2. Where $H$ \emph{is} the domain depth. (Missing is.)
+
+\item Page 266. It is the background PV \emph{gradient} that is zero in the Eady problem. $Q$ in (6.75), which is zero, is the contribution to the basic state PV from the flow and from $\beta y$; this is sometimes called the `QG PV', and does not include the $f_0$ term.
+
+
+% \item Page 268, figure caption. Better to use $U$ instead of $u$.
+
+% \item Page 272, above (6.106). Double `basic'. The word 'gradient' should be omitted.
+
+\item Page 274, l--2. $\beta \neq 0$, not $\beta = 0$.
+
+\item Page 277, surrounding (6.128). $K$ instead of $k$, so the unstable interval is $\sqrt{\beta/2U} < K < k_d$.
+
+\item Page 275, first sentence of second section. No hats on variables.
+
+% \item Page 278, 'of with' under (6.129). Also, comment explicitly that \y variation is ignored. Define `neutral waves'.
+
+\item Page 279. Better to have primes on the perturbation variables in (6.135)--(6.137).
+
+\item Page 280, \eq (6.141). $c_T$ and $c_B$ are interchanged.
+
+% \item Page 281, l--4. Should be, `$b$ the role of $u$.'
+
+\item Page 284, \eq (6.161) should read: $(\ppp{}t + U \ppp {}  x) q' + (\ppp{\psi'} x)( \ppp Q y) = 0 $ and not $(\ppp{}t + U \ppp u x) q' + (\ppp{\psi'}x) ( \ppp Q y )= 0 $. (Spot the difference.)
+
+\item Page 285, \eq (6.165). $\psi$ should be $\psi'$ on lhs, and four lines above.
+
+\item Page 296. Just before (7.5), `If $J$ is also zero' should be `if $H$ is also zero'. Just after (7.5), `$D$ and $J$ are zero' should be `$D$ and $H$ are zero'. Just below (7.12) on p.\ 297, `where $J'$ is' should be `where $H'$ is'.
+
+\item Page 298, first sentence of section 7.2. `Eddy flux of potential may be' should be `Eddy flux of potential vorticity may be'.
+
+\item Page 300, \eq (7.33). $k$ and $l$ are transposed in the expressions for $\util$ and $\vtil$. We should have:
+     $  \util  =  - \ir l \psitil,  \quad \vtil = \ir k \psitil$.
+
+\item Page 303, l 7. $p$ should be $m$, twice.
+
+\item Page 304, \eq (7.60b). $w$ should be $\wbar$.
+
+\item Page 310, second bullet. $\bm E$ should be $\Fbc$.
+
+\item Page 311, \eq (7.93). $\phi$ in first term should be $\varphibar$.
+
+\item Page 313, \eq (7.106). Should be $\Fb[\varphi]$ not $\Fb[\varphibar]$.
+
+\item Page 314, \eq (7.112c). Middle equation should have minus sign on rhs, and in last equation $\vb'$ should be $\ub'$ (the horizontal eddy velocity).
+
+% \item Page 319, line after (7.129). $\eta$ should be $\eta'$.
+
+\item Page 319, eqs.\ (7.130) and (7.131). Missing factor of $\ro$, and, in (7.131) only, $\fo$.
+
+\item Page 320, just above (7.138). Reference to (7.136) should be to (7.135).
+
+\item Page 324, \eq (7.141). Subscripts $1$ should be subscripts $i$.
+
+% \item Page 326, line above (7.152). Replace first minus sign by equals sign, giving $\fo \ppp \ubar z = - \ppp \bybar y$.
+
+\item Page 327, \eq (7.157). No minus sign on rhs.
+
+\item Page 330, first equation in box (7.812). Extraneous $s$ on lhs, next to $\what H$.
+
+\item Page 339, \eq (8.8). Should be $\zeta$ and not $\psi$ in viscous term.
+
+% \item Page 339, \eq (8.10). Wrong sign on both terms on rhs.
+
+\item Page 340. $1/L^2$ should be $L^2$ in (8.11), and $k^4$ should be $k^2$ in (8.12).
+
+\item Page 345. In fig.\ 8.3, $E(k)$ should be $\Eta(k)$.
+
+\item Page 352 and 353, \eq (8.48) and \eq (8.53). $\Ehat$ should be $\Ebar$, and $\Zhat$ should be $\Zbar$, respectively.
+
+\item Page 352, \eq (8.49).  $\Zeta(q)$ is not the same function as the $\Zeta(k)$ of (8.44), but it is still such that the enstrophy is $\int \Zeta(q) \, \d q$.
+
+\item Page 355, \eq (8.62a). The integral $\int \dxb$ is the same as $\int \d A$, and the viscous term should have a minus sign. In (8.63)--(8.65), for notational consistency the energy spectrum should be written $\Eta(k)$ and not $E(k)$.
+
+\item Page 369, \eq (8.105). $\chi$ should be $\chi'$ on right-hand side. ($\chi$ is a constant.) And replace `by $\eta^{-1/3}$' by `is $\eta^{-1/3}$' in
+the second sentence of the paragraph above (8.107).
+
+\item Page 380, caption and inset to Fig.\ 9.1. $\veps$ should be $\veps^{1/3}$.
+
+\item Page 386, \eq (9.24b). $a$ and $b$ are transposed on second term on rhs of definition of Jacobian. Also, line before (9.27), second `barotropic' should be `baroclinic'.
+
+\item Page 389. 1st text line should read $|\del^2| \sim
+k^2 \ll \kd^2$ and not $\del^2 \sim
+\kd^2 \ll k^2$.
+
+\item Page 392, \eq (9.48). $D[\tau]$ should be multiplied by $-k_d^{-2}$, but the term is not used.
+
+\item Page 417. The symbols $K_{\textit{turb}}$ and $\K_{\textit{turb}}$ are both used for the same quantity, the turbulent diffusivity.
+
+\item Page 428, line after (10.100). `Divergence' should be `gradient', twice.
+
+\item Page 434, \eq (10.132): $\ubar$ should be $\ubbar$ in first term. And line after (10.132): `Zonally uniform, small amplitude wave' should read `Zonally uniform basic state and small amplitude wave'. In (10.133), $u'$ should be $v'$. Two lines after (10.134), reference to (10.133) should be omitted.
+
+\item Page 437, \eq (10.146). Subscripts on $s$ should be superscripts, as they denote components and not derivatives.
+
+\item Page 440, \eq (10.156). The $\ub'$ should be outside of the derivative in the third order term, but this term is promptly neglected.
+
+\item Page 443, \eq (10.175). $\obar{\vb' \sigma'}$ should be $\obar{\ub' \sigma'}$ in third term.
+
+\item Page 458 \eq (11.4). Need a factor of $1/a$ on first term of rhs. Also, $\partial_y$ should be $\partial_\vrt$ on the following line; alternatively, delete factor of $a^{-1}$.
+
+\item Page 460, \eq (11.11). Missing factor $-1/g$ on rhs.
+
+\item Page 468, item \textit{(ii)} and (11.40). Note that we are using an \textit{equatorial} beta plane, on which $\fo=0$. Thus, $f=\fo + \beta y = \beta y$.
+
+\item Page  471, \eq (11.54). For notational consistency with what follows, $\delta \theta$ should be $\theta$.
+
+\item Page 471. Line above (11.57), should be $m(0) = \Omega a^2 \cos^2 \vrt$ (i.e., $\vrt$ and not $\vrt_1$), as $u=0$ at the surface. And (11.57) and (11.58) are missing factors of $-\theta_0$ on rhs.
+
+\item Page 474, $\cos \vrt$ should be $\cos^2 \vrt$ in text at end of second paragraph.
+
+\item Page 476, \eq (11.64); page 480, \eq (11.73);  page 481, \eq(11.75). The eddy flux term needs a factor of $1/a$.
+
+\item Page 476, \eq (11.66). $w$ should be $\wbar$.
+
+ \item Page 494, \eq (12.34). Factor of 1/2 missing on right-hand sides. See, e.g., (12.27).
+
+ \item Page 495. The statement `illustrating the group velocity property' is opaque and best ignored.
+
+\item Page 504. Line after (12.61b), extraneous $-\nabla$ between $g'$ and $\eta$. Also, $g' = g (\rho_2-\rho_1)/\ro$, and not $g' = g (\rho_1-\rho_2)/\ro$. Relatedly, (12.64) should have a minus sign on rhs. (It is technically correct as written, because of the way $g'$ is defined.) Finally, after (12.63), note that $\phi_T = \phi_1$, and its introduction is unnecessary.
+
+\item Page 505, \eq(12.71). $h_i$ should be $\hbarr_i$.
+
+\item Page 506, \eq (12.77). $v_1$ on rhs should be $v_2$. (Eq.\ (12.79) is correct.)
+
+\item Page 507. \Eq (12.83), second term on rhs should have plus sign, not minus sign.
+
+\item Page 508. \Eq (12.85), $q$ should be $\qbar$, twice.
+
+\item Page 511. Sentence above (12.89), polewards and equatorwards should be reversed. And `inequality' should be `equality' in the line following (12.89).
+
+\item Page 513. $H$ in (12.95) is not defined nearby, and is $H = H_1 + H_2$. Also, the frictional term in (12.95) and (12.96) has the wrong sign, and the factor of 2 in the first term of (12.96) is spurious. The terms are not used elsewhere.
+
+\item Page 514. In (12.98) $\eta$ should be $\etabar$, and in (12.99) $q$ should be $\qbar$.
+
+\item Page 516. In (12.103), factor of 1/2 should be inside square brackets.
+
+\item Page 518. Line 2: decreases should be increases. Line 7, westward should be westerly.
+
+\item Page 531, fifth line after (12.119). Tropopause should be troposphere. Likewise on page 533, third line after (12.123)
+
+\item Page 533, fourth line after (12.120), second subscript should be $s$, not $i$.
+
+\item Page 539, endnote 12. The reference to page 12.6.3 should be to page 532, or to section 12.6.3.
+
+\item Page 555, \eq (13.50). First term, $\ppp{\psi} t$ should be $\ppp{ (\pppp \psi z)} t$.
+
+ \item Page 555--556. We write the topography as $h_b(x,y)= \Re [ \wtilde{h}_b \sin ly \e^{\ir kx} ]$, and then in (13.55), (13.58), (13.65) and the rhs of (13.70), $h_b$ should be replaced by $\wtilde h_b$.
+
+ \item Page 586, eqs.\ (14.5) and (14.14). The quantity $W_E$ is not quite the same as the vertical velocity due to Ekman pumping, although such a notation might imply that. The Ekman pumping velocity, $W_{\textit{Ek}}$, is given by (2.296), and so $W_{\textit{Ek}} \approx \curlz (\taub/f)$, whereas $W_E = \curlz \taub$.
+
+ \item Page 725. Holloway and Hendershott (1986). Year should be (1977).
+
+\end{enumerate}
+
+\noindent \textit{Acknowledgment:} I am grateful to all the readers who have sent in comments. I would particularly like to acknowledge Roger Berlind for his exceptionally close reading of the book.
+
+\end{document}
+
+% Finis

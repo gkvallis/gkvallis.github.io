@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}  
+
+% A template for problems and solution sets, by G. K. Vallis
+% If possible, leave everything between the two dashed lines alone
+
+% ----------------------------------------------------------------------
+
+
+% The following two lines set the font. They are public domain
+% and should be supported on all current TeX installations. 
+% They may be commented out if they give you trouble. 
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+
+
+% The following are some latex packages that you may find useful. All of
+% them should be included in standard TeX installations. 
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{bm}
+\usepackage{paralist}
+\usepackage[dvips]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+% Here are a few math abbreviations that may be useful. Note that math 
+% variables should generally be set in italic, vectors in bold italic, and
+% constants, such as e and i should be upright. Operators like the 'd' in 
+% dx  and 'D' in D/Dt should also be upright. 
+\newcommand{\ir}{\mathrm{i}}
+\newcommand{\dr}{\mathrm{d}}
+\newcommand{\D}{\mathrm{D}}
+\newcommand{\e}{\, \mathrm{e}} \newcommand{\er}{\mathrm{e}}
+\newcommand{\vb}{\bm {v}\xspace}
+\newcommand{\ub}{\bm {u}\xspace}
+
+% The following makes ODEs and PDEs easier to write.
+% For an example, see the second problem below.
+\newcommand{\dd}[3][]{{\dr^{#1} #2 \over \dr #3^{#1}}}
+\newcommand{\pp}[3][]{{\partial^{#1} #2 \over \partial #3^{#1}}}
+\newcommand{\DD}[1]{{\D#1 \over \D t}}
+
+% Finally, the document geometry:
+\geometry{centering, text={14cm,22cm}}
+\renewcommand{\baselinestretch}{1.1}
+\parindent 0pt
+
+% ----------------------------------------------------------------------
+
+% Start your own edits here.
+% User-defined commands go here:
+
+
+
+% Document text begins here:
+
+\begin{document}
+\centerline{\textbf{\textsf{\Large Solutions to problems in Chapter 5}}}
+\medskip
+\centerline{\textsf{\large by Your Name Goes Here} }
+\medskip
+\centerline{\today}
+
+\vskip 1cm
+
+This template may be used for either submitted problems or solutions. 
+Any introductory text goes here. Note that each problem or solution is an
+item in an enumerated list, and that the problem number goes in the square
+brackets immediately following the word `item'. 
+
+To typeset the document you may use either `pdflatex', which is the easiest
+way, or `latex' followed by 'dvipdf' or `dvipdfm'. Please submit both the
+latex source and the final pdf version of your solution. Thanks very much.
+
+\begin{enumerate}
+  
+\item [5.6]  This is the (non)solution to problem 5.6. It contains some
+text and some mathematics:
+\begin{equation}
+  \er^{\ir \pi} + 1 = 0, \qquad \psi = \widetilde{\psi} \e^{\ir(k x - \omega t)} .
+\end{equation}
+
+
+\item [5.9]  This is the (non)solution to problem 5.9, illustrating some
+math constructs like pp and dd
+\begin{equation}
+ \dd \psi x + \pp[2]y x  = \int \chi \, \dr x ,
+\end{equation}
+and another, illustrating bold italic vectors:
+\begin{equation}
+ \DD \ub = \pp \ub t + \vb \cdot \nabla \ub .
+\end{equation}
+
+\item [5.10] Here is a problem or solution in two parts:
+    \begin{enumerate}[(a)]
+       \item Solution to part a. 
+   
+       \item Solution to part b
+  \end{enumerate}
+
+
+\end{enumerate}
+
+Any concluding comments go here. 
+
+
+\end{document}
