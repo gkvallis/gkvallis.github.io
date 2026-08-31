@@ -1,0 +1,4 @@
+cd /Users/gkv/syncshare/docs/public_html
+git add -A
+git commit -m "describe what you changed"
+git push
